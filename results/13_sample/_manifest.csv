@@ -1,0 +1,11 @@
+object,kind,file,class,named
+ra,table,ra.csv,data.table,FALSE
+rb,table,rb.csv,data.table,FALSE
+rc,table,rc.csv,data.table,FALSE
+rd,table,rd.csv,data.table,FALSE
+wcr,table,wcr.csv,data.table,FALSE
+re,table,re.csv,data.table,FALSE
+ry,table,ry.csv,data.table,FALSE
+bal,table,bal.csv,data.table,FALSE
+lab5,vector,lab5.csv,character,TRUE
+y5,vector,y5.csv,character,FALSE

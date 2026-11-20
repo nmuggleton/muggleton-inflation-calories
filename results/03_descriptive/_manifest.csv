@@ -1,0 +1,7 @@
+object,kind,file,class,named
+q,table,q.csv,data.table,FALSE
+q_all,table,q_all.csv,data.table,FALSE
+hist_yr,table,hist_yr.csv,data.table,FALSE
+spread_yr,table,spread_yr.csv,data.table,FALSE
+stats,table,stats.csv,data.table,FALSE
+bb,table,bb.csv,data.table,FALSE

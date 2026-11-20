@@ -1,0 +1,19 @@
+\sisetup{group-digits=integer, group-separator={,}, group-minimum-digits=4}
+\begin{tabular}{
+    l
+    S[table-format=2.1]
+    S[table-format=-1.1]
+    S[table-format=2.1]
+    S[table-format=1.3]
+}
+\toprule
+Step & {Saving, p25} & {Change} & {Saving, p50} & {p25 / RMS p25} \\
+\midrule
+RMS shelf: every item and store & 26.2 & {---} & 16.4 & 1.000 \\
+Only items panellists bought in the state & 25.9 & -0.3 & 16.4 & 1.007 \\
+Only item \texttimes{} store pairs panellists bought & 28.0 & 2.0 & 19.2 & 0.963 \\
+Panellists' calories as weights & 25.9 & -2.1 & 16.4 & 1.004 \\
+Panellists' prices, same matched cells & 26.4 & 0.6 & 15.9 & 0.987 \\
+Add panel purchases with no RMS record & 29.2 & 2.8 & 17.8 & 0.940 \\
+\bottomrule
+\end{tabular}

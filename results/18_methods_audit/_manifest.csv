@@ -1,0 +1,5 @@
+object,kind,file,class,named
+mw,table,mw.csv,data.table,FALSE
+jks,table,jks.csv,data.table,FALSE
+YS,vector,YS.csv,character,TRUE
+mw_balance,table,mw_balance.csv,data.table,FALSE

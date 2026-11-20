@@ -1,0 +1,7386 @@
+{
+ "duckdb": "1.5.6",
+ "inputs": {
+  "external/CPIAUCNS.csv": "f79e3a78837142293449cee4a1a9b1da7be677fb3e989ffb2ef48e8e7cf4cdd7",
+  "external/CUUR0000SAF11.csv": "205e4a2fcb4b1a835ea92d20b21edd417069cd8afda9433d6b10490903042a7d",
+  "external/CUUR0000SETB01.csv": "9e8dda0d773850df7db7bb4f9f0b9ae12761292144e4d2d1e268d91d563bab5b",
+  "external/README.txt": "7b97ae375d12f14cdc9df302bcc8967557e03a94c61d5d0d1ed54d39530d500c",
+  "external/hhs_poverty_guidelines.xlsx": "b36a73734f17c333f5bbb83926928930f84e3485fd9bec5050058f4bc38cf5e4",
+  "external/hhs_poverty_guidelines_48states.csv": "ecc4cc9de9902fb804ba068ad4cabc71e88bb25a52ea3eec9297eff507ae1664",
+  "local_raw/cbsa_list1_2013.xls": "1bb1d7ce747bcd72fc212bda806c28bb4b17d4cec72d1388770f2b0a6d06f5c0",
+  "local_raw/cu.area": "f4d0442e38dd4c4909a98b9fc8f8bc5fc8146ca4e87e4d9b947461f78af8abeb",
+  "local_raw/cu.data.0.Current": "70b9070ba38ebfd4cdf434aabd1be798cf2841e77fa940e99da37368950746c2",
+  "local_raw/cu.item": "376f2a9dd2cc7bb358118e6c0e031a404941cfe158b82612e807e44eabcec8fa",
+  "local_raw/cu.series": "f7367ea7851338d4d9165061bfb14051030f07f073dc12d007cdff2becd2320d",
+  "local_raw/fred/ALOTOT.csv": "0e6975e4146eead89e627a9e63c0280646a0ec45d370569fdd9b93232b6ff942",
+  "local_raw/fred/ALSTHPI.csv": "cb02d2fcc9ae4ef99bad098c173b448b43f9b2b1b83d27ea4ba0dd5acdd62bac",
+  "local_raw/fred/AROTOT.csv": "4132a2cc63d6493519dd17c79d3d034aa06cdb96b5a513bff09e5b251cc5caed",
+  "local_raw/fred/ARSTHPI.csv": "345eabd964a3b9378a7eede4d8071f6ae16acbb6216be212568e3c0d7acc8c56",
+  "local_raw/fred/AZOTOT.csv": "638f3213f0e86bbdacfd228c51df8c2abf75548ebea53aad8fc5230f8601a361",
+  "local_raw/fred/AZSTHPI.csv": "d7f48b62f89e4da3d98094884d71a0104d4bf6a8e51bfddec387d22eca89d1b6",
+  "local_raw/fred/CAOTOT.csv": "98b30dd331e366fe18674028c9d931cfd6006107444021854df45ef6da254ad8",
+  "local_raw/fred/CASTHPI.csv": "1258decbd1751fdcd7f559892a2f9c56e5dfe9f42cde5a31fa188145a64f08db",
+  "local_raw/fred/COOTOT.csv": "c8472e07d4005c70da07748243f1fa301875253e7d4d7fc10de5ec15e4b7c2f3",
+  "local_raw/fred/COSTHPI.csv": "a36f41721110ecc6df9ff32038de409b4f63e953f37dc1e2e357d792355d58bd",
+  "local_raw/fred/CTOTOT.csv": "e407ebee0432386100efeed00f8939d61d0fa20218097981aa175f9af6766671",
+  "local_raw/fred/CTSTHPI.csv": "d025d33947b81c464d7048561499a59edd1bba655988e911a432293ef79adf89",
+  "local_raw/fred/DCOTOT.csv": "3e3dbc47c385dd02081a9de5f6dedc58cc563143894000975a3d1ac06f65cd0e",
+  "local_raw/fred/DCSTHPI.csv": "b8a17e0837edb1af09792b98e947bcf9348c71b66697557492c318917a9419e1",
+  "local_raw/fred/DEOTOT.csv": "69bb2cf62b00cd7fcee0e0414b83e55b07ebfdf639404c3a9e98f1eada5cfb36",
+  "local_raw/fred/DESTHPI.csv": "cc197b6095d13670886bad568eb38f9eb5f525b3666c1a6c89a84f7afc6aeb8c",
+  "local_raw/fred/FLOTOT.csv": "1de39ea1e12f3fe6d3a4a959b8a847bef0db06ffb7bc36918a7e4a8cdbab180f",
+  "local_raw/fred/FLSTHPI.csv": "f77a1ebb4af64392e849d49a13bedb3477fad97f380a096a865a37fb34d96a6c",
+  "local_raw/fred/GAOTOT.csv": "7d7257cc7f0d6618c972c863237f8ef59b69cb4d4e71dd4013ad05885f2d6a03",
+  "local_raw/fred/GASTHPI.csv": "50f219b6dcff2bda9107be96d82ae5928d4790711a41ea5147f66e38c9b88eb9",
+  "local_raw/fred/IAOTOT.csv": "930dedb8a066a002758f9c3d8aab1cf87bb860f3687d500179b317e193d5048b",
+  "local_raw/fred/IASTHPI.csv": "f45154317b13658f1d518f391fd4bd8cb9a4d7cd4a8fa22d98eb07e0d57259ed",
+  "local_raw/fred/IDOTOT.csv": "27607b525e9e7b3bf05f4b8fb3532c3970e1f2958236b42c73d1651f213ef45c",
+  "local_raw/fred/IDSTHPI.csv": "1e45a43af9fb088699aaec766f7e8693d3b49320065eae857ae7aea768166d17",
+  "local_raw/fred/ILOTOT.csv": "ca316597d86a9b826eb2b10a91a959639bbc5b8764746220330f705ec23e0ade",
+  "local_raw/fred/ILSTHPI.csv": "56722f12cd58e8ae2e23739793c226784abaeda6f58fe1146c00405273e9a377",
+  "local_raw/fred/INOTOT.csv": "26153dd29b10c93de2ac0cc9290dd40cf3c23712e57400bc79d5f18a35c79de6",
+  "local_raw/fred/INSTHPI.csv": "7441e37ccf7a89fb7fbd1d3792bd8c97e55706842249a70dd3f32fea79e1b961",
+  "local_raw/fred/KSOTOT.csv": "15bdda52ab22a96a4cd8bbaf5006934c17d6f8b06a5ea32d57cf7dd506328846",
+  "local_raw/fred/KSSTHPI.csv": "35c6dbe393059f4b5945e95c43224c1f847db9dca15afe49cdcf0e3aa92f2283",
+  "local_raw/fred/KYOTOT.csv": "ba5e402000bc971da59aa7d94d2c250e4a282f92c520b4c568de42933f0a8238",
+  "local_raw/fred/KYSTHPI.csv": "82333f65df23365f93131a0259d6fd971c6b4c97fa980388170fb41dd280ecd4",
+  "local_raw/fred/LAOTOT.csv": "debb4c2d24be8ad5248f4cc63b39936f37895aab6531135e7f64c05904f91fa8",
+  "local_raw/fred/LASTHPI.csv": "a5747f637b7d63815fb90700e036e2f9aa0ac00354470e4bf34d727fec9b02d9",
+  "local_raw/fred/MAOTOT.csv": "1fa6454bb0f3b1fa527778bf805213423b6f2de5b4911e41f645bddeeba8c255",
+  "local_raw/fred/MASTHPI.csv": "2f8002de19b55cbedf63ad226aed86b5deab8d0ef7ad179f443a12bc71a88317",
+  "local_raw/fred/MDOTOT.csv": "54232ba60e927e79910f4a850e32a962ac9cfb87ef2485b35798ae7e60575efd",
+  "local_raw/fred/MDSTHPI.csv": "6ec72027caf46ea0cc66d5bce27a784af21d3af88a3a21589a149087a8382ba2",
+  "local_raw/fred/MEOTOT.csv": "7624ec26f4ba61bb6fbc27d251b8c86652b5f638cffbb9f1513b2ccaf833c262",
+  "local_raw/fred/MESTHPI.csv": "cef7d27ffa8e152e7522ca4410239b3c2c8a17e7bdd9bd02a63b73e689f0bbbe",
+  "local_raw/fred/MIOTOT.csv": "ce9a35deb42c8fe1ab613ab351c274ef67dab23b9a8d17cf9daf7c43a45e70b4",
+  "local_raw/fred/MISTHPI.csv": "60d385f039898dba33f5ab3602fa6d582363587d40fadf6595011431c1f96e72",
+  "local_raw/fred/MNOTOT.csv": "eef6d962ba195be310967a0af0bd5df65db84f8326a8ef655410e2574b0915a7",
+  "local_raw/fred/MNSTHPI.csv": "41ca0d9e2aa684b3a425f2094e434a6716cf70c8c02e747e43ef7dea2cd565c9",
+  "local_raw/fred/MOOTOT.csv": "96732ee6a89d7c0ef6407acf95d5a6019cf20083ceeae43746e22cbc583c8f44",
+  "local_raw/fred/MOSTHPI.csv": "aabf8b66404ca42b5b16e707609a23a8d8c3d0d200074371adc79860222d6a1d",
+  "local_raw/fred/MSOTOT.csv": "96b28490e5e35ca10434b8d595138f0b8da3a1ca8ea0437c37467e7e007f9162",
+  "local_raw/fred/MSSTHPI.csv": "48b75a1deb39b3c96a8873462cbf5061065cc625b09ac61b39a47e1ee3d10a32",
+  "local_raw/fred/MTOTOT.csv": "c1e9bb14e007b2f52ed9f8477d7e4c30ad6654e97a73288401c6fcebc436ce7b",
+  "local_raw/fred/MTSTHPI.csv": "b4bb5df3d220d912f6eb597edcafac065b996f673f3a19e10c61fed1780a5092",
+  "local_raw/fred/NCOTOT.csv": "1c95c97f725c6d8ad8c779c00896a3fa41c812f2fd402a4adee97b49f401029a",
+  "local_raw/fred/NCSTHPI.csv": "da99ba42f8cb0556681d3f6ca361506d5d149bf86bb920bd49d1daf77836f560",
+  "local_raw/fred/NDOTOT.csv": "c3dfae27ecee34cd9a139855a6b671471f4d341abb3613e639972d7c4bed042e",
+  "local_raw/fred/NDSTHPI.csv": "3d6794749693b31bc58585ea352af4eb2e60a71f2caa7968f7b8c5b1cbad0788",
+  "local_raw/fred/NEOTOT.csv": "f8ea0628957fec58114a03c9269d3f91bc06ae9d722cb8227bbef80689eec8d7",
+  "local_raw/fred/NESTHPI.csv": "f3d959a48a57e20f384ae7e2dcb0026fdc1b76ca775f2d92722d172daa7a2ce5",
+  "local_raw/fred/NHOTOT.csv": "0d0bdb7e003b1b05f62af923d3703c3536b7e1d071c4142d9b22b55f73860a8e",
+  "local_raw/fred/NHSTHPI.csv": "0f6b77a51604ed6c17c067f59bf7fa18b4a40035c6b4cdc9425c0eaefcbf4bad",
+  "local_raw/fred/NJOTOT.csv": "c0b4dec42dc544b9b2f2f5f8461c1ee9cc848318f9b16ff5fee95a3a73b02b74",
+  "local_raw/fred/NJSTHPI.csv": "319bad4d94d2488d0a7a66c4bc3ae41fd4bf0ee5fa037107708e6bdd61e632e6",
+  "local_raw/fred/NMOTOT.csv": "7918ecf50d93802baff68c4bc0e0fdaccbd43dd113d9d23291b0f48df629723a",
+  "local_raw/fred/NMSTHPI.csv": "42b14d0ff44533b3d12a9a5f4e46f378d4ddefc8a2343b38d2268656c411c510",
+  "local_raw/fred/NVOTOT.csv": "5fbb6131ef1416d588263fbb9633bd314a671f3e0a7201e196ad711c4c9af457",
+  "local_raw/fred/NVSTHPI.csv": "aa6ecd302f70047bf556a94b9323969bf9f905439b9fc18c24e4c98472861bec",
+  "local_raw/fred/NYOTOT.csv": "6c009cecac598c40294019418ae728342759170c42a7527c48080235ac301d16",
+  "local_raw/fred/NYSTHPI.csv": "24847a07873a1a583b2624f696f831b8d90c68af2e399f480593f8220ffdc952",
+  "local_raw/fred/OHOTOT.csv": "0674aa5c26dfc75e84b5bc96e494458cfbfe069be2161eea641cd2c8e1180457",
+  "local_raw/fred/OHSTHPI.csv": "30a930e0b9054efac9c9ecccf9a021204163adc63161ff6a38eb8d9a24c958af",
+  "local_raw/fred/OKOTOT.csv": "c1dafef8e995a4698178af032ab6c04c6634ad795a98b8008ee5d56b8810d627",
+  "local_raw/fred/OKSTHPI.csv": "48091bcb5d1add96d6085526faec61a6daa59cb0247fa62ff05c46708c13c0b2",
+  "local_raw/fred/OROTOT.csv": "f81777c993ad9ad595ade01b0daf7b50f24d8709873e3d66390b4e698b9277dc",
+  "local_raw/fred/ORSTHPI.csv": "434e9225fb1cf26f5847927041dc8608a51bb1e8a811859c99672a16d385475c",
+  "local_raw/fred/PAOTOT.csv": "d15004ed6b574a60129e31284fcbaf62dd424e599ebd5e9eec4778cd1983cf01",
+  "local_raw/fred/PASTHPI.csv": "8ea2afa2d6bd7a79dd30026ea6c4fbe918fccd0f1a6f58593755b7cd10e5b3b6",
+  "local_raw/fred/RIOTOT.csv": "45e5eba6205a4d9c30a7aebd0c80172b97365ed889a4b16b6f80d8881a1b0607",
+  "local_raw/fred/RISTHPI.csv": "2fba146a462790884fad9e69a8235280711190aee175aeb08be1e1776f9a3269",
+  "local_raw/fred/SCOTOT.csv": "0b7a7b67411d777aa44400094aa4d3a4a905e32fab0dd42704bb1962c45a9c97",
+  "local_raw/fred/SCSTHPI.csv": "a8b112a688d9a90e4d8326ffbf95947ea9f82f2ef719a7168fd2cf6596561625",
+  "local_raw/fred/SDOTOT.csv": "33a09db072fb6ff4607840e072b10b56025a121cae1a28471621c6bf23316a11",
+  "local_raw/fred/SDSTHPI.csv": "cbdb9b8513b19a27348fa17ceae3ff4c2cacb1ab13c27111f996082508fa550e",
+  "local_raw/fred/TNOTOT.csv": "c83b17a727224fdbe4f22b2c3eb5645e3478de5ddfe10f42a189df908b998a99",
+  "local_raw/fred/TNSTHPI.csv": "dbe44bfffa34ef6045ab1b5e62aa1c00261695bc6d8aaa1aa0bd719f1b59780f",
+  "local_raw/fred/TXOTOT.csv": "82bcd39fe76473e498541ca31e763106cf55624d650aec00146d85b94d503019",
+  "local_raw/fred/TXSTHPI.csv": "49fdf250ad1d85b0d668e7c6019d09bb08e4fec892f11fabce481ea4e0bd1487",
+  "local_raw/fred/UTOTOT.csv": "c99ec945ba8f316ca4c4987a76aa3808f734747b0aea3eadcd761f04df217df8",
+  "local_raw/fred/UTSTHPI.csv": "91ac48a40285edd7bdd7f8c868515d619ea79073463490da92276ffe568cb24b",
+  "local_raw/fred/VAOTOT.csv": "1483e87074f4377988423afcece49f8d850f1e7828a9c12d629606e357edf7bc",
+  "local_raw/fred/VASTHPI.csv": "ff9583dc38427053ac5f51c308e833a8cbb41ec3ccbd14c8bb904dfe318d607d",
+  "local_raw/fred/VTOTOT.csv": "cb1c80d82ef019b7a0a3dd0a4acf1495b08f07b85a296827564563252596ac6c",
+  "local_raw/fred/VTSTHPI.csv": "1199e7dc64b19a5e3376541f2ac59361512a6279b777ee2f5b6d565282ce14bc",
+  "local_raw/fred/WAOTOT.csv": "378619c651f9e0d4e1043acce0f466091a54d9bfae4a76faf0a1ac589be2af78",
+  "local_raw/fred/WASTHPI.csv": "0fc7e9f655123ba90b672d2074d9b45d1bfd03d45ebb8155fc60ed98d3be34ad",
+  "local_raw/fred/WIOTOT.csv": "099ad1f9306f52b1283a17bf5e79336f4c5ba8d4f23c0ca79e86607e546cfc4e",
+  "local_raw/fred/WISTHPI.csv": "83fd4a42a1dcb9fe521cdedd7ec6e8040f0cf638e7f283bfadf098c7a9a21d9e",
+  "local_raw/fred/WVOTOT.csv": "621f5f7c982c34eb359ea42b058a05f596fe45088d7f8ada993b0eb65da3962d",
+  "local_raw/fred/WVSTHPI.csv": "598e8068dd728556dc1eece306b28cb75e5635fb84160ff6773936b5b0ee9a06",
+  "local_raw/fred/WYOTOT.csv": "81329744c87664d6a7e311262cf094d6a1618952f5963b0b49fb2292c0460bdb",
+  "local_raw/fred/WYSTHPI.csv": "a1202967362ee32a2e87cee5fb9fe2041b22d38188e2a86213e3786b309eddfe",
+  "local_raw/la.area": "7f1dcbd6a2506d92d65641609cf08bd04f0a534503c6d0f23497f284dce1fc45",
+  "local_raw/la.data.3.AllStatesS": "8fdce0f98813ab0b9b754c82f066939745244dc940fc10a4640c5e829069b509",
+  "local_raw/la.data.64.County": "4eb05146d3f1101795148ae86e498eae2c98d04c883924534561857e7df35752",
+  "local_raw/la.series": "a938666287086eb9eae630c434948e0b9dd90eaf91285f92183f24b1074e26a0",
+  "minwage_raw/FederalMinimumWage_Changes.xlsx": "a8d078aac95d2ff8401666a84e1d5277328823ff553073b654103c1e9bdb9f18",
+  "minwage_raw/StateMinimumWage_Changes.xlsx": "e69d5965f8062520f7e1944ba9fbb2c573c8d82bcf646df8ef3021328a807b93",
+  "raw/fred_AKPHCI.csv": "65ffdf81c8d188234d48f15b3f9243c86a708b4a4212cf5cc72aeaed50a481c1",
+  "raw/fred_AKUR.csv": "0bdb1f9cc1eae3b54a99a3775a6de0a1428560595025fa13f7d15db8b74c13a0",
+  "raw/fred_ALPHCI.csv": "092332768db9b6dd603312e60f5b681ce45938b350d7a6186de0bc98553cd5ed",
+  "raw/fred_ALUR.csv": "0c02014171bb829fb6a7f2dfb57ab2cc3afbe96c84fde30e3812ca9757c5d111",
+  "raw/fred_ARPHCI.csv": "f09603ba7c6ed42efc15e92f917bea252d2ce2d0df981cbbb2afaf77692a53b2",
+  "raw/fred_ARUR.csv": "ed49861acaf2ffa41e9931002419cb57ec8e46c6e2923cc89ef79a74d4ad9840",
+  "raw/fred_AZPHCI.csv": "b0e44488ae890aa73c09e42e748f8bfb41230014375bfb59d5c905beed178eb8",
+  "raw/fred_AZUR.csv": "33eb50304a1f5b1e9af13d998dc487520b3724507e1533fc7b22a1b2d484a5d2",
+  "raw/fred_CAPHCI.csv": "08e05127be10b048e687105efc275738a3da77f1309cf4e54f5ba6c3f0c3aa60",
+  "raw/fred_CAUR.csv": "3d630e2dd7536f65b61644422fbbe0c2d20dce62d895986f508e0e82478ea5e9",
+  "raw/fred_COPHCI.csv": "65c34032c87f477cb7bcd2f7df805190755f84a315207e6b462e39408e5b99e8",
+  "raw/fred_COUR.csv": "e1b40a1fe66ef922c399e056239e396c0b3967179eaae039ca683978be445486",
+  "raw/fred_CTPHCI.csv": "1e0366498e1b446b14d6dc0d60ee4f8306689a0d93bde7d7f28efa20ca75034c",
+  "raw/fred_CTUR.csv": "e2f4fe78896371e8663ad1c0d316c8465e574d8d377a41a4c31f7141341b34cc",
+  "raw/fred_DCUR.csv": "c869578aaa472485eaad416c9eba090413732caea60ffc725c67bf174d16e44a",
+  "raw/fred_DEPHCI.csv": "1cbbb7f485276dcaf3271c724b729f5785d5f827b1f82f4ac3dc346a387f88ff",
+  "raw/fred_DEUR.csv": "2184498cbd8f99b8e1910cb0c372b0ca9b8ce31920b639d0b520e8fc3c29428d",
+  "raw/fred_FLPHCI.csv": "28e0aada29e6ecfd40575147ab8858276460525dc1ae4b677bbfa37d34794901",
+  "raw/fred_FLUR.csv": "ac3dfbe2f03ab9972bb29dc2e8f999de39f950deaf1e7fde63a5d6e36bc4af69",
+  "raw/fred_GAPHCI.csv": "dca30df6087136f452838cbf370ef09d90c85d8889b47284314ced55fe807327",
+  "raw/fred_GAUR.csv": "f6660afd20e7978bfb9e89197b3b415c2d402d9256b4016ee01d50474ffe7dae",
+  "raw/fred_HIPHCI.csv": "ff1557d64df675e898b973a0dd30a454e60c3505b14c158adf5df35bd9f6572f",
+  "raw/fred_HIUR.csv": "165c1f71b13b5042a038933d93302e2fe72e9aa1a752d9e7a60d379f93a24cdd",
+  "raw/fred_IAPHCI.csv": "e3d4dd3ef7c4e4a0f25838407f08901bfb4638e0b9049ccdcd100ef1e311071c",
+  "raw/fred_IAUR.csv": "12df448b090b7713a767e6d5077743425bdb64bd819efc20881132fb96597580",
+  "raw/fred_IDPHCI.csv": "a1fa75a38cc7c577ff395fe0036cfca5fa2e8c344127ce120265e97e7b3ed022",
+  "raw/fred_IDUR.csv": "bba48bab5ee90e5ea8d5f81360c5eb70918996c6a003f47e0e8303592afd468f",
+  "raw/fred_ILPHCI.csv": "b51e8ddde5787992df6b0fbd973d978aa67e26b1ca785be6f9d5136e5ebd5f33",
+  "raw/fred_ILUR.csv": "9c590c616cc7864fd07c2d07eb695a6e1392f4e657e84d219e37f99b47951655",
+  "raw/fred_INPHCI.csv": "b2b1b34ea020b8f38b32aaaad40f47089c0632edbcf9b9f29ea9b8026b0f6ab3",
+  "raw/fred_INUR.csv": "cffa1e7a2cde3ea00cbdcdccd75b27e151419febcec03421825489a0cff60dee",
+  "raw/fred_KSPHCI.csv": "d236f102ddf71aad5261a4fbb76f68a2726296b4dffc9b40613b1117df74b6e0",
+  "raw/fred_KSUR.csv": "828c086f9222fc48055337ca42aa2b2c166a59df55f8d61350228e2213cf8515",
+  "raw/fred_KYPHCI.csv": "8f2f8a7692aeadb7918636ab9a9e7ac3435040722e5cd331e554e91a39d21d0c",
+  "raw/fred_KYUR.csv": "ffbf7f5e840239bc1ab7b3337a88ea98d1153fef3c3531c2d74b8cc6ac9dbb0e",
+  "raw/fred_LAPHCI.csv": "05db4521328700fdce03e2781197b1c97eb0e195410162c8d588bc9790250229",
+  "raw/fred_LAUR.csv": "024bc8d7b70f91270cbc74408a1dd3d5b84e3eefd905da4d5f1938e4df0db74e",
+  "raw/fred_MAPHCI.csv": "2b4bc2e669fb72f2aa2f91961e91e3fba25c38d2da9aca0b0f7484fe2685495f",
+  "raw/fred_MAUR.csv": "77d8ce49e8bb010f1f1b790f5e093c4f0061aaeb7c73bade6aafa07aff1f4092",
+  "raw/fred_MDPHCI.csv": "176f27ee81bbf293bbeec1817c982d4318a633d0108c6a09a9004c9b505fa0a7",
+  "raw/fred_MDUR.csv": "75d99af4a40613ebea85972c43ed5638169f41fdbd805be62a0c1c7ab94d6c91",
+  "raw/fred_MEPHCI.csv": "be728e0afbeca45abd6e25fe261dfd1685d4ba4f470c64669eaea0a326db6133",
+  "raw/fred_MEUR.csv": "1b72297d13a4b6d5c76e55b08645413d0293ab138fc0d28497dabe7a8e5fda86",
+  "raw/fred_MIPHCI.csv": "cf29adb8e6a5823cb273b177da3c4d25562445ecb259727fde16985fc6643e7d",
+  "raw/fred_MIUR.csv": "445278149488c163c2c8a0c618be4540ed352e668e9b47d6eec877bb17a0e613",
+  "raw/fred_MNPHCI.csv": "e071494fbeb3de31cd873a1b721014868add11cebe6aca4d5055375c56f87072",
+  "raw/fred_MNUR.csv": "55f49ba75f8f57b1e4480459bcfa8d6b1637c244d5994df3df5e6d0301a9460c",
+  "raw/fred_MOPHCI.csv": "f64e474229920e6e404ab1b67aa557819186dfdcd24a63735f3e06eac33cb1a3",
+  "raw/fred_MOUR.csv": "b69d2f3e4abd9dee5c1ee73eba06078623fb463b72450b2b9a0fc3627f37a89c",
+  "raw/fred_MSPHCI.csv": "34a3e3d2a7e62ae22ccb528cf2287b67954098c50ae3875804ac83bb5f45ba07",
+  "raw/fred_MSUR.csv": "4df1bbcf3574e4877ce1edf9367c1dff172c6b3b452b0a5709e0abf513b5bec8",
+  "raw/fred_MTPHCI.csv": "f622953415d52ec5a22c6effbd196218fa6814adb13c94a94041e5e3eadbae26",
+  "raw/fred_MTUR.csv": "1235915b0f1fa293e848e1fc54b6f05d19439fa7d8cec881acc87773923ed1ac",
+  "raw/fred_NCPHCI.csv": "777c82d106d3da8512114c699abada638cd178c19835a7ff7c415f9f6ba05902",
+  "raw/fred_NCUR.csv": "1dd985d793225f04a04a46ab2df0fa9cabecf09ac401273144279d2df5f7b9e0",
+  "raw/fred_NDPHCI.csv": "c19a61340799db3205c19d7ac419ff86b7178508ef29036ad52d1cc9421703ab",
+  "raw/fred_NDUR.csv": "5d3468efaa5832921308cc1a0ca67ace5318ec099d1b87ddd04117dc32e2f82a",
+  "raw/fred_NEPHCI.csv": "7e7eb6228f7d2e8eb0136194c93d25cec3f0fbf03c0a4cd44f9f3b2805b027db",
+  "raw/fred_NEUR.csv": "f9dbde5fa717db5d5d8f3ddf51f6f45b0f508d388a72d2c9e34859d9ca4835c1",
+  "raw/fred_NHPHCI.csv": "f0469f7d99be60db7ff21eb95d5218ec53b9179cc21ef80321c187da419eb7e7",
+  "raw/fred_NHUR.csv": "300fefb5786dd12af03abb93341b232f3103a97e6e0b165b93000d132431182c",
+  "raw/fred_NJPHCI.csv": "0c77ac3d1ca95ff552d7fbd74a0345d7842503371ad68d1fa426f03060925939",
+  "raw/fred_NJUR.csv": "982f137c0fecf703e35cb0e966daa3ee991cdcbf38f43e65379447ee872a49cb",
+  "raw/fred_NMPHCI.csv": "8a66dcda400a02b8416fcad95fdc045af94dadcc0f720e65605aacc011b7d442",
+  "raw/fred_NMUR.csv": "e3a4b65d3b36425137bfe70177b84200bf2a35ec244636471b1f634d4570a30e",
+  "raw/fred_NVPHCI.csv": "fae05928030f715f03f89b54f02b63583fc4f81297f070f4fa137caae71a7cdf",
+  "raw/fred_NVUR.csv": "fa7ab923fa7d6350296894cdec6d762d26a53f446ca32ddd0395a2fe15095e7b",
+  "raw/fred_NYPHCI.csv": "6e08773fd763b035312393f544ddcbd268ee8b2af7ed45823e1ae89621d33d15",
+  "raw/fred_NYUR.csv": "64378bc03f2cf73bf3f1904d9de006f1f12fa758cb83deeb5af457a743cb2f30",
+  "raw/fred_OHPHCI.csv": "abeeb5834ef2fd209bd523e0c3ad6adb36be81a8a67b27538b7ba7f8cb5b5fa4",
+  "raw/fred_OHUR.csv": "e63984d979b9c335b6f12bdfaf86b4e2744fc576347cfc9553b7b426dae7cd5e",
+  "raw/fred_OKPHCI.csv": "b5c13a240dad58953c6d583af1da8a8a0773aa5653d2b21c11230400a9562fba",
+  "raw/fred_OKUR.csv": "6b216baffd4a1a9b088d179e448a10fcb9e7c058584f24c95ead0e4d002e4ce6",
+  "raw/fred_ORPHCI.csv": "840514fadd066e9e67fbb640a23149411e312eabbcf5d1b2715ca770005ad41c",
+  "raw/fred_ORUR.csv": "3441032d89835483f7c4e9804ec8c74d60f356273319cd231cd6ba4cac29653c",
+  "raw/fred_PAPHCI.csv": "fc492fe50a1bc861fee4535c604dd3136fc83f6232bc6a173bc38da5a9da2d5a",
+  "raw/fred_PAUR.csv": "e3936ae942d9b7a375aa6484f5040b504fe33ffafe9ab10a36d8b9c3208ba40a",
+  "raw/fred_RIPHCI.csv": "3e68caef9a4ed59ca00d0401aac06f7cbce4f1e97d466b5323f3b1dc8bb8cf7f",
+  "raw/fred_RIUR.csv": "5fe5a29270947da612a3573d2ac514c138af1433c31e136e7dec83ff86340b26",
+  "raw/fred_SCPHCI.csv": "992fb2e9404eea620bd7bfd618e006c0f38aa97ac92508591cf1043960d3c6e2",
+  "raw/fred_SCUR.csv": "f91a4763b0e994578b6ddf4ec1e2a962b42dfe47873b3704bca722830bad5d93",
+  "raw/fred_SDPHCI.csv": "2ee0dd9aa2c62ace472e3d124f56521afac0e2b6d3b7088f469be4a9326cfb3d",
+  "raw/fred_SDUR.csv": "1823146dd2d4c8bbb88ffb08839ed41cef284916ebcf438193eda7c9392808b5",
+  "raw/fred_TNPHCI.csv": "d83b8dfb43027b1532af3b0cbdeb1a522344e0a3d4358cff5b519b76fcd15b62",
+  "raw/fred_TNUR.csv": "8fba95005e8da97ad0f54ad75630a305d2710a1dcc59dea3a372e8194188f948",
+  "raw/fred_TXPHCI.csv": "6446ae738591e42eb47e448e3c1c16947d3000849f9061d75befc2fd4769ae6a",
+  "raw/fred_TXUR.csv": "440332226c0451edecc9a7df044e3934003d7efc446c47e39680375ea93daace",
+  "raw/fred_UTPHCI.csv": "2ce8521014414f23150b787783167079913dec4bc31777360c28aadd82c21d46",
+  "raw/fred_UTUR.csv": "8bf48a6a8e022c40812cbd7d9209ea5f662fee8560c73d01be48b6f9e3003ebc",
+  "raw/fred_VAPHCI.csv": "c4bf35ee979c55a74c46d58c29fcb1301849381f333aa892d95f01c26e13cbf2",
+  "raw/fred_VAUR.csv": "0943c0cb9dfc6705fbfc57d57ec83c3a80de84d494887bd640f42fc97d620cc2",
+  "raw/fred_VTPHCI.csv": "9bb8769b682783475be636376958df7360117979b49e782fa134fb5dceceb217",
+  "raw/fred_VTUR.csv": "675777c5ac8a60def90987e6ac7aa88f4baad99572ca994ae0d64a67b155ba2b",
+  "raw/fred_WAPHCI.csv": "595568aa010469f239fe8ceaadaeb6bdc46c37d081379f3a127813919f973152",
+  "raw/fred_WAUR.csv": "91b277968aad8eb9ee0b34bcaed9c7bfe1f1dd581c1d4b68d555190f58125029",
+  "raw/fred_WIPHCI.csv": "f727ff61e14d5802d366faf9109947c73c3c990bd08453d7cfe06fdc723e0c0e",
+  "raw/fred_WIUR.csv": "e9c36ce4ce2599bff5f23e91fe999f607d66c0772fc9311c321da4da4efb7b21",
+  "raw/fred_WVPHCI.csv": "0a7a3598ea0ee18e4b0c1410d6064b28c082cfea37554b4d3e075a3fe900c4ec",
+  "raw/fred_WVUR.csv": "5b4641405b88a9438e032a6b39ead142f7bc4d69195fb9724099978e00bde16b",
+  "raw/fred_WYPHCI.csv": "4b105ce1225136bc96bc2a624ff9463f49a84b5edc10fcacda6b5599d92ba1fa",
+  "raw/fred_WYUR.csv": "be09c2d55259d7f1c9283e80416167608184766277cae8ad700f100cf8b9d9e0"
+ },
+ "tables": {
+  "analysis_hh_quarter": {
+   "columns": {
+    "ae_oecd": [
+     "DOUBLE",
+     4255446,
+     6955613.199999716,
+     6955613.199999716,
+     1.0,
+     5.0,
+     0
+    ],
+    "age_and_presence_of_children": [
+     "INTEGER",
+     4255446,
+     "62939123154771657859155711"
+    ],
+    "all_heads_not_employed": [
+     "BOOLEAN",
+     4255446,
+     "5541385402321583487949392"
+    ],
+    "any_head_employed": [
+     "BOOLEAN",
+     4255446,
+     "14535791885072829355635600"
+    ],
+    "bal_2007_2012": [
+     "BOOLEAN",
+     4255446,
+     "6699309011295436889205696"
+    ],
+    "bal_2016_2023": [
+     "BOOLEAN",
+     0,
+     "58673445995442842236487334"
+    ],
+    "bal_2018_2023": [
+     "BOOLEAN",
+     0,
+     "58673445995442842236487334"
+    ],
+    "bal_2019_2022": [
+     "BOOLEAN",
+     0,
+     "58673445995442842236487334"
+    ],
+    "children_present": [
+     "BOOLEAN",
+     4255446,
+     "4610916381427401322843008"
+    ],
+    "coupon_value": [
+     "DOUBLE",
+     4255446,
+     75231075.68000787,
+     75231075.68000787,
+     0.0,
+     2395.8100000000004,
+     0
+    ],
+    "cov_fb": [
+     "DOUBLE",
+     4236365,
+     4111358.782853957,
+     4111358.782853957,
+     0.0,
+     1.0,
+     0
+    ],
+    "cov_lab": [
+     "DOUBLE",
+     4236365,
+     3390465.8877152936,
+     3390465.8877152936,
+     0.0,
+     1.0,
+     0
+    ],
+    "cov_lab_pl": [
+     "DOUBLE",
+     4164394,
+     3601533.300206088,
+     3601533.300206088,
+     0.0,
+     1.0,
+     0
+    ],
+    "cpi_all_index": [
+     "DOUBLE",
+     4255446,
+     982431884.1367395,
+     982431884.1367395,
+     184.6,
+     284.1226666666667,
+     0
+    ],
+    "cpi_all_yoy": [
+     "DOUBLE",
+     4255446,
+     9047886.132008981,
+     9400637.186608646,
+     -1.6233603361339388,
+     7.966706904479337,
+     0
+    ],
+    "cpi_fah_index": [
+     "DOUBLE",
+     4255446,
+     967330061.2641795,
+     967330061.2641795,
+     182.66666666666666,
+     274.63033333333334,
+     0
+    ],
+    "cpi_fah_yoy": [
+     "DOUBLE",
+     4255446,
+     8833374.629373923,
+     10458817.538203254,
+     -2.684548445535573,
+     8.685001332358922,
+     0
+    ],
+    "cpi_gas_index": [
+     "DOUBLE",
+     4255446,
+     1020236320.4453733,
+     1020236320.4453733,
+     131.26666666666668,
+     327.4676666666667,
+     0
+    ],
+    "cpi_gas_yoy": [
+     "DOUBLE",
+     4255446,
+     21723818.213258654,
+     71453616.19758214,
+     -38.45983267815745,
+     52.37999899023487,
+     0
+    ],
+    "days_obs": [
+     "INTEGER",
+     4255446,
+     "37186218278989952438396633"
+    ],
+    "days_q": [
+     "INTEGER",
+     4255446,
+     "36226461359730624962806010"
+    ],
+    "dma_code": [
+     "INTEGER",
+     4012899,
+     "43321398409372492453446890"
+    ],
+    "episode": [
+     "VARCHAR",
+     4255446,
+     "52917539168857034239594713"
+    ],
+    "f_ae_imputed": [
+     "BOOLEAN",
+     4255446,
+     "330259721335345084640"
+    ],
+    "f_core": [
+     "BOOLEAN",
+     4255446,
+     "19843740280362552785044736"
+    ],
+    "f_exp_valid": [
+     "BOOLEAN",
+     3174645,
+     "29726057693267085907683561"
+    ],
+    "f_food_reporter": [
+     "BOOLEAN",
+     4255446,
+     "20040579792274437531848528"
+    ],
+    "f_health_survey": [
+     "BOOLEAN",
+     4255446,
+     "7593779722564066440086320"
+    ],
+    "f_idx_valid": [
+     "BOOLEAN",
+     3171434,
+     "28562273441069352785134924"
+    ],
+    "f_income_topcoded": [
+     "BOOLEAN",
+     4255446,
+     "2726893185117696371213904"
+    ],
+    "f_magnet_hh": [
+     "BOOLEAN",
+     4255446,
+     "11487810762880872340417984"
+    ],
+    "f_nutri_cov50": [
+     "BOOLEAN",
+     242530,
+     "56266043699389414457484132"
+    ],
+    "f_partial_q": [
+     "BOOLEAN",
+     4255446,
+     "978998327946401587115056"
+    ],
+    "f_spend_outlier": [
+     "BOOLEAN",
+     4255446,
+     "199849593372055463432368"
+    ],
+    "f_static": [
+     "BOOLEAN",
+     4255446,
+     "20077177287394412843584992"
+    ],
+    "f_store_linkable": [
+     "BOOLEAN",
+     4255446,
+     "13272472963028829185153968"
+    ],
+    "fe_inc_q": [
+     "VARCHAR",
+     4255446,
+     "40972112231888092472029013"
+    ],
+    "fe_market_q": [
+     "VARCHAR",
+     4255446,
+     "37992049391961094347298284"
+    ],
+    "fe_state_q": [
+     "VARCHAR",
+     4255446,
+     "39158010463206874388482026"
+    ],
+    "fiber_g": [
+     "DOUBLE",
+     4255446,
+     5956214419.62097,
+     5956214419.62097,
+     0.0,
+     40794.31297767282,
+     0
+    ],
+    "fiber_per_1000": [
+     "DOUBLE",
+     4225776,
+     35374770.330645345,
+     35374770.330645345,
+     0.0,
+     626.0320619363102,
+     0
+    ],
+    "fips_county_code": [
+     "INTEGER",
+     4255429,
+     "36037596660507966355290368"
+    ],
+    "fips_state_code": [
+     "INTEGER",
+     4255429,
+     "36476010381079510229215705"
+    ],
+    "first_panel_year": [
+     "INTEGER",
+     4255446,
+     "36185289427182069240673671"
+    ],
+    "first_trip_date": [
+     "DATE",
+     4255446,
+     "41733753751894792703634503"
+    ],
+    "fpl_ratio": [
+     "DOUBLE",
+     4255446,
+     16887905.041609675,
+     16887905.041609675,
+     0.053522483940042824,
+     26.852846401718583,
+     0
+    ],
+    "gas_exposure": [
+     "DOUBLE",
+     1430212,
+     -156824.01556065993,
+     1501171.6548300062,
+     -29.828759631348024,
+     51.80410563319579,
+     0
+    ],
+    "gas_share": [
+     "DOUBLE",
+     1886205,
+     140438.85148308615,
+     140438.85148308615,
+     0.0,
+     1.0,
+     0
+    ],
+    "gas_share_base": [
+     "DOUBLE",
+     1430212,
+     105366.17822820635,
+     105366.17822820635,
+     0.0,
+     1.0,
+     0
+    ],
+    "grams_lab": [
+     "DOUBLE",
+     4255446,
+     320257478654.4777,
+     320257478654.4777,
+     0.0,
+     3112995.1292050015,
+     0
+    ],
+    "head_age": [
+     "DOUBLE",
+     4255446,
+     238743151.0,
+     238743151.0,
+     22.0,
+     70.0,
+     0
+    ],
+    "head_college": [
+     "BOOLEAN",
+     4255446,
+     "10524707363522739004590816"
+    ],
+    "head_educ": [
+     "INTEGER",
+     4255446,
+     "29661988420946928238460215"
+    ],
+    "health_score": [
+     "DOUBLE",
+     4218195,
+     -21447.615245812267,
+     1617492.782417561,
+     -2.9221379553925533,
+     2.576894284557801,
+     0
+    ],
+    "hispanic": [
+     "BOOLEAN",
+     4255446,
+     "1228769037196303998269936"
+    ],
+    "household_code": [
+     "INTEGER",
+     4255446,
+     "39225390007307366995560318"
+    ],
+    "household_composition": [
+     "INTEGER",
+     4255446,
+     "21544642081461242969767530"
+    ],
+    "household_income": [
+     "INTEGER",
+     4255446,
+     "30583403017097191824453671"
+    ],
+    "household_size": [
+     "INTEGER",
+     4255446,
+     "19825883940911536043944515"
+    ],
+    "idx_exposure": [
+     "DOUBLE",
+     3174645,
+     3249945.105000466,
+     3249945.105000466,
+     0.34921348314606776,
+     2.7333333333333347,
+     0
+    ],
+    "idx_fisher": [
+     "DOUBLE",
+     3171434,
+     3233453.43114445,
+     3233453.43114445,
+     0.3333333333333333,
+     3.0000000000000004,
+     0
+    ],
+    "idx_laspeyres": [
+     "DOUBLE",
+     3171434,
+     3242667.9209565404,
+     3242667.9209565404,
+     0.3333333333333333,
+     3.0000000000000004,
+     0
+    ],
+    "idx_paasche": [
+     "DOUBLE",
+     3171434,
+     3226012.2866037865,
+     3226012.2866037865,
+     0.3333333333333333,
+     3.0000000000000004,
+     0
+    ],
+    "in_health_survey": [
+     "BOOLEAN",
+     4255446,
+     "7593779722564066440086320"
+    ],
+    "in_next_year": [
+     "BOOLEAN",
+     4255446,
+     "15295686477893324860883776"
+    ],
+    "in_prev_year": [
+     "BOOLEAN",
+     4255446,
+     "14998735808452658866208896"
+    ],
+    "income_cat": [
+     "VARCHAR",
+     4255446,
+     "37250028501467794282152756"
+    ],
+    "income_mid": [
+     "DOUBLE",
+     4255446,
+     263776756461.5,
+     263776756461.5,
+     2499.5,
+     250000.0,
+     0
+    ],
+    "income_real2019": [
+     "DOUBLE",
+     4255446,
+     304949389390.1812,
+     304949389390.1812,
+     2499.5,
+     338380.0626489014,
+     0
+    ],
+    "income_year": [
+     "INTEGER",
+     4255446,
+     "30682221607355129317063855"
+    ],
+    "infl_exposure": [
+     "DOUBLE",
+     3174645,
+     7530010.500045677,
+     11112045.464571087,
+     -65.07865168539323,
+     173.33333333333348,
+     0
+    ],
+    "infl_fisher": [
+     "DOUBLE",
+     3171434,
+     6201943.114444574,
+     20434070.877141554,
+     -66.66666666666667,
+     200.00000000000006,
+     0
+    ],
+    "infl_laspeyres": [
+     "DOUBLE",
+     3171434,
+     7123392.095658255,
+     21194552.497760877,
+     -66.66666666666667,
+     200.00000000000006,
+     0
+    ],
+    "kcal_100g_food": [
+     "DOUBLE",
+     4226180,
+     1092715881.828835,
+     1092715881.828835,
+     0.0,
+     892.8571428571429,
+     0
+    ],
+    "kcal_100ml_drink": [
+     "DOUBLE",
+     4160200,
+     239122095.91737837,
+     239122095.91737837,
+     0.0,
+     900.0,
+     0
+    ],
+    "kcal_100ml_drink_w": [
+     "DOUBLE",
+     4137335,
+     232190644.41881418,
+     232190644.41881418,
+     1.0603839561605999,
+     262.41586516647806,
+     0
+    ],
+    "kcal_fb": [
+     "DOUBLE",
+     4255446,
+     1064471461057.9702,
+     1064471461057.9702,
+     0.0,
+     5532547.099716706,
+     0
+    ],
+    "kcal_fb_ae_day": [
+     "DOUBLE",
+     4255446,
+     7997116485.267905,
+     7997116485.267905,
+     0.0,
+     268308.1507704857,
+     0
+    ],
+    "kcal_fg_drinks_sweet": [
+     "DOUBLE",
+     4255446,
+     60265815664.66783,
+     60265815664.66783,
+     0.0,
+     2198154.30268087,
+     0
+    ],
+    "kcal_fg_fv": [
+     "DOUBLE",
+     4255446,
+     48839746491.090546,
+     48839746491.090546,
+     0.0,
+     1278452.3205325396,
+     0
+    ],
+    "kcal_fg_snacks_sweets": [
+     "DOUBLE",
+     4255446,
+     303283087493.0682,
+     303283087493.0682,
+     0.0,
+     2814291.083740049,
+     0
+    ],
+    "kcal_lab": [
+     "DOUBLE",
+     4255446,
+     941562489449.5249,
+     941562489449.5249,
+     0.0,
+     4192602.705209822,
+     0
+    ],
+    "kcal_lab_ae_day": [
+     "DOUBLE",
+     4255446,
+     7079806005.217866,
+     7079806005.217866,
+     0.0,
+     232754.81915252237,
+     0
+    ],
+    "kcal_lab_g": [
+     "DOUBLE",
+     4255446,
+     814966392583.6843,
+     814966392583.6843,
+     0.0,
+     4026577.4499793,
+     0
+    ],
+    "kcal_lab_ml": [
+     "DOUBLE",
+     4255446,
+     126596096865.8514,
+     126596096865.8514,
+     0.0,
+     1955754.3816061197,
+     0
+    ],
+    "kcal_per_usd": [
+     "DOUBLE",
+     4231624,
+     2118503707.9881046,
+     2118503707.9881046,
+     0.0,
+     383808.61538462347,
+     0
+    ],
+    "kcal_per_usd_real": [
+     "DOUBLE",
+     4199307,
+     1944768246.5197356,
+     1944768246.5197356,
+     158.0646064342039,
+     987.3115308844668,
+     0
+    ],
+    "kcal_per_usd_w": [
+     "DOUBLE",
+     4199307,
+     2089186557.1455112,
+     2089186557.1455112,
+     151.23985041300398,
+     1268.5921260787948,
+     0
+    ],
+    "kcal_scaled_ae_day": [
+     "DOUBLE",
+     4187962,
+     8764253990.050337,
+     8764253990.050337,
+     0.0,
+     295772.875960327,
+     0
+    ],
+    "kcal_w_fiber": [
+     "DOUBLE",
+     4255446,
+     746680585235.1606,
+     746680585235.1606,
+     0.0,
+     3765853.3444232317,
+     0
+    ],
+    "kcal_w_protein": [
+     "DOUBLE",
+     4255446,
+     937383742389.9302,
+     937383742389.9302,
+     0.0,
+     4145167.2038013716,
+     0
+    ],
+    "kcal_w_satfat": [
+     "DOUBLE",
+     4255446,
+     857438648768.4991,
+     857438648768.4991,
+     0.0,
+     4026577.4499793,
+     0
+    ],
+    "kcal_w_sodium": [
+     "DOUBLE",
+     4255446,
+     938612983496.7853,
+     938612983496.7853,
+     0.0,
+     4190466.603349357,
+     0
+    ],
+    "kcal_w_sugar": [
+     "DOUBLE",
+     4255446,
+     567276334527.8816,
+     567276334527.8816,
+     0.0,
+     3573102.2834616164,
+     0
+    ],
+    "last_panel_year": [
+     "INTEGER",
+     4255446,
+     "36725193696628062444271010"
+    ],
+    "last_trip_date": [
+     "DATE",
+     4255446,
+     "41064627644910931658292015"
+    ],
+    "marital_status": [
+     "INTEGER",
+     4255446,
+     "23717320844525145533922634"
+    ],
+    "ml_lab": [
+     "DOUBLE",
+     4255446,
+     259988163721.961,
+     259988163721.961,
+     0.0,
+     3482072.6104999976,
+     0
+    ],
+    "n_base_items": [
+     "DOUBLE",
+     3221060,
+     419530225.0,
+     419530225.0,
+     1.0,
+     1804.0,
+     0
+    ],
+    "n_base_priced": [
+     "DOUBLE",
+     3174645,
+     332244012.0,
+     332244012.0,
+     1.0,
+     883.0,
+     0
+    ],
+    "n_children_u14": [
+     "DOUBLE",
+     4255446,
+     1236539.0,
+     1236539.0,
+     0.0,
+     7.0,
+     0
+    ],
+    "n_days_all": [
+     "DOUBLE",
+     4255446,
+     99026296.0,
+     99026296.0,
+     1.0,
+     92.0,
+     0
+    ],
+    "n_files": [
+     "DOUBLE",
+     4255446,
+     4633832.0,
+     4633832.0,
+     1.0,
+     2.0,
+     0
+    ],
+    "n_heads": [
+     "INTEGER",
+     4255446,
+     "12857846950323352152823562"
+    ],
+    "n_lines_food": [
+     "DOUBLE",
+     4255446,
+     817719132.0,
+     817719132.0,
+     0.0,
+     4251.0,
+     0
+    ],
+    "n_lines_lab": [
+     "DOUBLE",
+     4255446,
+     604103077.0,
+     604103077.0,
+     0.0,
+     2650.0,
+     0
+    ],
+    "n_lines_size_disagree": [
+     "DOUBLE",
+     4255446,
+     16866381.0,
+     16866381.0,
+     0.0,
+     185.0,
+     0
+    ],
+    "n_matched": [
+     "DOUBLE",
+     3171434,
+     72933787.0,
+     72933787.0,
+     1.0,
+     576.0,
+     0
+    ],
+    "n_trips_all": [
+     "DOUBLE",
+     4255446,
+     152605196.0,
+     152605196.0,
+     1.0,
+     731.0,
+     0
+    ],
+    "n_trips_food": [
+     "DOUBLE",
+     4255446,
+     112305110.0,
+     112305110.0,
+     0.0,
+     508.0,
+     0
+    ],
+    "n_years_in_panel": [
+     "DOUBLE",
+     4255446,
+     40034185.0,
+     40034185.0,
+     1.0,
+     18.0,
+     0
+    ],
+    "panel_year": [
+     "INTEGER",
+     4255446,
+     "31243476045630430756876452"
+    ],
+    "panelist_zip_code": [
+     "VARCHAR",
+     4255446,
+     "38871983259707427319587672"
+    ],
+    "projection_factor": [
+     "INTEGER",
+     4255446,
+     "39366560597015089993130789"
+    ],
+    "projection_factor_magnet": [
+     "INTEGER",
+     2539044,
+     "47702216030732404953043357"
+    ],
+    "protein_g": [
+     "DOUBLE",
+     4255446,
+     25400229251.569748,
+     25400229251.569748,
+     0.0,
+     131478.90224606587,
+     0
+    ],
+    "protein_per_1000": [
+     "DOUBLE",
+     4230489,
+     117472600.65111929,
+     117472600.65111929,
+     0.0,
+     3750.0,
+     0
+    ],
+    "qend": [
+     "DATE",
+     4255446,
+     "44245401000796231765929157"
+    ],
+    "qstart": [
+     "DATE",
+     4255446,
+     "44490435374773030418919287"
+    ],
+    "qtr": [
+     "DOUBLE",
+     4255446,
+     10771286.0,
+     10771286.0,
+     1.0,
+     4.0,
+     0
+    ],
+    "race_f": [
+     "VARCHAR",
+     4255446,
+     "13595242358760364458229725"
+    ],
+    "region_code": [
+     "INTEGER",
+     4255446,
+     "34681395402937559030559533"
+    ],
+    "satfat_g": [
+     "DOUBLE",
+     4255446,
+     13607048485.903658,
+     13607048485.903658,
+     0.0,
+     89078.0063535705,
+     0
+    ],
+    "satfat_per_1000": [
+     "DOUBLE",
+     4227014,
+     66721700.43241449,
+     66721700.43241449,
+     0.0,
+     2571.756601607349,
+     0
+    ],
+    "scantrack_market_code": [
+     "INTEGER",
+     4012916,
+     "40551535583711761418615132"
+    ],
+    "sh_ch_club": [
+     "DOUBLE",
+     4241074,
+     383430.53545550857,
+     383430.53545550857,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_ch_convenience": [
+     "DOUBLE",
+     4241074,
+     23952.1209554676,
+     23952.1209554676,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_ch_discount": [
+     "DOUBLE",
+     4241074,
+     826820.2924773175,
+     826820.2924773175,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_ch_dollar": [
+     "DOUBLE",
+     4241074,
+     92093.05084158844,
+     92093.05084158844,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_ch_grocery": [
+     "DOUBLE",
+     4241074,
+     2542545.8538437593,
+     2542545.8538437593,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_ch_online": [
+     "DOUBLE",
+     4241074,
+     42685.78266104598,
+     42685.78266104598,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_coupon": [
+     "DOUBLE",
+     4241124,
+     106958.64763522876,
+     106958.64763522876,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_deal": [
+     "DOUBLE",
+     4241074,
+     1041859.3824254242,
+     1041859.3824254242,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_fg_baby": [
+     "DOUBLE",
+     4241074,
+     13913.744773065173,
+     13913.744773065173,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_fg_coffee_tea": [
+     "DOUBLE",
+     4241074,
+     164422.19451721592,
+     164422.19451721592,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_fg_dairy": [
+     "DOUBLE",
+     4241074,
+     449165.2051805803,
+     449165.2051805803,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_fg_diet_water": [
+     "DOUBLE",
+     4241074,
+     138964.67669830433,
+     138964.67669830433,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_fg_fats_condiments": [
+     "DOUBLE",
+     4241074,
+     303604.6137523364,
+     303604.6137523364,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_fg_fv": [
+     "DOUBLE",
+     4241074,
+     482177.709990536,
+     482177.709990536,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_fg_grains": [
+     "DOUBLE",
+     4241074,
+     424231.64762805786,
+     424231.64762805786,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_fg_juice100": [
+     "DOUBLE",
+     4241074,
+     80648.5417045274,
+     80648.5417045274,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_fg_prepared": [
+     "DOUBLE",
+     4241074,
+     512108.7660297087,
+     512108.7660297087,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_fg_protein": [
+     "DOUBLE",
+     4241074,
+     577801.1780813937,
+     577801.1780813937,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_fg_salty_snacks": [
+     "DOUBLE",
+     4241074,
+     201998.97687622526,
+     201998.97687622526,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_fg_ssb": [
+     "DOUBLE",
+     4241074,
+     185808.54048641436,
+     185808.54048641436,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_fg_sweets": [
+     "DOUBLE",
+     4241074,
+     614628.1460925154,
+     614628.1460925154,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_fg_takeout": [
+     "DOUBLE",
+     4241074,
+     91600.05818908161,
+     91600.05818908161,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_food_in_all": [
+     "DOUBLE",
+     4255400,
+     2508798.594507878,
+     2508798.594507878,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_fv_nomag": [
+     "DOUBLE",
+     4236365,
+     447167.52287926764,
+     447167.52287926764,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_kcal_fv": [
+     "DOUBLE",
+     4234294,
+     200123.48283583423,
+     200123.48283583423,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_kcal_snacks_sweets": [
+     "DOUBLE",
+     4234294,
+     1213481.2099704219,
+     1213481.2099704219,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_kcal_sweet_drinks": [
+     "DOUBLE",
+     4234294,
+     243233.12780318854,
+     243233.12780318854,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_pl": [
+     "DOUBLE",
+     4236365,
+     928030.0181663487,
+     928030.0181663487,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_takeout": [
+     "DOUBLE",
+     4241074,
+     91600.05818908161,
+     91600.05818908161,
+     0.0,
+     1.0,
+     0
+    ],
+    "shop_component": [
+     "DOUBLE",
+     3125019,
+     -15784.919987735495,
+     187194.11224837095,
+     -1.2742650433721752,
+     1.5844619263639235,
+     0
+    ],
+    "snap_elig_proxy": [
+     "BOOLEAN",
+     4255446,
+     "1864618078683243889727328"
+    ],
+    "sodium_mg": [
+     "DOUBLE",
+     4255446,
+     1916135302597.2676,
+     1916135302597.2676,
+     0.0,
+     40378326.75278742,
+     0
+    ],
+    "sodium_per_1000": [
+     "DOUBLE",
+     4230510,
+     9035876566.910685,
+     9035876566.910685,
+     0.0,
+     15875416.666666666,
+     0
+    ],
+    "sodium_per_1000_w": [
+     "DOUBLE",
+     4198393,
+     8534972488.903867,
+     8534972488.903867,
+     546.1725867790599,
+     9647.930453485023,
+     0
+    ],
+    "spend_all": [
+     "DOUBLE",
+     4255446,
+     4996788662.280068,
+     4996788662.280068,
+     0.0,
+     41703.17000000003,
+     0
+    ],
+    "spend_base": [
+     "DOUBLE",
+     3221060,
+     1915608051.709989,
+     1915608051.709989,
+     0.009999999999999787,
+     11912.619999999999,
+     0
+    ],
+    "spend_ch_club": [
+     "DOUBLE",
+     4255446,
+     283389381.58000886,
+     283389381.58000886,
+     0.0,
+     8497.019999999979,
+     0
+    ],
+    "spend_ch_convenience": [
+     "DOUBLE",
+     4255446,
+     13300576.819999242,
+     13300576.819999242,
+     0.0,
+     2272.1500000000005,
+     0
+    ],
+    "spend_ch_discount": [
+     "DOUBLE",
+     4255446,
+     543112051.0299913,
+     543112051.0299913,
+     0.0,
+     17189.710000000036,
+     0
+    ],
+    "spend_ch_dollar": [
+     "DOUBLE",
+     4255446,
+     46057358.490006074,
+     46057358.490006074,
+     0.0,
+     2795.6600000000008,
+     0
+    ],
+    "spend_ch_grocery": [
+     "DOUBLE",
+     4255446,
+     1673448659.7899804,
+     1673448659.7899804,
+     0.0,
+     14762.209999999865,
+     0
+    ],
+    "spend_ch_online": [
+     "DOUBLE",
+     4255446,
+     28764521.879999638,
+     28764521.879999638,
+     0.0,
+     4058.3300000000017,
+     0
+    ],
+    "spend_ch_restaurant": [
+     "DOUBLE",
+     4255446,
+     107858080.6500041,
+     107858080.6500041,
+     0.0,
+     7627.730000000001,
+     0
+    ],
+    "spend_deal": [
+     "DOUBLE",
+     4255446,
+     659042843.8299807,
+     659042843.8299807,
+     0.0,
+     7744.310000000005,
+     0
+    ],
+    "spend_fb": [
+     "DOUBLE",
+     4255446,
+     2363546157.8999887,
+     2363546157.8999887,
+     0.0,
+     16904.07000000003,
+     0
+    ],
+    "spend_fg_baby": [
+     "DOUBLE",
+     4255446,
+     10425585.099999651,
+     10425585.099999651,
+     0.0,
+     3513.15,
+     0
+    ],
+    "spend_fg_coffee_tea": [
+     "DOUBLE",
+     4255446,
+     106405083.46005398,
+     106405083.46005398,
+     0.0,
+     3094.970000000002,
+     0
+    ],
+    "spend_fg_dairy": [
+     "DOUBLE",
+     4255446,
+     288124247.75999284,
+     288124247.75999284,
+     0.0,
+     3369.1799999999857,
+     0
+    ],
+    "spend_fg_diet_water": [
+     "DOUBLE",
+     4255446,
+     89756700.53003427,
+     89756700.53003427,
+     0.0,
+     5576.99,
+     0
+    ],
+    "spend_fg_fats_condiments": [
+     "DOUBLE",
+     4255446,
+     194759761.4400071,
+     194759761.4400071,
+     0.0,
+     3184.930000000001,
+     0
+    ],
+    "spend_fg_fv": [
+     "DOUBLE",
+     4255446,
+     331612188.07000273,
+     331612188.07000273,
+     0.0,
+     3536.59,
+     0
+    ],
+    "spend_fg_fv_nomag": [
+     "DOUBLE",
+     4255446,
+     262847849.97000077,
+     262847849.97000077,
+     0.0,
+     3524.66,
+     0
+    ],
+    "spend_fg_grains": [
+     "DOUBLE",
+     4255446,
+     270204603.8399952,
+     270204603.8399952,
+     0.0,
+     2379.4999999999995,
+     0
+    ],
+    "spend_fg_juice100": [
+     "DOUBLE",
+     4255446,
+     48421761.67002882,
+     48421761.67002882,
+     0.0,
+     2234.6000000000004,
+     0
+    ],
+    "spend_fg_prepared": [
+     "DOUBLE",
+     4255446,
+     343128322.53999186,
+     343128322.53999186,
+     0.0,
+     5334.73,
+     0
+    ],
+    "spend_fg_protein": [
+     "DOUBLE",
+     4255446,
+     416004778.45999694,
+     416004778.45999694,
+     0.0,
+     3819.5799999999986,
+     0
+    ],
+    "spend_fg_salty_snacks": [
+     "DOUBLE",
+     4255446,
+     130528358.3500388,
+     130528358.3500388,
+     0.0,
+     2357.6000000000004,
+     0
+    ],
+    "spend_fg_ssb": [
+     "DOUBLE",
+     4255446,
+     116559813.2000418,
+     116559813.2000418,
+     0.0,
+     4668.880000000008,
+     0
+    ],
+    "spend_fg_sweets": [
+     "DOUBLE",
+     4255446,
+     387213798.10999435,
+     387213798.10999435,
+     0.0,
+     5378.509999999999,
+     0
+    ],
+    "spend_fg_takeout": [
+     "DOUBLE",
+     4255446,
+     89168501.65000397,
+     89168501.65000397,
+     0.0,
+     8226.53,
+     0
+    ],
+    "spend_food": [
+     "DOUBLE",
+     4255446,
+     2822313504.1799927,
+     2822313504.1799927,
+     0.0,
+     17189.710000000036,
+     0
+    ],
+    "spend_food_ae_day": [
+     "DOUBLE",
+     4255446,
+     21476127.09341041,
+     21476127.09341041,
+     0.0,
+     1062.15,
+     0
+    ],
+    "spend_food_mag": [
+     "DOUBLE",
+     4255446,
+     384686031.0399995,
+     384686031.0399995,
+     0.0,
+     8342.529999999999,
+     0
+    ],
+    "spend_food_nomag": [
+     "DOUBLE",
+     4255446,
+     2437627473.1399775,
+     2437627473.1399775,
+     0.0,
+     17027.310000000034,
+     0
+    ],
+    "spend_food_nomag_ae_day": [
+     "DOUBLE",
+     4255446,
+     18543501.861821856,
+     18543501.861821856,
+     0.0,
+     1062.15,
+     0
+    ],
+    "spend_food_nomag_ae_day_real": [
+     "DOUBLE",
+     4255446,
+     19765761.448018186,
+     19765761.448018186,
+     0.0,
+     1075.1925690310875,
+     0
+    ],
+    "spend_food_store_id": [
+     "DOUBLE",
+     4255446,
+     2002968799.8099675,
+     2002968799.8099675,
+     0.0,
+     17189.710000000036,
+     0
+    ],
+    "spend_gas_card": [
+     "DOUBLE",
+     4255446,
+     215468208.4000019,
+     215468208.4000019,
+     0.0,
+     10300.389999999996,
+     0
+    ],
+    "spend_lab": [
+     "DOUBLE",
+     4255446,
+     1949624443.1399913,
+     1949624443.1399913,
+     0.0,
+     11113.579999999998,
+     0
+    ],
+    "spend_lab_g": [
+     "DOUBLE",
+     4255446,
+     1640235317.7600093,
+     1640235317.7600093,
+     0.0,
+     7908.959999999999,
+     0
+    ],
+    "spend_lab_pl": [
+     "DOUBLE",
+     4255446,
+     454613123.24999195,
+     454613123.24999195,
+     0.0,
+     3701.509999999998,
+     0
+    ],
+    "spend_matched_t": [
+     "DOUBLE",
+     3171434,
+     503329420.3999965,
+     503329420.3999965,
+     0.010000000000000009,
+     4770.519999999996,
+     0
+    ],
+    "spend_pl": [
+     "DOUBLE",
+     4255446,
+     524930693.0899933,
+     524930693.0899933,
+     0.0,
+     3713.489999999998,
+     0
+    ],
+    "sugar_g": [
+     "DOUBLE",
+     4255446,
+     37596246919.02447,
+     37596246919.02447,
+     0.0,
+     413354.07546976133,
+     0
+    ],
+    "sugar_per_1000": [
+     "DOUBLE",
+     4221599,
+     274103815.0336423,
+     274103815.0336423,
+     0.0,
+     5837.902490931644,
+     0
+    ],
+    "sugar_per_1000_w": [
+     "DOUBLE",
+     4191666,
+     270963429.7360955,
+     270963429.7360955,
+     7.796397302760342,
+     162.6036337784672,
+     0
+    ],
+    "wic_indicator_current": [
+     "INTEGER",
+     27367,
+     "58425231334574589797801575"
+    ],
+    "year": [
+     "BIGINT",
+     4255446,
+     "31382002940184423706959180"
+    ],
+    "yq": [
+     "DOUBLE",
+     4255446,
+     85668058446.0,
+     85668058446.0,
+     20034.0,
+     20221.0,
+     0
+    ],
+    "z_fiber": [
+     "DOUBLE",
+     4225776,
+     637624.4163917078,
+     3276203.593260399,
+     -1.661973353053242,
+     3.7305081284291566,
+     0
+    ],
+    "z_fv": [
+     "DOUBLE",
+     4236365,
+     -341015.80110513495,
+     3180499.0465124045,
+     -1.551904296308104,
+     3.3374924762816587,
+     0
+    ],
+    "z_protein": [
+     "DOUBLE",
+     4230489,
+     -213164.88208143064,
+     3233440.6813425557,
+     -2.184120260931558,
+     3.2268496076910758,
+     0
+    ],
+    "z_satfat": [
+     "DOUBLE",
+     4227014,
+     840481.6736050107,
+     3268444.3402558034,
+     -3.3095442166701203,
+     2.2273900265729254,
+     0
+    ],
+    "z_sodium": [
+     "DOUBLE",
+     4230510,
+     -133078.11166688142,
+     2607177.556602102,
+     -5.430325016444139,
+     1.0925411894469583,
+     0
+    ],
+    "z_sugar": [
+     "DOUBLE",
+     4221599,
+     -951159.469252724,
+     3203053.9712312953,
+     -3.394960588948153,
+     1.8465842789250333,
+     0
+    ]
+   },
+   "rows": 4255446
+  },
+  "bartik": {
+   "columns": {
+    "B4_div": [
+     "DOUBLE",
+     3142037,
+     4097742.333510796,
+     5970277.801082158,
+     -37.263166257397536,
+     18.35403197502661,
+     0
+    ],
+    "B4_lag": [
+     "DOUBLE",
+     3018558,
+     4267307.094725197,
+     5873960.041203272,
+     -25.37215079492447,
+     21.181319977569828,
+     0
+    ],
+    "B4_lead": [
+     "DOUBLE",
+     2942708,
+     3705423.4600471715,
+     5480244.9311983315,
+     -29.9863931676347,
+     17.357631622748492,
+     0
+    ],
+    "B4_nat": [
+     "DOUBLE",
+     3142037,
+     4115652.467506332,
+     5982664.029567928,
+     -37.32839923354879,
+     18.53269900312451,
+     0
+    ],
+    "B4_st": [
+     "DOUBLE",
+     3142037,
+     4110765.4618013985,
+     5983175.170812593,
+     -37.29275935957148,
+     18.565355575168557,
+     0
+    ],
+    "B8_st": [
+     "DOUBLE",
+     2555284,
+     3230715.9774207543,
+     4793362.167184999,
+     -63.284042005788706,
+     34.9678221802556,
+     0
+    ],
+    "S4_div": [
+     "DOUBLE",
+     3142037,
+     3141863.4852034748,
+     3141863.4852034748,
+     0.4544201588890767,
+     1.0,
+     0
+    ],
+    "S4_lag": [
+     "DOUBLE",
+     3018558,
+     3018412.3146218206,
+     3018412.3146218206,
+     0.4544201588890767,
+     1.0,
+     0
+    ],
+    "S4_lead": [
+     "DOUBLE",
+     2942708,
+     2942477.6098218476,
+     2942477.6098218476,
+     0.4544201588890767,
+     1.0,
+     0
+    ],
+    "S4_nat": [
+     "DOUBLE",
+     3142037,
+     3141871.227028552,
+     3141871.227028552,
+     0.4544201588890767,
+     1.0,
+     0
+    ],
+    "S4_st": [
+     "DOUBLE",
+     3142037,
+     3141867.4621979133,
+     3141867.4621979133,
+     0.4544201588890767,
+     1.0,
+     0
+    ],
+    "S8_st": [
+     "DOUBLE",
+     2555284,
+     2555086.212623625,
+     2555086.212623625,
+     0.4544201588890767,
+     1.0,
+     0
+    ],
+    "household_code": [
+     "INTEGER",
+     3142037,
+     "28958867522912317617131027"
+    ],
+    "n_mod4": [
+     "BIGINT",
+     3142037,
+     "27821600916827517702115750"
+    ],
+    "spend_base4": [
+     "DOUBLE",
+     3142037,
+     1909941336.859994,
+     1909941336.859994,
+     11.180000000000001,
+     11912.62,
+     0
+    ],
+    "yq": [
+     "DOUBLE",
+     3142037,
+     63274339910.0,
+     63274339910.0,
+     20051.0,
+     20214.0,
+     0
+    ]
+   },
+   "rows": 3142037
+  },
+  "county_cpi": {
+   "columns": {
+    "area": [
+     "VARCHAR",
+     3157,
+     "46706603359778859253117"
+    ],
+    "area_type": [
+     "VARCHAR",
+     3157,
+     "17295629920896603697280"
+    ],
+    "cbsa": [
+     "INTEGER",
+     1808,
+     "34939295432221825286850"
+    ],
+    "fips": [
+     "INTEGER",
+     3157,
+     "28947329315368853393611"
+    ],
+    "region": [
+     "INTEGER",
+     3157,
+     "18678736608355424708116"
+    ],
+    "state": [
+     "INTEGER",
+     3157,
+     "26690018427191126181961"
+    ]
+   },
+   "rows": 3157
+  },
+  "county_q": {
+   "columns": {
+    "d_emp_c": [
+     "DOUBLE",
+     231404,
+     -33658.10179779272,
+     737570.3652516555,
+     -154.32981099295552,
+     87.08283577973978,
+     0
+    ],
+    "d_ur_c": [
+     "DOUBLE",
+     231404,
+     -17760.366666666625,
+     268368.3666666787,
+     -22.0,
+     28.866666666666667,
+     0
+    ],
+    "dl_emp_c": [
+     "DOUBLE",
+     218476,
+     -67881.16432213853,
+     677952.3141858309,
+     -154.32981099295552,
+     87.08283577973978,
+     0
+    ],
+    "dl_ur_c": [
+     "DOUBLE",
+     218476,
+     9753.033333333377,
+     232662.23333333942,
+     -13.433333333333334,
+     28.866666666666667,
+     0
+    ],
+    "emp_c": [
+     "DOUBLE",
+     244488,
+     11178643728.000053,
+     11178643728.000053,
+     16.666666666666668,
+     4995521.0,
+     0
+    ],
+    "fips": [
+     "INTEGER",
+     244488,
+     "2248087560183953030665176"
+    ],
+    "ur_c": [
+     "DOUBLE",
+     244488,
+     1543875.2333333397,
+     1543875.2333333397,
+     1.0,
+     31.599999999999998,
+     0
+    ],
+    "yq": [
+     "INTEGER",
+     244488,
+     "2161286399807580322442350"
+    ]
+   },
+   "rows": 244488
+  },
+  "cpi_q": {
+   "columns": {
+    "area": [
+     "VARCHAR",
+     2204,
+     "22345660847617601242108"
+    ],
+    "cpi": [
+     "DOUBLE",
+     2204,
+     460145.87900000036,
+     460145.87900000036,
+     109.23333333333335,
+     293.83,
+     0
+    ],
+    "d_cpi": [
+     "DOUBLE",
+     2088,
+     4193.019164937702,
+     5139.633926819862,
+     -5.600756724464107,
+     10.670154567844548,
+     0
+    ],
+    "dl_cpi": [
+     "DOUBLE",
+     1972,
+     3822.6855754572193,
+     4744.755796067732,
+     -5.600756724464107,
+     10.354971845615246,
+     0
+    ],
+    "yq": [
+     "INTEGER",
+     2204,
+     "19480077924489164779049"
+    ]
+   },
+   "rows": 2204
+  },
+  "desc_panel": {
+   "columns": {
+    "ae_oecd": [
+     "DOUBLE",
+     4255446,
+     6955613.199999614,
+     6955613.199999614,
+     1.0,
+     5.0,
+     0
+    ],
+    "any_head_employed": [
+     "BOOLEAN",
+     4255446,
+     "14535791885072829355635600"
+    ],
+    "bal_2007_2012": [
+     "BOOLEAN",
+     4255446,
+     "6699309011295436889205696"
+    ],
+    "children_present": [
+     "BOOLEAN",
+     4255446,
+     "4610916381427401322843008"
+    ],
+    "core_q": [
+     "BOOLEAN",
+     4255446,
+     "18880976576717792947018912"
+    ],
+    "cov_fb": [
+     "DOUBLE",
+     4236365,
+     4111358.7828539405,
+     4111358.7828539405,
+     0.0,
+     1.0,
+     0
+    ],
+    "cov_lab": [
+     "DOUBLE",
+     4236365,
+     3390465.887715296,
+     3390465.887715296,
+     0.0,
+     1.0,
+     0
+    ],
+    "cov_lab_pl": [
+     "DOUBLE",
+     4164394,
+     3601533.300206094,
+     3601533.300206094,
+     0.0,
+     1.0,
+     0
+    ],
+    "cpi_fah_yoy": [
+     "DOUBLE",
+     4255446,
+     8833374.629377887,
+     10458817.538194628,
+     -2.684548445535573,
+     8.685001332358922,
+     0
+    ],
+    "cpi_gas_yoy": [
+     "DOUBLE",
+     4255446,
+     21723818.213258114,
+     71453616.19766736,
+     -38.45983267815745,
+     52.37999899023487,
+     0
+    ],
+    "d_cov": [
+     "DOUBLE",
+     3269648,
+     -653.5623303866288,
+     223370.77818270092,
+     -1.0,
+     1.0,
+     0
+    ],
+    "d_deal": [
+     "DOUBLE",
+     3274492,
+     -15826.785193962107,
+     260128.490202027,
+     -1.0,
+     1.0,
+     0
+    ],
+    "d_disc": [
+     "DOUBLE",
+     3274492,
+     4073.721497271177,
+     294126.07901960704,
+     -1.0,
+     1.0,
+     0
+    ],
+    "d_dollar": [
+     "DOUBLE",
+     3274492,
+     1014.7620893280742,
+     59264.096030311404,
+     -1.0,
+     1.0,
+     0
+    ],
+    "d_ed": [
+     "DOUBLE",
+     3259439,
+     345709.99861671234,
+     112949540.05433863,
+     -714.4405561921277,
+     712.834008097166,
+     0
+    ],
+    "d_fv": [
+     "DOUBLE",
+     3269648,
+     4119.558207862434,
+     140080.29775240255,
+     -1.0,
+     1.0,
+     0
+    ],
+    "d_hs": [
+     "DOUBLE",
+     3251597,
+     632.600473323391,
+     1025622.7823836568,
+     -4.204581001217963,
+     3.5531198023266093,
+     0
+    ],
+    "d_lkcal": [
+     "DOUBLE",
+     3263871,
+     -15618849.070499085,
+     131477210.03563425,
+     -999.9849994851708,
+     909.5505103437678,
+     0
+    ],
+    "d_lkpu": [
+     "DOUBLE",
+     3232639,
+     -2643637.068035474,
+     51638708.81475849,
+     -170.64885488328096,
+     168.3107967083359,
+     0
+    ],
+    "d_lspend": [
+     "DOUBLE",
+     3269648,
+     -13025447.342074003,
+     122319322.00693116,
+     -979.996545535175,
+     779.4539215674175,
+     0
+    ],
+    "d_pl": [
+     "DOUBLE",
+     3269648,
+     17483.262189015004,
+     228275.05167740458,
+     -1.0,
+     1.0,
+     0
+    ],
+    "d_snk": [
+     "DOUBLE",
+     3267551,
+     4459.711393271468,
+     279325.35719216854,
+     -1.0,
+     1.0,
+     0
+    ],
+    "d_ssb": [
+     "DOUBLE",
+     3274492,
+     -4253.500981031513,
+     90901.89193764879,
+     -1.0,
+     1.0,
+     0
+    ],
+    "days_obs": [
+     "INTEGER",
+     4255446,
+     "37186218278989952438396633"
+    ],
+    "episode": [
+     "VARCHAR",
+     4255446,
+     "52917539168857034239594713"
+    ],
+    "est_gate": [
+     "BOOLEAN",
+     4255446,
+     "13130621694719279394942736"
+    ],
+    "f_ae_imputed": [
+     "BOOLEAN",
+     4255446,
+     "330259721335345084640"
+    ],
+    "f_core": [
+     "BOOLEAN",
+     4255446,
+     "19843740280362552785044736"
+    ],
+    "f_exp_valid": [
+     "BOOLEAN",
+     3174645,
+     "29726057693267085907683561"
+    ],
+    "f_idx_valid": [
+     "BOOLEAN",
+     3171434,
+     "28562273441069352785134924"
+    ],
+    "f_income_topcoded": [
+     "BOOLEAN",
+     4255446,
+     "2726893185117696371213904"
+    ],
+    "f_magnet_hh": [
+     "BOOLEAN",
+     4255446,
+     "11487810762880872340417984"
+    ],
+    "f_partial_q": [
+     "BOOLEAN",
+     4255446,
+     "978998327946401587115056"
+    ],
+    "f_store_linkable": [
+     "BOOLEAN",
+     4255446,
+     "13272472963028829185153968"
+    ],
+    "fiber_per_1000": [
+     "DOUBLE",
+     4225776,
+     35374770.33064522,
+     35374770.33064522,
+     0.0,
+     626.0320619363102,
+     0
+    ],
+    "first_panel_year": [
+     "INTEGER",
+     4255446,
+     "36185289427182069240673671"
+    ],
+    "fpl_ratio": [
+     "DOUBLE",
+     4255446,
+     16887905.04160946,
+     16887905.04160946,
+     0.053522483940042824,
+     26.852846401718583,
+     0
+    ],
+    "gas_exposure": [
+     "DOUBLE",
+     1430212,
+     -156824.01556065603,
+     1501171.6548300053,
+     -29.828759631348024,
+     51.80410563319579,
+     0
+    ],
+    "gas_share_base": [
+     "DOUBLE",
+     1430212,
+     105366.17822820623,
+     105366.17822820623,
+     0.0,
+     1.0,
+     0
+    ],
+    "has_base": [
+     "BOOLEAN",
+     4255446,
+     "15518767483663312312841392"
+    ],
+    "head_age": [
+     "DOUBLE",
+     4255446,
+     238743151.0,
+     238743151.0,
+     22.0,
+     70.0,
+     0
+    ],
+    "head_college": [
+     "BOOLEAN",
+     4255446,
+     "10524707363522739004590816"
+    ],
+    "head_educ": [
+     "INTEGER",
+     4255446,
+     "29661988420946928238460215"
+    ],
+    "health_score": [
+     "DOUBLE",
+     4218195,
+     -21447.61524581221,
+     1617492.782417552,
+     -2.9221379553925533,
+     2.576894284557801,
+     0
+    ],
+    "hispanic": [
+     "BOOLEAN",
+     4255446,
+     "1228769037196303998269936"
+    ],
+    "household_code": [
+     "INTEGER",
+     4255446,
+     "39225390007307366995560318"
+    ],
+    "household_income": [
+     "INTEGER",
+     4255446,
+     "30583403017097191824453671"
+    ],
+    "household_size": [
+     "INTEGER",
+     4255446,
+     "19825883940911536043944515"
+    ],
+    "in_next_year": [
+     "BOOLEAN",
+     4255446,
+     "15295686477893324860883776"
+    ],
+    "in_prev_year": [
+     "BOOLEAN",
+     4255446,
+     "14998735808452658866208896"
+    ],
+    "income_cat": [
+     "VARCHAR",
+     4255446,
+     "37250028501467794282152756"
+    ],
+    "income_real2019": [
+     "DOUBLE",
+     4255446,
+     304949389390.1995,
+     304949389390.1995,
+     2499.5,
+     338380.0626489014,
+     0
+    ],
+    "infl_exposure": [
+     "DOUBLE",
+     3174645,
+     7530010.500045605,
+     11112045.464571053,
+     -65.07865168539323,
+     173.33333333333348,
+     0
+    ],
+    "infl_fisher": [
+     "DOUBLE",
+     3171434,
+     6201943.114444591,
+     20434070.877141546,
+     -66.66666666666667,
+     200.00000000000006,
+     0
+    ],
+    "infl_laspeyres": [
+     "DOUBLE",
+     3171434,
+     7123392.095658214,
+     21194552.497760907,
+     -66.66666666666667,
+     200.00000000000006,
+     0
+    ],
+    "kcal_100g_food": [
+     "DOUBLE",
+     4226180,
+     1092715881.8288333,
+     1092715881.8288333,
+     0.0,
+     892.8571428571429,
+     0
+    ],
+    "kcal_100ml_drink_w": [
+     "DOUBLE",
+     4137335,
+     232190644.41881156,
+     232190644.41881156,
+     1.0603839561605999,
+     262.41586516647806,
+     0
+    ],
+    "kcal_fb_ae_day": [
+     "DOUBLE",
+     4255446,
+     7997116485.267852,
+     7997116485.267852,
+     0.0,
+     268308.1507704857,
+     0
+    ],
+    "kcal_lab_ae_day": [
+     "DOUBLE",
+     4255446,
+     7079806005.2178955,
+     7079806005.2178955,
+     0.0,
+     232754.81915252237,
+     0
+    ],
+    "kcal_per_usd_real": [
+     "DOUBLE",
+     4199307,
+     1944768246.5197322,
+     1944768246.5197322,
+     158.0646064342039,
+     987.3115308844668,
+     0
+    ],
+    "kcal_scaled_ae_day": [
+     "DOUBLE",
+     4187962,
+     8764253990.050343,
+     8764253990.050343,
+     0.0,
+     295772.875960327,
+     0
+    ],
+    "marital_status": [
+     "INTEGER",
+     4255446,
+     "23717320844525145533922634"
+    ],
+    "n_base_items": [
+     "DOUBLE",
+     3221060,
+     419530225.0,
+     419530225.0,
+     1.0,
+     1804.0,
+     0
+    ],
+    "n_base_priced": [
+     "DOUBLE",
+     3174645,
+     332244012.0,
+     332244012.0,
+     1.0,
+     883.0,
+     0
+    ],
+    "n_children_u14": [
+     "DOUBLE",
+     4255446,
+     1236539.0,
+     1236539.0,
+     0.0,
+     7.0,
+     0
+    ],
+    "n_heads": [
+     "INTEGER",
+     4255446,
+     "12857846950323352152823562"
+    ],
+    "n_lines_food": [
+     "DOUBLE",
+     4255446,
+     817719132.0,
+     817719132.0,
+     0.0,
+     4251.0,
+     0
+    ],
+    "n_matched": [
+     "DOUBLE",
+     3171434,
+     72933787.0,
+     72933787.0,
+     1.0,
+     576.0,
+     0
+    ],
+    "n_trips_food": [
+     "DOUBLE",
+     4255446,
+     112305110.0,
+     112305110.0,
+     0.0,
+     508.0,
+     0
+    ],
+    "n_years_in_panel": [
+     "DOUBLE",
+     4255446,
+     40034185.0,
+     40034185.0,
+     1.0,
+     18.0,
+     0
+    ],
+    "panel_year": [
+     "INTEGER",
+     4255446,
+     "31243476045630430756876452"
+    ],
+    "projection_factor": [
+     "INTEGER",
+     4255446,
+     "39366560597015089993130789"
+    ],
+    "projection_factor_magnet": [
+     "INTEGER",
+     2539044,
+     "47702216030732404953043357"
+    ],
+    "protein_per_1000": [
+     "DOUBLE",
+     4230489,
+     117472600.65111956,
+     117472600.65111956,
+     0.0,
+     3750.0,
+     0
+    ],
+    "qtr": [
+     "DOUBLE",
+     4255446,
+     10771286.0,
+     10771286.0,
+     1.0,
+     4.0,
+     0
+    ],
+    "race_f": [
+     "VARCHAR",
+     4255446,
+     "13595242358760364458229725"
+    ],
+    "region_code": [
+     "INTEGER",
+     4255446,
+     "34681395402937559030559533"
+    ],
+    "satfat_per_1000": [
+     "DOUBLE",
+     4227014,
+     66721700.43241461,
+     66721700.43241461,
+     0.0,
+     2571.756601607349,
+     0
+    ],
+    "scantrack_market_code": [
+     "INTEGER",
+     4012916,
+     "40551535583711761418615132"
+    ],
+    "sh_ch_club": [
+     "DOUBLE",
+     4241074,
+     383430.5354555086,
+     383430.5354555086,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_ch_convenience": [
+     "DOUBLE",
+     4241074,
+     23952.120955467602,
+     23952.120955467602,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_ch_discount": [
+     "DOUBLE",
+     4241074,
+     826820.2924773168,
+     826820.2924773168,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_ch_dollar": [
+     "DOUBLE",
+     4241074,
+     92093.05084158853,
+     92093.05084158853,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_ch_grocery": [
+     "DOUBLE",
+     4241074,
+     2542545.8538437616,
+     2542545.8538437616,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_ch_online": [
+     "DOUBLE",
+     4241074,
+     42685.7826610459,
+     42685.7826610459,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_coupon": [
+     "DOUBLE",
+     4241124,
+     106958.6476352291,
+     106958.6476352291,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_deal": [
+     "DOUBLE",
+     4241074,
+     1041859.3824254312,
+     1041859.3824254312,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_fg_dairy": [
+     "DOUBLE",
+     4241074,
+     449165.20518057706,
+     449165.20518057706,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_fg_diet_water": [
+     "DOUBLE",
+     4241074,
+     138964.67669830425,
+     138964.67669830425,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_fg_grains": [
+     "DOUBLE",
+     4241074,
+     424231.64762805763,
+     424231.64762805763,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_fg_juice100": [
+     "DOUBLE",
+     4241074,
+     80648.54170452742,
+     80648.54170452742,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_fg_prepared": [
+     "DOUBLE",
+     4241074,
+     512108.76602971094,
+     512108.76602971094,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_fg_protein": [
+     "DOUBLE",
+     4241074,
+     577801.1780813939,
+     577801.1780813939,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_fg_salty_snacks": [
+     "DOUBLE",
+     4241074,
+     201998.97687622652,
+     201998.97687622652,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_fg_ssb": [
+     "DOUBLE",
+     4241074,
+     185808.54048641433,
+     185808.54048641433,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_fg_sweets": [
+     "DOUBLE",
+     4241074,
+     614628.1460925201,
+     614628.1460925201,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_fv_nomag": [
+     "DOUBLE",
+     4236365,
+     447167.5228792691,
+     447167.5228792691,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_kcal_fv": [
+     "DOUBLE",
+     4234294,
+     200123.4828358343,
+     200123.4828358343,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_kcal_snacks_sweets": [
+     "DOUBLE",
+     4234294,
+     1213481.2099704258,
+     1213481.2099704258,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_kcal_sweet_drinks": [
+     "DOUBLE",
+     4234294,
+     243233.12780318665,
+     243233.12780318665,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_pl": [
+     "DOUBLE",
+     4236365,
+     928030.0181663502,
+     928030.0181663502,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_takeout": [
+     "DOUBLE",
+     4241074,
+     91600.05818908167,
+     91600.05818908167,
+     0.0,
+     1.0,
+     0
+    ],
+    "shop_component": [
+     "DOUBLE",
+     3125019,
+     -15784.919987735437,
+     187194.11224837063,
+     -1.2742650433721752,
+     1.5844619263639235,
+     0
+    ],
+    "snap_elig_proxy": [
+     "BOOLEAN",
+     4255446,
+     "1864618078683243889727328"
+    ],
+    "sodium_per_1000_w": [
+     "DOUBLE",
+     4198393,
+     8534972488.903966,
+     8534972488.903966,
+     546.1725867790599,
+     9647.930453485023,
+     0
+    ],
+    "spend_food_ae_day": [
+     "DOUBLE",
+     4255446,
+     21476127.093410477,
+     21476127.093410477,
+     0.0,
+     1062.15,
+     0
+    ],
+    "spend_food_nomag_ae_day_real": [
+     "DOUBLE",
+     4255446,
+     19765761.44801815,
+     19765761.44801815,
+     0.0,
+     1075.1925690310875,
+     0
+    ],
+    "state": [
+     "INTEGER",
+     4255429,
+     "36476010381079510229215705"
+    ],
+    "sugar_per_1000_w": [
+     "DOUBLE",
+     4191666,
+     270963429.7360959,
+     270963429.7360959,
+     7.796397302760342,
+     162.6036337784672,
+     0
+    ],
+    "year": [
+     "BIGINT",
+     4255446,
+     "31382002940184423706959180"
+    ],
+    "yq": [
+     "DOUBLE",
+     4255446,
+     85668058446.0,
+     85668058446.0,
+     20034.0,
+     20221.0,
+     0
+    ],
+    "z_fiber": [
+     "DOUBLE",
+     4225776,
+     637624.4163917025,
+     3276203.593260389,
+     -1.661973353053242,
+     3.7305081284291566,
+     0
+    ],
+    "z_fv": [
+     "DOUBLE",
+     4236365,
+     -341015.80110512953,
+     3180499.046512342,
+     -1.551904296308104,
+     3.3374924762816587,
+     0
+    ],
+    "z_protein": [
+     "DOUBLE",
+     4230489,
+     -213164.8820814295,
+     3233440.681342573,
+     -2.184120260931558,
+     3.2268496076910758,
+     0
+    ],
+    "z_satfat": [
+     "DOUBLE",
+     4227014,
+     840481.6736050063,
+     3268444.3402558025,
+     -3.3095442166701203,
+     2.2273900265729254,
+     0
+    ],
+    "z_sodium": [
+     "DOUBLE",
+     4230510,
+     -133078.1116668799,
+     2607177.556602093,
+     -5.430325016444139,
+     1.0925411894469583,
+     0
+    ],
+    "z_sugar": [
+     "DOUBLE",
+     4221599,
+     -951159.4692527207,
+     3203053.971231296,
+     -3.394960588948153,
+     1.8465842789250333,
+     0
+    ]
+   },
+   "rows": 4255446
+  },
+  "f1_analysis": {
+   "columns": {
+    "ae_b": [
+     "DOUBLE",
+     3142037,
+     5066529.399997141,
+     5066529.399997141,
+     1.0,
+     5.0,
+     0
+    ],
+    "aed_a": [
+     "DOUBLE",
+     3142037,
+     446038936.6000616,
+     446038936.6000616,
+     1.0,
+     460.0,
+     0
+    ],
+    "age65": [
+     "BOOLEAN",
+     2783093,
+     "9013689937585351369674256"
+    ],
+    "age_b": [
+     "DOUBLE",
+     3142037,
+     179424052.0,
+     179424052.0,
+     22.0,
+     70.0,
+     0
+    ],
+    "age_bin": [
+     "VARCHAR",
+     2783093,
+     "42920486084819567581783266"
+    ],
+    "b_kcal": [
+     "DOUBLE",
+     2783093,
+     664981875839.6086,
+     664981875839.6086,
+     470.06247914,
+     3388609.7173348744,
+     0
+    ],
+    "b_spend": [
+     "DOUBLE",
+     2783093,
+     1307497706.209992,
+     1307497706.209992,
+     5.609999999999999,
+     5640.909999999998,
+     0
+    ],
+    "b_spend_lab": [
+     "DOUBLE",
+     2783093,
+     1313904909.0999913,
+     1313904909.0999913,
+     5.609999999999999,
+     5655.229999999998,
+     0
+    ],
+    "bal_2007_2012": [
+     "BOOLEAN",
+     3142037,
+     "6001451348129776419927968"
+    ],
+    "base_lkcal": [
+     "DOUBLE",
+     3142034,
+     22802688.772779666,
+     22802689.67566254,
+     -0.4514414358417958,
+     12.357740900198957,
+     0
+    ],
+    "base_lkpu": [
+     "DOUBLE",
+     3142037,
+     19158968.536731232,
+     19158968.536731232,
+     5.0884895801827215,
+     6.894985623759642,
+     0
+    ],
+    "base_lspend": [
+     "DOUBLE",
+     3142037,
+     4361668.641103721,
+     4413265.967499938,
+     -3.0343350556595396,
+     6.980255058501594,
+     0
+    ],
+    "burden": [
+     "DOUBLE",
+     2783093,
+     163527.36567879558,
+     163527.36567879558,
+     0.0005257936237251674,
+     6.199952161255768,
+     0
+    ],
+    "burden_q": [
+     "INTEGER",
+     2783093,
+     "20362208515020969321377266"
+    ],
+    "cf_fiber": [
+     "DOUBLE",
+     2783093,
+     3605286738.6572075,
+     3605286738.6572075,
+     0.0,
+     30173.518530837053,
+     0
+    ],
+    "cf_grams": [
+     "DOUBLE",
+     2783092,
+     202184166562.10953,
+     202184166562.10953,
+     40.716743929067746,
+     3105654.702729246,
+     0
+    ],
+    "cf_protein": [
+     "DOUBLE",
+     2783093,
+     16091824453.621643,
+     16091824453.621643,
+     2.3524927631926347,
+     96471.91531770353,
+     0
+    ],
+    "cf_satfat": [
+     "DOUBLE",
+     2783093,
+     9921170946.521223,
+     9921170946.521223,
+     0.0,
+     83534.35905288182,
+     0
+    ],
+    "cf_sodium": [
+     "DOUBLE",
+     2783093,
+     914642728595.001,
+     914642728595.001,
+     224.13051856105454,
+     51266729.58457374,
+     0
+    ],
+    "cf_sugar": [
+     "DOUBLE",
+     2783093,
+     27546743897.13746,
+     27546743897.13746,
+     4.504380008439695,
+     361793.5129215617,
+     0
+    ],
+    "children_present": [
+     "BOOLEAN",
+     3142037,
+     "2871631866990920892736560"
+    ],
+    "college_b": [
+     "BOOLEAN",
+     3142037,
+     "7759178509004826334832384"
+    ],
+    "core_a": [
+     "BOOLEAN",
+     3142037,
+     "14701369955362314151999040"
+    ],
+    "core_b": [
+     "BOOLEAN",
+     3142037,
+     "14714707730108243017060144"
+    ],
+    "cost_cheap": [
+     "DOUBLE",
+     2783093,
+     782853964.1748724,
+     782853964.1748724,
+     1.1697694759910142,
+     4870.548363365365,
+     0
+    ],
+    "county": [
+     "INTEGER",
+     3142037,
+     "26546748259590127573059601"
+    ],
+    "cov_lab": [
+     "DOUBLE",
+     3139304,
+     2513251.221806438,
+     2513251.221806438,
+     0.0,
+     1.0,
+     0
+    ],
+    "cov_lab_b": [
+     "DOUBLE",
+     3142037,
+     2516788.4577276306,
+     2516788.4577276306,
+     0.033251753956599774,
+     1.0,
+     0
+    ],
+    "cpi_fah_yoy": [
+     "DOUBLE",
+     3142037,
+     6058794.455716502,
+     7325005.023861852,
+     -2.684548445535573,
+     7.409183808016873,
+     0
+    ],
+    "d_arc_kpu": [
+     "DOUBLE",
+     3138589,
+     -3097821.3029643497,
+     47999315.34914351,
+     -138.55211119732905,
+     135.90482842617152,
+     0
+    ],
+    "d_cov": [
+     "DOUBLE",
+     3139304,
+     -1372.7342948493974,
+     200955.46851581486,
+     -1.0,
+     0.9538350077780494,
+     0
+    ],
+    "d_ed": [
+     "DOUBLE",
+     3137762,
+     1690660.4727965416,
+     102090822.1546931,
+     -613.0091005141115,
+     682.8992831359953,
+     0
+    ],
+    "d_emp": [
+     "INTEGER",
+     3142037,
+     "750464358609218765430753"
+    ],
+    "d_hhsize": [
+     "INTEGER",
+     3142037,
+     "2453459192983808825503886"
+    ],
+    "d_hs": [
+     "DOUBLE",
+     3135923,
+     7845.42801235623,
+     957517.5001213596,
+     -3.8079958598787407,
+     3.5531198023266093,
+     0
+    ],
+    "d_lgrams": [
+     "DOUBLE",
+     3137762,
+     -13487288.44321669,
+     118999041.64600945,
+     -965.3076567020463,
+     589.6289559551051,
+     0
+    ],
+    "d_linc": [
+     "DOUBLE",
+     3142037,
+     -4264233.545878242,
+     48322996.357588425,
+     -464.3042608597442,
+     421.6942373115826,
+     0
+    ],
+    "d_lkcal": [
+     "DOUBLE",
+     3138422,
+     -13551780.652062848,
+     116776954.13727446,
+     -999.9849994851708,
+     554.4426170771051,
+     0
+    ],
+    "d_lkcal_fb": [
+     "DOUBLE",
+     3138977,
+     -14741215.225755135,
+     114702638.6763014,
+     -875.3323162059828,
+     552.1762930992389,
+     0
+    ],
+    "d_lkcal_sc": [
+     "DOUBLE",
+     3098928,
+     -12520809.168594811,
+     112057209.40531662,
+     -870.8509798774543,
+     554.6354028906346,
+     0
+    ],
+    "d_lkcal_tot": [
+     "DOUBLE",
+     3138422,
+     -18350830.480151244,
+     115990198.55941239,
+     -999.9849994851706,
+     498.6256939975415,
+     0
+    ],
+    "d_lkpu": [
+     "DOUBLE",
+     3138589,
+     -3154185.672384721,
+     48462191.9845886,
+     -170.64885488328096,
+     165.64588364809634,
+     0
+    ],
+    "d_lkpu_fb": [
+     "DOUBLE",
+     3138969,
+     -9409624.673239598,
+     50229994.473058596,
+     -528.0456988031349,
+     709.19372018799,
+     0
+    ],
+    "d_lkpu_nom": [
+     "DOUBLE",
+     3138410,
+     -9138726.512811707,
+     50587382.93364278,
+     -590.9954174595574,
+     708.2927417566982,
+     0
+    ],
+    "d_lkpu_w": [
+     "DOUBLE",
+     3138589,
+     -9066757.230037235,
+     49270705.82680443,
+     -171.5613625385382,
+     163.78571626477117,
+     0
+    ],
+    "d_lspend": [
+     "DOUBLE",
+     3139304,
+     -10177934.33688119,
+     107835007.33825758,
+     -979.996545535175,
+     530.8670774676867,
+     0
+    ],
+    "d_lspend_all": [
+     "DOUBLE",
+     3140127,
+     -314435.9122922986,
+     107845480.38109718,
+     -799.4154400735803,
+     535.2563315547994,
+     0
+    ],
+    "d_lspend_lab": [
+     "DOUBLE",
+     3138589,
+     -4454083.383396927,
+     111176182.30349162,
+     -959.8930562859524,
+     572.983279592086,
+     0
+    ],
+    "d_lspend_nom": [
+     "DOUBLE",
+     3139304,
+     -4263700.421582731,
+     107880217.75022751,
+     -980.3225130597756,
+     532.0340373155661,
+     0
+    ],
+    "d_lspend_tot": [
+     "DOUBLE",
+     3139304,
+     -9167640.153528813,
+     106706228.69976108,
+     -980.3225130597756,
+     454.75465086545324,
+     0
+    ],
+    "d_lspend_unlab": [
+     "DOUBLE",
+     3125233,
+     -4045030.073809061,
+     157747660.7622646,
+     -854.3835122362503,
+     802.2240916807448,
+     0
+    ],
+    "d_lvol": [
+     "DOUBLE",
+     3138602,
+     -15027736.756781528,
+     118652029.51245666,
+     -1002.573250424965,
+     543.9302493853342,
+     0
+    ],
+    "d_sh_fv_all": [
+     "DOUBLE",
+     3140127,
+     5325.404015200525,
+     128955.85254949627,
+     -0.9108165274025672,
+     1.0,
+     0
+    ],
+    "d_sh_mag": [
+     "DOUBLE",
+     3140127,
+     30123.40368713096,
+     148840.98569959227,
+     -0.9221454012151685,
+     1.0,
+     0
+    ],
+    "days_obs": [
+     "INTEGER",
+     3142037,
+     "27745945244112552079699190"
+    ],
+    "days_obs_b": [
+     "INTEGER",
+     3142037,
+     "27834402781898943306664333"
+    ],
+    "deal_b": [
+     "DOUBLE",
+     3142037,
+     819647.7548817366,
+     819647.7548817366,
+     0.0,
+     1.0,
+     0
+    ],
+    "dec_l": [
+     "DOUBLE",
+     2605864,
+     -72165.55380450533,
+     25853064.33831209,
+     -462.6174098452561,
+     430.2288771006339,
+     0
+    ],
+    "dec_m": [
+     "DOUBLE",
+     2605864,
+     4513693.846181255,
+     8955963.947061192,
+     -276.0702042756256,
+     321.9290403755401,
+     0
+    ],
+    "dec_t": [
+     "DOUBLE",
+     2608837,
+     6848305.314593918,
+     40244505.378443144,
+     -554.9522970566039,
+     479.0358684610911,
+     0
+    ],
+    "dec_w": [
+     "DOUBLE",
+     2605864,
+     4441528.292376703,
+     26983595.885647222,
+     -463.13354839684496,
+     449.2202621795946,
+     0
+    ],
+    "dollar_b": [
+     "DOUBLE",
+     3142037,
+     65204.66381690942,
+     65204.66381690942,
+     0.0,
+     1.0,
+     0
+    ],
+    "e_own": [
+     "DOUBLE",
+     2641592,
+     6199938.515276991,
+     9669476.684110004,
+     -62.05984460240923,
+     116.6443421315702,
+     0
+    ],
+    "emp_b": [
+     "BOOLEAN",
+     3142037,
+     "10599242264632107313835712"
+    ],
+    "episode": [
+     "VARCHAR",
+     3142037,
+     "38891159799280127654506648"
+    ],
+    "est_gate": [
+     "BOOLEAN",
+     3142037,
+     "13130621694719279394942736"
+    ],
+    "f_all": [
+     "DOUBLE",
+     2641753,
+     5914294.152359533,
+     7062949.372748785,
+     -34.14921129685051,
+     28.604038031573964,
+     0
+    ],
+    "f_cheap": [
+     "DOUBLE",
+     2641753,
+     9219371.056544643,
+     10110162.890185291,
+     -41.36546828482971,
+     115.2173913043478,
+     0
+    ],
+    "f_cheap_b2": [
+     "DOUBLE",
+     2551725,
+     7982173.38021344,
+     9220823.885295626,
+     -36.367532909310185,
+     72.64319986872717,
+     0
+    ],
+    "f_cheap_own": [
+     "DOUBLE",
+     2641753,
+     17088834.748302177,
+     17207311.13325436,
+     -24.37207230048345,
+     115.2173913043478,
+     0
+    ],
+    "f_idx_valid": [
+     "BOOLEAN",
+     3106841,
+     "14018188187401800962667804"
+    ],
+    "f_magnet_hh": [
+     "BOOLEAN",
+     3142037,
+     "8725509017640007899772320"
+    ],
+    "f_prem": [
+     "DOUBLE",
+     2641753,
+     4537275.596532387,
+     6143085.241895372,
+     -48.27586206902927,
+     60.507678301010046,
+     0
+    ],
+    "f_prem_b2": [
+     "DOUBLE",
+     2551725,
+     4821823.877221966,
+     6261648.764667988,
+     -37.260388821562685,
+     85.51888890102663,
+     0
+    ],
+    "f_prem_own": [
+     "DOUBLE",
+     2641753,
+     -322506.8681467667,
+     5191622.719281383,
+     -48.27586206902927,
+     55.96527219734764,
+     0
+    ],
+    "first_panel_year": [
+     "INTEGER",
+     3142037,
+     "27240309290962085375036842"
+    ],
+    "fpl_b": [
+     "DOUBLE",
+     3142037,
+     12686281.909125794,
+     12686281.909125794,
+     0.053522483940042824,
+     26.852846401718583,
+     0
+    ],
+    "fpl_bin": [
+     "VARCHAR",
+     2783093,
+     "20324055494265024385509766"
+    ],
+    "fpl_rank": [
+     "DOUBLE",
+     2783093,
+     1391547.0000001243,
+     1391547.0000001243,
+     1.0779373883661092e-06,
+     0.9999877833762651,
+     0
+    ],
+    "fx_spend": [
+     "DOUBLE",
+     2641753,
+     1211609952.3099942,
+     1211609952.3099942,
+     1.38,
+     5601.469999999998,
+     0
+    ],
+    "head_age": [
+     "DOUBLE",
+     3142037,
+     181925699.0,
+     181925699.0,
+     22.0,
+     70.0,
+     0
+    ],
+    "head_college": [
+     "BOOLEAN",
+     3142037,
+     "7723604819020990592858304"
+    ],
+    "health_score": [
+     "DOUBLE",
+     3135991,
+     20459.09985200239,
+     1189942.590956276,
+     -2.9221379553925533,
+     2.576894284557801,
+     0
+    ],
+    "health_score_b": [
+     "DOUBLE",
+     3141963,
+     12069.47718113297,
+     1178091.4309619982,
+     -2.8143551168912597,
+     2.5766978432711207,
+     0
+    ],
+    "hhsize_b": [
+     "INTEGER",
+     3142037,
+     "14314158451346973815312533"
+    ],
+    "hisp_b": [
+     "BOOLEAN",
+     3142037,
+     "831806288143257359249360"
+    ],
+    "hispanic": [
+     "BOOLEAN",
+     3142037,
+     "828536716902037442911424"
+    ],
+    "household_code": [
+     "INTEGER",
+     3142037,
+     "28958867522912317617131027"
+    ],
+    "household_size": [
+     "INTEGER",
+     3142037,
+     "14173374318766578285183030"
+    ],
+    "household_size_b": [
+     "INTEGER",
+     3142037,
+     "14314158451346973815312533"
+    ],
+    "hs_b": [
+     "DOUBLE",
+     3141963,
+     12069.47718113297,
+     1178091.4309619982,
+     -2.8143551168912597,
+     2.5766978432711207,
+     0
+    ],
+    "idx_exposure": [
+     "DOUBLE",
+     3142037,
+     3216495.2013385217,
+     3216495.2013385217,
+     0.4753118043384603,
+     2.0953083872466833,
+     0
+    ],
+    "in_next_year": [
+     "BOOLEAN",
+     3142037,
+     "11848411916614897485619696"
+    ],
+    "inc_real_b": [
+     "DOUBLE",
+     3142037,
+     226711475191.28046,
+     226711475191.28046,
+     2544.7961908311263,
+     338380.0626489014,
+     0
+    ],
+    "income_cat": [
+     "VARCHAR",
+     3142037,
+     "27430446392929225203983709"
+    ],
+    "infl_exposure": [
+     "DOUBLE",
+     3142037,
+     7445820.133849771,
+     10854528.088904705,
+     -52.46881956615397,
+     109.53083872466833,
+     0
+    ],
+    "infl_laspeyres": [
+     "DOUBLE",
+     3106841,
+     6889190.818128176,
+     20389229.12052949,
+     -66.66666666666667,
+     200.00000000000006,
+     0
+    ],
+    "kcal0": [
+     "DOUBLE",
+     2783093,
+     666898440377.6963,
+     666898440377.6963,
+     776.543560221,
+     3399773.980841365,
+     0
+    ],
+    "kcal1": [
+     "DOUBLE",
+     2608837,
+     596596625691.8577,
+     596596625691.8577,
+     10.001648418,
+     3399773.9808413666,
+     0
+    ],
+    "kcal_100g_food": [
+     "DOUBLE",
+     3137768,
+     808277997.9756088,
+     808277997.9756088,
+     0.0,
+     857.1428571428571,
+     0
+    ],
+    "kcal_100g_food_b": [
+     "DOUBLE",
+     3142030,
+     807725647.1936468,
+     807725647.1936468,
+     0.0,
+     802.466025281967,
+     0
+    ],
+    "kcal_cheap0": [
+     "DOUBLE",
+     2763515,
+     184507136060.89404,
+     184507136060.89404,
+     0.35436875,
+     1817299.72552527,
+     0
+    ],
+    "kcal_cheap1": [
+     "DOUBLE",
+     2580684,
+     165102185567.72025,
+     165102185567.72025,
+     0.35436875,
+     1817299.7255252702,
+     0
+    ],
+    "kcal_lab": [
+     "DOUBLE",
+     3142037,
+     717380694922.224,
+     717380694922.224,
+     0.0,
+     4192602.705209822,
+     0
+    ],
+    "kcal_per_usd": [
+     "DOUBLE",
+     3138589,
+     1540248546.6112304,
+     1540248546.6112304,
+     0.0,
+     282739.01333333337,
+     0
+    ],
+    "kcal_per_usd_real": [
+     "DOUBLE",
+     3138589,
+     1449013268.4604726,
+     1449013268.4604726,
+     158.0646064342039,
+     972.3546745503984,
+     0
+    ],
+    "kcal_prem0": [
+     "DOUBLE",
+     2782179,
+     178996109549.3047,
+     178996109549.3047,
+     16.77827551,
+     1542252.5929289642,
+     0
+    ],
+    "kcal_prem1": [
+     "DOUBLE",
+     2604576,
+     160793221298.68896,
+     160793221298.68896,
+     3.29779898,
+     1065550.873078716,
+     0
+    ],
+    "kcal_tier0": [
+     "DOUBLE",
+     2783091,
+     653623829359.9412,
+     653623829359.9412,
+     776.543560221,
+     3341507.7427413994,
+     0
+    ],
+    "kcal_tier1": [
+     "DOUBLE",
+     2608704,
+     586159337779.3003,
+     586159337779.3003,
+     10.001648418,
+     3341507.7427414013,
+     0
+    ],
+    "kids_b": [
+     "BOOLEAN",
+     3142037,
+     "3057421832226128808279968"
+    ],
+    "kpu_b": [
+     "DOUBLE",
+     3142037,
+     1463993610.4099386,
+     1463993610.4099386,
+     162.14477033001197,
+     987.3115308844668,
+     0
+    ],
+    "l_d_ed": [
+     "DOUBLE",
+     2572830,
+     -429011.99126875756,
+     84795658.7654865,
+     -678.7796512512664,
+     581.466057451728,
+     0
+    ],
+    "l_d_hs": [
+     "DOUBLE",
+     2570525,
+     3627.1571104686445,
+     785845.282969967,
+     -4.062722153706038,
+     3.471034327626567,
+     0
+    ],
+    "l_d_lkcal": [
+     "DOUBLE",
+     2574832,
+     -5005830.234875957,
+     94457435.12093246,
+     -684.986546375005,
+     868.4771635013944,
+     0
+    ],
+    "l_d_lkpu": [
+     "DOUBLE",
+     2554094,
+     -1451202.3939912496,
+     39134504.886599995,
+     -170.6117735459663,
+     168.3107967083359,
+     0
+    ],
+    "l_d_lspend": [
+     "DOUBLE",
+     2576819,
+     -3347879.5683032945,
+     87640107.39946605,
+     -546.9647737736374,
+     712.3819974893639,
+     0
+    ],
+    "mkt_b": [
+     "INTEGER",
+     3142037,
+     "29145814329288237090762483"
+    ],
+    "n_base_items": [
+     "DOUBLE",
+     3142037,
+     418302566.0,
+     418302566.0,
+     10.0,
+     1804.0,
+     0
+    ],
+    "n_base_priced": [
+     "DOUBLE",
+     3142037,
+     332064674.0,
+     332064674.0,
+     10.0,
+     883.0,
+     0
+    ],
+    "n_e_items": [
+     "DOUBLE",
+     2641592,
+     233137979.0,
+     233137979.0,
+     1.0,
+     636.0,
+     0
+    ],
+    "n_mod_both": [
+     "DOUBLE",
+     2605864,
+     83616028.0,
+     83616028.0,
+     1.0,
+     164.0,
+     0
+    ],
+    "n_sq": [
+     "INTEGER",
+     2783093,
+     "30755484266825332406573505"
+    ],
+    "n_years_in_panel": [
+     "DOUBLE",
+     3142037,
+     33714886.0,
+     33714886.0,
+     1.0,
+     18.0,
+     0
+    ],
+    "nheads_b": [
+     "INTEGER",
+     3142037,
+     "9504920429102434086890142"
+    ],
+    "noemp": [
+     "BOOLEAN",
+     2783093,
+     "8700070588209288600941760"
+    ],
+    "own_fiber": [
+     "DOUBLE",
+     2783093,
+     4244307842.177439,
+     4244307842.177439,
+     0.0,
+     35733.19668658099,
+     0
+    ],
+    "own_grams": [
+     "DOUBLE",
+     2783092,
+     222593078851.55133,
+     222593078851.55133,
+     41.106775,
+     3112266.547055001,
+     0
+    ],
+    "own_kcal_g": [
+     "DOUBLE",
+     2783092,
+     574760307753.1084,
+     574760307753.1084,
+     210.546896341,
+     3312911.3166907937,
+     0
+    ],
+    "own_protein": [
+     "DOUBLE",
+     2783093,
+     17930486074.1596,
+     17930486074.1596,
+     0.0,
+     88777.55914308199,
+     0
+    ],
+    "own_satfat": [
+     "DOUBLE",
+     2783093,
+     9513602193.26474,
+     9513602193.26474,
+     0.0,
+     89078.00635357402,
+     0
+    ],
+    "own_sodium": [
+     "DOUBLE",
+     2783093,
+     1026857379051.9512,
+     1026857379051.9512,
+     50.176106195,
+     36036318.78033843,
+     0
+    ],
+    "own_sugar": [
+     "DOUBLE",
+     2783093,
+     27762303659.401127,
+     27762303659.401127,
+     0.0,
+     413321.67604119005,
+     0
+    ],
+    "panel_year": [
+     "INTEGER",
+     3142037,
+     "22559177319232366741315563"
+    ],
+    "panel_year_b": [
+     "INTEGER",
+     3142037,
+     "22196803084046180649435266"
+    ],
+    "partial_a": [
+     "BOOLEAN",
+     3142037,
+     "262429092569084280613296"
+    ],
+    "partial_b": [
+     "BOOLEAN",
+     3142037,
+     "214862256704756435708432"
+    ],
+    "pl_b": [
+     "DOUBLE",
+     3142037,
+     683695.5728167458,
+     683695.5728167458,
+     0.0,
+     1.0,
+     0
+    ],
+    "projection_factor": [
+     "DOUBLE",
+     3142037,
+     6052095233.0,
+     6052095233.0,
+     118.0,
+     31860.0,
+     0
+    ],
+    "projection_factor_magnet": [
+     "DOUBLE",
+     1899757,
+     5879957564.0,
+     5879957564.0,
+     300.0,
+     168246.0,
+     0
+    ],
+    "qtr": [
+     "DOUBLE",
+     3142037,
+     7862410.0,
+     7862410.0,
+     1.0,
+     4.0,
+     0
+    ],
+    "race_b": [
+     "VARCHAR",
+     3142037,
+     "10038692998724254755925784"
+    ],
+    "race_f": [
+     "VARCHAR",
+     3142037,
+     "10040508354124724313086932"
+    ],
+    "regime": [
+     "VARCHAR",
+     2783093,
+     "36680405866949633100279336"
+    ],
+    "region_code": [
+     "INTEGER",
+     3142037,
+     "25595045001213163628454946"
+    ],
+    "sav25": [
+     "DOUBLE",
+     2783093,
+     440949362.400262,
+     440949362.400262,
+     0.0,
+     2142.328501565155,
+     0
+    ],
+    "sav50": [
+     "DOUBLE",
+     2783093,
+     280383747.31346905,
+     280383747.31346905,
+     0.0,
+     1949.6825573874403,
+     0
+    ],
+    "shop_component": [
+     "DOUBLE",
+     3106841,
+     -15664.978035958506,
+     184607.27597716617,
+     -1.2551074328392917,
+     1.2345846402982206,
+     0
+    ],
+    "snap_b": [
+     "BOOLEAN",
+     3142037,
+     "1277270036272408962128496"
+    ],
+    "spend0": [
+     "DOUBLE",
+     2783093,
+     1313904909.0999913,
+     1313904909.0999913,
+     5.609999999999999,
+     5655.230000000001,
+     0
+    ],
+    "spend1": [
+     "DOUBLE",
+     2608837,
+     1188776579.3899949,
+     1188776579.3899949,
+     0.01,
+     5655.229999999998,
+     0
+    ],
+    "spend_b": [
+     "DOUBLE",
+     3142037,
+     14605667.387557935,
+     14605667.387557935,
+     0.0481066404810795,
+     1075.1925690310875,
+     0
+    ],
+    "spend_base": [
+     "DOUBLE",
+     3142037,
+     1909941336.8599951,
+     1909941336.8599951,
+     11.18,
+     11912.619999999999,
+     0
+    ],
+    "spend_food_nomag": [
+     "DOUBLE",
+     3142037,
+     1890049802.2699885,
+     1890049802.2699885,
+     0.0,
+     17027.310000000034,
+     0
+    ],
+    "spend_food_nomag_ae_day": [
+     "DOUBLE",
+     3142037,
+     13721107.029235601,
+     13721107.029235601,
+     0.0,
+     1062.15,
+     0
+    ],
+    "spend_food_nomag_ae_day_real": [
+     "DOUBLE",
+     3142037,
+     14405343.94225454,
+     14405343.94225454,
+     0.0,
+     1075.1925690310875,
+     0
+    ],
+    "spend_lab": [
+     "DOUBLE",
+     3142037,
+     1511124357.2399979,
+     1511124357.2399979,
+     0.0,
+     11113.579999999998,
+     0
+    ],
+    "spend_outlier_ab": [
+     "BOOLEAN",
+     3142037,
+     "156547825908972646477712"
+    ],
+    "state": [
+     "INTEGER",
+     3142037,
+     "26951191909682031510714960"
+    ],
+    "topcode_b": [
+     "BOOLEAN",
+     3142037,
+     "1981284684242964079055584"
+    ],
+    "year": [
+     "BIGINT",
+     3142037,
+     "22574313972232372988959031"
+    ],
+    "yq": [
+     "DOUBLE",
+     3142037,
+     63274339910.0,
+     63274339910.0,
+     20051.0,
+     20214.0,
+     0
+    ],
+    "z": [
+     "DOUBLE",
+     2783093,
+     6269619.148678008,
+     7093912.550036125,
+     -5.589726201301205,
+     11.831238253573162,
+     0
+    ],
+    "z_div": [
+     "DOUBLE",
+     2783093,
+     6317626.093779073,
+     7024710.618123615,
+     -3.34252281662044,
+     8.727618063416722,
+     0
+    ],
+    "zb": [
+     "DOUBLE",
+     3142037,
+     7453589.267455228,
+     8331662.736620225,
+     -5.498116261847681,
+     11.624502648097167,
+     0
+    ],
+    "zb_lag": [
+     "DOUBLE",
+     3018558,
+     7222569.658108451,
+     8086746.197413517,
+     -5.498116261847681,
+     11.624502648097167,
+     0
+    ],
+    "zb_lead": [
+     "DOUBLE",
+     2942708,
+     6667743.613705494,
+     7555772.37147166,
+     -5.498116261847681,
+     11.624502648097167,
+     0
+    ]
+   },
+   "rows": 3142037
+  },
+  "hh_quarter_outcomes": {
+   "columns": {
+    "coupon_value": [
+     "DOUBLE",
+     4255446,
+     75231075.68000764,
+     75231075.68000764,
+     0.0,
+     2395.8100000000004,
+     0
+    ],
+    "cov_fb": [
+     "DOUBLE",
+     4236365,
+     4111358.782853965,
+     4111358.782853965,
+     0.0,
+     1.0,
+     0
+    ],
+    "cov_lab": [
+     "DOUBLE",
+     4236365,
+     3390465.8877152954,
+     3390465.8877152954,
+     0.0,
+     1.0,
+     0
+    ],
+    "cov_lab_pl": [
+     "DOUBLE",
+     4164394,
+     3601533.3002061048,
+     3601533.3002061048,
+     0.0,
+     1.0,
+     0
+    ],
+    "days_obs": [
+     "INTEGER",
+     4255446,
+     "37186218278989952438396633"
+    ],
+    "days_q": [
+     "INTEGER",
+     4255446,
+     "36226461359730624962806010"
+    ],
+    "f_partial_q": [
+     "BOOLEAN",
+     4255446,
+     "978998327946401587115056"
+    ],
+    "fiber_g": [
+     "DOUBLE",
+     4255446,
+     5956214419.620962,
+     5956214419.620962,
+     0.0,
+     40794.31297767282,
+     0
+    ],
+    "fiber_per_1000": [
+     "DOUBLE",
+     4225776,
+     35374770.3306453,
+     35374770.3306453,
+     0.0,
+     626.0320619363102,
+     0
+    ],
+    "first_trip_date": [
+     "DATE",
+     4255446,
+     "41733753751894792703634503"
+    ],
+    "grams_lab": [
+     "DOUBLE",
+     4255446,
+     320257478654.47736,
+     320257478654.47736,
+     0.0,
+     3112995.1292050015,
+     0
+    ],
+    "health_score": [
+     "DOUBLE",
+     4218195,
+     -21447.615245812216,
+     1617492.7824175612,
+     -2.9221379553925533,
+     2.576894284557801,
+     0
+    ],
+    "household_code": [
+     "INTEGER",
+     4255446,
+     "39225390007307366995560318"
+    ],
+    "kcal_100g_food": [
+     "DOUBLE",
+     4226180,
+     1092715881.8288372,
+     1092715881.8288372,
+     0.0,
+     892.8571428571429,
+     0
+    ],
+    "kcal_100ml_drink": [
+     "DOUBLE",
+     4160200,
+     239122095.91737765,
+     239122095.91737765,
+     0.0,
+     900.0,
+     0
+    ],
+    "kcal_100ml_drink_w": [
+     "DOUBLE",
+     4137335,
+     232190644.4188129,
+     232190644.4188129,
+     1.0603839561605999,
+     262.41586516647806,
+     0
+    ],
+    "kcal_fb": [
+     "DOUBLE",
+     4255446,
+     1064471461057.969,
+     1064471461057.969,
+     0.0,
+     5532547.099716706,
+     0
+    ],
+    "kcal_fg_drinks_sweet": [
+     "DOUBLE",
+     4255446,
+     60265815664.66763,
+     60265815664.66763,
+     0.0,
+     2198154.30268087,
+     0
+    ],
+    "kcal_fg_fv": [
+     "DOUBLE",
+     4255446,
+     48839746491.09084,
+     48839746491.09084,
+     0.0,
+     1278452.3205325396,
+     0
+    ],
+    "kcal_fg_snacks_sweets": [
+     "DOUBLE",
+     4255446,
+     303283087493.0674,
+     303283087493.0674,
+     0.0,
+     2814291.083740049,
+     0
+    ],
+    "kcal_lab": [
+     "DOUBLE",
+     4255446,
+     941562489449.5267,
+     941562489449.5267,
+     0.0,
+     4192602.705209822,
+     0
+    ],
+    "kcal_lab_g": [
+     "DOUBLE",
+     4255446,
+     814966392583.6835,
+     814966392583.6835,
+     0.0,
+     4026577.4499793,
+     0
+    ],
+    "kcal_lab_ml": [
+     "DOUBLE",
+     4255446,
+     126596096865.85208,
+     126596096865.85208,
+     0.0,
+     1955754.3816061197,
+     0
+    ],
+    "kcal_per_usd": [
+     "DOUBLE",
+     4231624,
+     2118503707.9881134,
+     2118503707.9881134,
+     0.0,
+     383808.61538462347,
+     0
+    ],
+    "kcal_per_usd_w": [
+     "DOUBLE",
+     4199307,
+     2089186557.145504,
+     2089186557.145504,
+     151.23985041300398,
+     1268.5921260787948,
+     0
+    ],
+    "kcal_w_fiber": [
+     "DOUBLE",
+     4255446,
+     746680585235.1573,
+     746680585235.1573,
+     0.0,
+     3765853.3444232317,
+     0
+    ],
+    "kcal_w_protein": [
+     "DOUBLE",
+     4255446,
+     937383742389.9325,
+     937383742389.9325,
+     0.0,
+     4145167.2038013716,
+     0
+    ],
+    "kcal_w_satfat": [
+     "DOUBLE",
+     4255446,
+     857438648768.5016,
+     857438648768.5016,
+     0.0,
+     4026577.4499793,
+     0
+    ],
+    "kcal_w_sodium": [
+     "DOUBLE",
+     4255446,
+     938612983496.7885,
+     938612983496.7885,
+     0.0,
+     4190466.603349357,
+     0
+    ],
+    "kcal_w_sugar": [
+     "DOUBLE",
+     4255446,
+     567276334527.88,
+     567276334527.88,
+     0.0,
+     3573102.2834616164,
+     0
+    ],
+    "last_trip_date": [
+     "DATE",
+     4255446,
+     "41064627644910931658292015"
+    ],
+    "ml_lab": [
+     "DOUBLE",
+     4255446,
+     259988163721.96017,
+     259988163721.96017,
+     0.0,
+     3482072.6104999976,
+     0
+    ],
+    "n_days_all": [
+     "DOUBLE",
+     4255446,
+     99026296.0,
+     99026296.0,
+     1.0,
+     92.0,
+     0
+    ],
+    "n_files": [
+     "DOUBLE",
+     4255446,
+     4633832.0,
+     4633832.0,
+     1.0,
+     2.0,
+     0
+    ],
+    "n_lines_food": [
+     "DOUBLE",
+     4255446,
+     817719132.0,
+     817719132.0,
+     0.0,
+     4251.0,
+     0
+    ],
+    "n_lines_lab": [
+     "DOUBLE",
+     4255446,
+     604103077.0,
+     604103077.0,
+     0.0,
+     2650.0,
+     0
+    ],
+    "n_lines_size_disagree": [
+     "DOUBLE",
+     4255446,
+     16866381.0,
+     16866381.0,
+     0.0,
+     185.0,
+     0
+    ],
+    "n_trips_all": [
+     "DOUBLE",
+     4255446,
+     152605196.0,
+     152605196.0,
+     1.0,
+     731.0,
+     0
+    ],
+    "n_trips_food": [
+     "DOUBLE",
+     4255446,
+     112305110.0,
+     112305110.0,
+     0.0,
+     508.0,
+     0
+    ],
+    "panel_year": [
+     "INTEGER",
+     4255446,
+     "31243476045630430756876452"
+    ],
+    "protein_g": [
+     "DOUBLE",
+     4255446,
+     25400229251.569576,
+     25400229251.569576,
+     0.0,
+     131478.90224606587,
+     0
+    ],
+    "protein_per_1000": [
+     "DOUBLE",
+     4230489,
+     117472600.65111943,
+     117472600.65111943,
+     0.0,
+     3750.0,
+     0
+    ],
+    "qend": [
+     "DATE",
+     4255446,
+     "44245401000796231765929157"
+    ],
+    "qstart": [
+     "DATE",
+     4255446,
+     "44490435374773030418919287"
+    ],
+    "qtr": [
+     "DOUBLE",
+     4255446,
+     10771286.0,
+     10771286.0,
+     1.0,
+     4.0,
+     0
+    ],
+    "satfat_g": [
+     "DOUBLE",
+     4255446,
+     13607048485.903746,
+     13607048485.903746,
+     0.0,
+     89078.0063535705,
+     0
+    ],
+    "satfat_per_1000": [
+     "DOUBLE",
+     4227014,
+     66721700.43241462,
+     66721700.43241462,
+     0.0,
+     2571.756601607349,
+     0
+    ],
+    "sh_ch_club": [
+     "DOUBLE",
+     4241074,
+     383430.5354555098,
+     383430.5354555098,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_ch_convenience": [
+     "DOUBLE",
+     4241074,
+     23952.12095546758,
+     23952.12095546758,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_ch_discount": [
+     "DOUBLE",
+     4241074,
+     826820.2924773151,
+     826820.2924773151,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_ch_dollar": [
+     "DOUBLE",
+     4241074,
+     92093.05084158851,
+     92093.05084158851,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_ch_grocery": [
+     "DOUBLE",
+     4241074,
+     2542545.853843763,
+     2542545.853843763,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_ch_online": [
+     "DOUBLE",
+     4241074,
+     42685.78266104597,
+     42685.78266104597,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_coupon": [
+     "DOUBLE",
+     4241124,
+     106958.64763522815,
+     106958.64763522815,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_deal": [
+     "DOUBLE",
+     4241074,
+     1041859.3824254303,
+     1041859.3824254303,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_fg_baby": [
+     "DOUBLE",
+     4241074,
+     13913.744773065187,
+     13913.744773065187,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_fg_coffee_tea": [
+     "DOUBLE",
+     4241074,
+     164422.1945172163,
+     164422.1945172163,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_fg_dairy": [
+     "DOUBLE",
+     4241074,
+     449165.2051805788,
+     449165.2051805788,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_fg_diet_water": [
+     "DOUBLE",
+     4241074,
+     138964.67669830425,
+     138964.67669830425,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_fg_fats_condiments": [
+     "DOUBLE",
+     4241074,
+     303604.6137523371,
+     303604.6137523371,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_fg_fv": [
+     "DOUBLE",
+     4241074,
+     482177.7099905367,
+     482177.7099905367,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_fg_grains": [
+     "DOUBLE",
+     4241074,
+     424231.6476280596,
+     424231.6476280596,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_fg_juice100": [
+     "DOUBLE",
+     4241074,
+     80648.54170452735,
+     80648.54170452735,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_fg_prepared": [
+     "DOUBLE",
+     4241074,
+     512108.76602970687,
+     512108.76602970687,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_fg_protein": [
+     "DOUBLE",
+     4241074,
+     577801.1780813939,
+     577801.1780813939,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_fg_salty_snacks": [
+     "DOUBLE",
+     4241074,
+     201998.9768762256,
+     201998.9768762256,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_fg_ssb": [
+     "DOUBLE",
+     4241074,
+     185808.54048641524,
+     185808.54048641524,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_fg_sweets": [
+     "DOUBLE",
+     4241074,
+     614628.1460925181,
+     614628.1460925181,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_fg_takeout": [
+     "DOUBLE",
+     4241074,
+     91600.05818908173,
+     91600.05818908173,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_food_in_all": [
+     "DOUBLE",
+     4255400,
+     2508798.594507896,
+     2508798.594507896,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_fv_nomag": [
+     "DOUBLE",
+     4236365,
+     447167.52287926624,
+     447167.52287926624,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_kcal_fv": [
+     "DOUBLE",
+     4234294,
+     200123.4828358352,
+     200123.4828358352,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_kcal_snacks_sweets": [
+     "DOUBLE",
+     4234294,
+     1213481.2099704216,
+     1213481.2099704216,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_kcal_sweet_drinks": [
+     "DOUBLE",
+     4234294,
+     243233.12780318805,
+     243233.12780318805,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_pl": [
+     "DOUBLE",
+     4236365,
+     928030.0181663521,
+     928030.0181663521,
+     0.0,
+     1.0,
+     0
+    ],
+    "sh_takeout": [
+     "DOUBLE",
+     4241074,
+     91600.05818908173,
+     91600.05818908173,
+     0.0,
+     1.0,
+     0
+    ],
+    "sodium_mg": [
+     "DOUBLE",
+     4255446,
+     1916135302597.275,
+     1916135302597.275,
+     0.0,
+     40378326.75278742,
+     0
+    ],
+    "sodium_per_1000": [
+     "DOUBLE",
+     4230510,
+     9035876566.910707,
+     9035876566.910707,
+     0.0,
+     15875416.666666666,
+     0
+    ],
+    "sodium_per_1000_w": [
+     "DOUBLE",
+     4198393,
+     8534972488.903938,
+     8534972488.903938,
+     546.1725867790599,
+     9647.930453485023,
+     0
+    ],
+    "spend_all": [
+     "DOUBLE",
+     4255446,
+     4996788662.28005,
+     4996788662.28005,
+     0.0,
+     41703.17000000003,
+     0
+    ],
+    "spend_ch_club": [
+     "DOUBLE",
+     4255446,
+     283389381.5800085,
+     283389381.5800085,
+     0.0,
+     8497.019999999979,
+     0
+    ],
+    "spend_ch_convenience": [
+     "DOUBLE",
+     4255446,
+     13300576.81999924,
+     13300576.81999924,
+     0.0,
+     2272.1500000000005,
+     0
+    ],
+    "spend_ch_discount": [
+     "DOUBLE",
+     4255446,
+     543112051.0299923,
+     543112051.0299923,
+     0.0,
+     17189.710000000036,
+     0
+    ],
+    "spend_ch_dollar": [
+     "DOUBLE",
+     4255446,
+     46057358.49000596,
+     46057358.49000596,
+     0.0,
+     2795.6600000000008,
+     0
+    ],
+    "spend_ch_grocery": [
+     "DOUBLE",
+     4255446,
+     1673448659.7899768,
+     1673448659.7899768,
+     0.0,
+     14762.209999999865,
+     0
+    ],
+    "spend_ch_online": [
+     "DOUBLE",
+     4255446,
+     28764521.879999623,
+     28764521.879999623,
+     0.0,
+     4058.3300000000017,
+     0
+    ],
+    "spend_ch_restaurant": [
+     "DOUBLE",
+     4255446,
+     107858080.650004,
+     107858080.650004,
+     0.0,
+     7627.730000000001,
+     0
+    ],
+    "spend_deal": [
+     "DOUBLE",
+     4255446,
+     659042843.8299795,
+     659042843.8299795,
+     0.0,
+     7744.310000000005,
+     0
+    ],
+    "spend_fb": [
+     "DOUBLE",
+     4255446,
+     2363546157.899986,
+     2363546157.899986,
+     0.0,
+     16904.07000000003,
+     0
+    ],
+    "spend_fg_baby": [
+     "DOUBLE",
+     4255446,
+     10425585.09999967,
+     10425585.09999967,
+     0.0,
+     3513.15,
+     0
+    ],
+    "spend_fg_coffee_tea": [
+     "DOUBLE",
+     4255446,
+     106405083.46005276,
+     106405083.46005276,
+     0.0,
+     3094.970000000002,
+     0
+    ],
+    "spend_fg_dairy": [
+     "DOUBLE",
+     4255446,
+     288124247.75999224,
+     288124247.75999224,
+     0.0,
+     3369.1799999999857,
+     0
+    ],
+    "spend_fg_diet_water": [
+     "DOUBLE",
+     4255446,
+     89756700.53003374,
+     89756700.53003374,
+     0.0,
+     5576.99,
+     0
+    ],
+    "spend_fg_fats_condiments": [
+     "DOUBLE",
+     4255446,
+     194759761.4400072,
+     194759761.4400072,
+     0.0,
+     3184.930000000001,
+     0
+    ],
+    "spend_fg_fv": [
+     "DOUBLE",
+     4255446,
+     331612188.0700032,
+     331612188.0700032,
+     0.0,
+     3536.59,
+     0
+    ],
+    "spend_fg_fv_nomag": [
+     "DOUBLE",
+     4255446,
+     262847849.97000077,
+     262847849.97000077,
+     0.0,
+     3524.66,
+     0
+    ],
+    "spend_fg_grains": [
+     "DOUBLE",
+     4255446,
+     270204603.83999515,
+     270204603.83999515,
+     0.0,
+     2379.4999999999995,
+     0
+    ],
+    "spend_fg_juice100": [
+     "DOUBLE",
+     4255446,
+     48421761.67002857,
+     48421761.67002857,
+     0.0,
+     2234.6000000000004,
+     0
+    ],
+    "spend_fg_prepared": [
+     "DOUBLE",
+     4255446,
+     343128322.53999263,
+     343128322.53999263,
+     0.0,
+     5334.73,
+     0
+    ],
+    "spend_fg_protein": [
+     "DOUBLE",
+     4255446,
+     416004778.4599977,
+     416004778.4599977,
+     0.0,
+     3819.5799999999986,
+     0
+    ],
+    "spend_fg_salty_snacks": [
+     "DOUBLE",
+     4255446,
+     130528358.35003863,
+     130528358.35003863,
+     0.0,
+     2357.6000000000004,
+     0
+    ],
+    "spend_fg_ssb": [
+     "DOUBLE",
+     4255446,
+     116559813.20004067,
+     116559813.20004067,
+     0.0,
+     4668.880000000008,
+     0
+    ],
+    "spend_fg_sweets": [
+     "DOUBLE",
+     4255446,
+     387213798.1099959,
+     387213798.1099959,
+     0.0,
+     5378.509999999999,
+     0
+    ],
+    "spend_fg_takeout": [
+     "DOUBLE",
+     4255446,
+     89168501.650004,
+     89168501.650004,
+     0.0,
+     8226.53,
+     0
+    ],
+    "spend_food": [
+     "DOUBLE",
+     4255446,
+     2822313504.179993,
+     2822313504.179993,
+     0.0,
+     17189.710000000036,
+     0
+    ],
+    "spend_food_mag": [
+     "DOUBLE",
+     4255446,
+     384686031.0399991,
+     384686031.0399991,
+     0.0,
+     8342.529999999999,
+     0
+    ],
+    "spend_food_nomag": [
+     "DOUBLE",
+     4255446,
+     2437627473.1399856,
+     2437627473.1399856,
+     0.0,
+     17027.310000000034,
+     0
+    ],
+    "spend_food_store_id": [
+     "DOUBLE",
+     4255446,
+     2002968799.8099778,
+     2002968799.8099778,
+     0.0,
+     17189.710000000036,
+     0
+    ],
+    "spend_gas_card": [
+     "DOUBLE",
+     4255446,
+     215468208.40000278,
+     215468208.40000278,
+     0.0,
+     10300.389999999996,
+     0
+    ],
+    "spend_lab": [
+     "DOUBLE",
+     4255446,
+     1949624443.1399972,
+     1949624443.1399972,
+     0.0,
+     11113.579999999998,
+     0
+    ],
+    "spend_lab_g": [
+     "DOUBLE",
+     4255446,
+     1640235317.760004,
+     1640235317.760004,
+     0.0,
+     7908.959999999999,
+     0
+    ],
+    "spend_lab_pl": [
+     "DOUBLE",
+     4255446,
+     454613123.24999374,
+     454613123.24999374,
+     0.0,
+     3701.509999999998,
+     0
+    ],
+    "spend_pl": [
+     "DOUBLE",
+     4255446,
+     524930693.0899944,
+     524930693.0899944,
+     0.0,
+     3713.489999999998,
+     0
+    ],
+    "sugar_g": [
+     "DOUBLE",
+     4255446,
+     37596246919.02429,
+     37596246919.02429,
+     0.0,
+     413354.07546976133,
+     0
+    ],
+    "sugar_per_1000": [
+     "DOUBLE",
+     4221599,
+     274103815.0336433,
+     274103815.0336433,
+     0.0,
+     5837.902490931644,
+     0
+    ],
+    "sugar_per_1000_w": [
+     "DOUBLE",
+     4191666,
+     270963429.7360964,
+     270963429.7360964,
+     7.796397302760342,
+     162.6036337784672,
+     0
+    ],
+    "year": [
+     "BIGINT",
+     4255446,
+     "31382002940184423706959180"
+    ],
+    "yq": [
+     "DOUBLE",
+     4255446,
+     85668058446.0,
+     85668058446.0,
+     20034.0,
+     20221.0,
+     0
+    ],
+    "z_fiber": [
+     "DOUBLE",
+     4225776,
+     637624.4163917,
+     3276203.5932603832,
+     -1.661973353053242,
+     3.7305081284291566,
+     0
+    ],
+    "z_fv": [
+     "DOUBLE",
+     4236365,
+     -341015.80110513145,
+     3180499.046512344,
+     -1.551904296308104,
+     3.3374924762816587,
+     0
+    ],
+    "z_protein": [
+     "DOUBLE",
+     4230489,
+     -213164.88208142755,
+     3233440.681342559,
+     -2.184120260931558,
+     3.2268496076910758,
+     0
+    ],
+    "z_satfat": [
+     "DOUBLE",
+     4227014,
+     840481.6736050069,
+     3268444.3402558207,
+     -3.3095442166701203,
+     2.2273900265729254,
+     0
+    ],
+    "z_sodium": [
+     "DOUBLE",
+     4230510,
+     -133078.11166688197,
+     2607177.5566020813,
+     -5.430325016444139,
+     1.0925411894469583,
+     0
+    ],
+    "z_sugar": [
+     "DOUBLE",
+     4221599,
+     -951159.4692527181,
+     3203053.9712312697,
+     -3.394960588948153,
+     1.8465842789250333,
+     0
+    ]
+   },
+   "rows": 4255446
+  },
+  "household_year": {
+   "columns": {
+    "age_and_presence_of_children": [
+     "SMALLINT",
+     1036019,
+     "15347407045906576036406611"
+    ],
+    "dma_code": [
+     "SMALLINT",
+     977789,
+     "10544089308689981817437061"
+    ],
+    "dma_descr": [
+     "VARCHAR",
+     977789,
+     "10910574248873504918744522"
+    ],
+    "female_head_age": [
+     "SMALLINT",
+     1036019,
+     "10885641220805829779840658"
+    ],
+    "female_head_birth": [
+     "SMALLINT",
+     934081,
+     "9401564641235654961597617"
+    ],
+    "female_head_education": [
+     "SMALLINT",
+     1036019,
+     "6590382650752512923035111"
+    ],
+    "female_head_employment": [
+     "SMALLINT",
+     1036019,
+     "10576985122214973189672986"
+    ],
+    "female_head_occupation": [
+     "SMALLINT",
+     969676,
+     "11378517982253519874353712"
+    ],
+    "fips_county_code": [
+     "SMALLINT",
+     1036015,
+     "8773349406642035050320655"
+    ],
+    "fips_county_descr": [
+     "VARCHAR",
+     977789,
+     "9826527531670694710375799"
+    ],
+    "fips_state_code": [
+     "SMALLINT",
+     1036015,
+     "8878883280027999087543081"
+    ],
+    "fips_state_descr": [
+     "VARCHAR",
+     977789,
+     "11058999381935044135398468"
+    ],
+    "first_panel_year": [
+     "SMALLINT",
+     1036019,
+     "8813109346753584144682414"
+    ],
+    "first_trip_date": [
+     "DATE",
+     1036019,
+     "10185194736009866407899714"
+    ],
+    "hispanic_origin": [
+     "SMALLINT",
+     1036019,
+     "2302570470146873266088372"
+    ],
+    "household_code": [
+     "INTEGER",
+     1036019,
+     "9549609118744504227977514"
+    ],
+    "household_composition": [
+     "SMALLINT",
+     1036019,
+     "5244838466527963547934708"
+    ],
+    "household_income": [
+     "SMALLINT",
+     1036019,
+     "7442631082675670473751711"
+    ],
+    "household_internet_connection": [
+     "SMALLINT",
+     1036019,
+     "4565151753510712120311156"
+    ],
+    "household_size": [
+     "SMALLINT",
+     1036019,
+     "4818365724051520066532133"
+    ],
+    "in_health_survey": [
+     "BOOLEAN",
+     1036019,
+     "1857352364813866297865248"
+    ],
+    "in_next_year": [
+     "BOOLEAN",
+     1036019,
+     "3739110923034414597485392"
+    ],
+    "in_prev_year": [
+     "BOOLEAN",
+     1036019,
+     "3739110923034414597485392"
+    ],
+    "kitchen_appliances": [
+     "SMALLINT",
+     1036019,
+     "7919086328578117814228229"
+    ],
+    "last_panel_year": [
+     "SMALLINT",
+     1036019,
+     "8944498450301453858367636"
+    ],
+    "last_trip_date": [
+     "DATE",
+     1036019,
+     "10002337216706256711403047"
+    ],
+    "male_head_age": [
+     "SMALLINT",
+     1036019,
+     "9072327948109402227594868"
+    ],
+    "male_head_birth": [
+     "SMALLINT",
+     762463,
+     "10354243376506985116483839"
+    ],
+    "male_head_education": [
+     "SMALLINT",
+     1036019,
+     "5318104222353097866910575"
+    ],
+    "male_head_employment": [
+     "SMALLINT",
+     1036019,
+     "8152275099739853820183308"
+    ],
+    "male_head_occupation": [
+     "SMALLINT",
+     1036019,
+     "7564773266916274311680686"
+    ],
+    "marital_status": [
+     "SMALLINT",
+     1036019,
+     "5772692719993998021889892"
+    ],
+    "member_1_birth": [
+     "SMALLINT",
+     411172,
+     "11841441391692648599364678"
+    ],
+    "member_1_employment": [
+     "SMALLINT",
+     123912,
+     "13160609721895425529561427"
+    ],
+    "member_1_relationship_sex": [
+     "SMALLINT",
+     411172,
+     "10425682441268631526231853"
+    ],
+    "member_2_birth": [
+     "SMALLINT",
+     223634,
+     "12938184601791943605070900"
+    ],
+    "member_2_employment": [
+     "SMALLINT",
+     41809,
+     "13905271844205731005989858"
+    ],
+    "member_2_relationship_sex": [
+     "SMALLINT",
+     223634,
+     "12128003370038109731034818"
+    ],
+    "member_3_birth": [
+     "SMALLINT",
+     87515,
+     "13760094167723908139801960"
+    ],
+    "member_3_employment": [
+     "SMALLINT",
+     12670,
+     "14169558284189653533518061"
+    ],
+    "member_3_relationship_sex": [
+     "SMALLINT",
+     87515,
+     "13461509806374931236450085"
+    ],
+    "member_4_birth": [
+     "SMALLINT",
+     31519,
+     "14096515587231275030937107"
+    ],
+    "member_4_employment": [
+     "SMALLINT",
+     4314,
+     "14245345973969867564199473"
+    ],
+    "member_4_relationship_sex": [
+     "SMALLINT",
+     31519,
+     "13998409489806385022965035"
+    ],
+    "member_5_birth": [
+     "SMALLINT",
+     9822,
+     "14226217725100855874881511"
+    ],
+    "member_5_employment": [
+     "SMALLINT",
+     1537,
+     "14270532955123488239546802"
+    ],
+    "member_5_relationship_sex": [
+     "SMALLINT",
+     9822,
+     "14198641225740839353570639"
+    ],
+    "member_6_birth": [
+     "SMALLINT",
+     3556,
+     "14263896715545345773167986"
+    ],
+    "member_6_employment": [
+     "SMALLINT",
+     541,
+     "14279566528486472104381494"
+    ],
+    "member_6_relationship_sex": [
+     "SMALLINT",
+     3556,
+     "14253780695053172420890543"
+    ],
+    "member_7_birth": [
+     "SMALLINT",
+     1256,
+     "14277452333553515438969450"
+    ],
+    "member_7_employment": [
+     "SMALLINT",
+     248,
+     "14282223995349277598755555"
+    ],
+    "member_7_relationship_sex": [
+     "SMALLINT",
+     1256,
+     "14273673009728521919648068"
+    ],
+    "n_distinct_upcs": [
+     "BIGINT",
+     1035959,
+     "9679696055419144834825284"
+    ],
+    "n_health_survey_rows": [
+     "BIGINT",
+     1036019,
+     "1762799422526634992099789"
+    ],
+    "n_months_with_trips": [
+     "BIGINT",
+     1036019,
+     "11684982398509738587102641"
+    ],
+    "n_purchase_lines": [
+     "BIGINT",
+     1035959,
+     "9580502571148895273512129"
+    ],
+    "n_retailers": [
+     "BIGINT",
+     1036019,
+     "9157078602340001047346499"
+    ],
+    "n_shopping_days": [
+     "BIGINT",
+     1036019,
+     "9279401156536058300415607"
+    ],
+    "n_trips": [
+     "BIGINT",
+     1036019,
+     "9388199923442188993993782"
+    ],
+    "n_years_in_panel": [
+     "BIGINT",
+     1036019,
+     "6928428685525333786571365"
+    ],
+    "panel_year": [
+     "SMALLINT",
+     1036019,
+     "7571433681220887588818891"
+    ],
+    "panelist_zip_code": [
+     "VARCHAR",
+     1036019,
+     "9463587386974383634875563"
+    ],
+    "projection_factor": [
+     "INTEGER",
+     1036019,
+     "9587150370606535903199064"
+    ],
+    "projection_factor_magnet": [
+     "INTEGER",
+     617488,
+     "11613292308368300344895903"
+    ],
+    "race": [
+     "SMALLINT",
+     1036019,
+     "4905241226163539564375078"
+    ],
+    "region_code": [
+     "SMALLINT",
+     1036019,
+     "8443944029625883057728935"
+    ],
+    "scantrack_market_code": [
+     "SMALLINT",
+     977793,
+     "9874157838002807513888978"
+    ],
+    "scantrack_market_descr": [
+     "VARCHAR",
+     977793,
+     "10664459507779629535249348"
+    ],
+    "sh_food_spend_with_kcal": [
+     "DOUBLE",
+     58194,
+     37229.35660878917,
+     37229.35660878917,
+     0.000993739591825622,
+     1.0,
+     0
+    ],
+    "sh_trips_store_identified": [
+     "DOUBLE",
+     1036019,
+     527903.3149904418,
+     527903.3149904418,
+     0.0,
+     1.0,
+     0
+    ],
+    "spend_all": [
+     "DOUBLE",
+     1035959,
+     4996788662.2800045,
+     4996788662.2800045,
+     1.77,
+     95035.87999999983,
+     0
+    ],
+    "spend_food": [
+     "DOUBLE",
+     1035807,
+     2975215874.529979,
+     2975215874.529979,
+     0.33,
+     55128.04000000011,
+     0
+    ],
+    "spend_magnet": [
+     "DOUBLE",
+     593203,
+     1013659636.5299995,
+     1013659636.5299995,
+     7.840000000000002,
+     86576.73000000011,
+     0
+    ],
+    "spend_private_label": [
+     "DOUBLE",
+     1035009,
+     730140421.4399998,
+     730140421.4399998,
+     0.0,
+     15778.549999999997,
+     0
+    ],
+    "spend_store_identified": [
+     "DOUBLE",
+     1026322,
+     2939147762.1700063,
+     2939147762.1700063,
+     0.0,
+     84128.08000000007,
+     0
+    ],
+    "trip_total_spent": [
+     "DOUBLE",
+     1036019,
+     8172385519.120018,
+     8172385519.120018,
+     381.36,
+     227936.1999999999,
+     0
+    ],
+    "tv_items": [
+     "SMALLINT",
+     1005859,
+     "6458065760067096260414494"
+    ],
+    "type_of_residence": [
+     "SMALLINT",
+     1036012,
+     "5292828922266072825939104"
+    ],
+    "wic_indicator_current": [
+     "SMALLINT",
+     6559,
+     "14224984154492057547579108"
+    ],
+    "wic_indicator_ever_notcurrent": [
+     "SMALLINT",
+     81691,
+     "13543547975869865044807944"
+    ]
+   },
+   "rows": 1036019
+  },
+  "ladder_hh": {
+   "columns": {
+    "b_kcal": [
+     "DOUBLE",
+     2783093,
+     664981875839.6088,
+     664981875839.6088,
+     470.06247914,
+     3388609.7173348744,
+     0
+    ],
+    "b_spend": [
+     "DOUBLE",
+     2783093,
+     1307497706.2099943,
+     1307497706.2099943,
+     5.609999999999999,
+     5640.909999999998,
+     0
+    ],
+    "b_spend_lab": [
+     "DOUBLE",
+     2783093,
+     1313904909.099992,
+     1313904909.099992,
+     5.609999999999999,
+     5655.229999999998,
+     0
+    ],
+    "cf_fiber": [
+     "DOUBLE",
+     2783093,
+     3605286738.65722,
+     3605286738.65722,
+     0.0,
+     30173.518530837053,
+     0
+    ],
+    "cf_grams": [
+     "DOUBLE",
+     2783092,
+     202184166562.11008,
+     202184166562.11008,
+     40.716743929067746,
+     3105654.702729246,
+     0
+    ],
+    "cf_protein": [
+     "DOUBLE",
+     2783093,
+     16091824453.62173,
+     16091824453.62173,
+     2.3524927631926347,
+     96471.91531770353,
+     0
+    ],
+    "cf_satfat": [
+     "DOUBLE",
+     2783093,
+     9921170946.521242,
+     9921170946.521242,
+     0.0,
+     83534.35905288182,
+     0
+    ],
+    "cf_sodium": [
+     "DOUBLE",
+     2783093,
+     914642728595.0005,
+     914642728595.0005,
+     224.13051856105454,
+     51266729.58457374,
+     0
+    ],
+    "cf_sugar": [
+     "DOUBLE",
+     2783093,
+     27546743897.13753,
+     27546743897.13753,
+     4.504380008439695,
+     361793.5129215617,
+     0
+    ],
+    "cost_cheap": [
+     "DOUBLE",
+     2783093,
+     782853964.1748745,
+     782853964.1748745,
+     1.1697694759910142,
+     4870.548363365365,
+     0
+    ],
+    "dec_l": [
+     "DOUBLE",
+     2605864,
+     -72165.55380450706,
+     25853064.33831211,
+     -462.6174098452561,
+     430.2288771006339,
+     0
+    ],
+    "dec_m": [
+     "DOUBLE",
+     2605864,
+     4513693.846181239,
+     8955963.947061216,
+     -276.0702042756256,
+     321.9290403755401,
+     0
+    ],
+    "dec_t": [
+     "DOUBLE",
+     2608837,
+     6848305.314593888,
+     40244505.37844324,
+     -554.9522970566039,
+     479.0358684610911,
+     0
+    ],
+    "dec_w": [
+     "DOUBLE",
+     2605864,
+     4441528.292376743,
+     26983595.885647293,
+     -463.13354839684496,
+     449.2202621795946,
+     0
+    ],
+    "e_own": [
+     "DOUBLE",
+     2641592,
+     6199938.515276986,
+     9669476.68411009,
+     -62.05984460240923,
+     116.6443421315702,
+     0
+    ],
+    "f_all": [
+     "DOUBLE",
+     2641753,
+     5914294.152359533,
+     7062949.3727487195,
+     -34.14921129685051,
+     28.604038031573964,
+     0
+    ],
+    "f_cheap": [
+     "DOUBLE",
+     2641753,
+     9219371.056544608,
+     10110162.89018527,
+     -41.36546828482971,
+     115.2173913043478,
+     0
+    ],
+    "f_cheap_b2": [
+     "DOUBLE",
+     2551725,
+     7982173.380213457,
+     9220823.885295585,
+     -36.367532909310185,
+     72.64319986872717,
+     0
+    ],
+    "f_cheap_own": [
+     "DOUBLE",
+     2641753,
+     17088834.748302165,
+     17207311.13325435,
+     -24.37207230048345,
+     115.2173913043478,
+     0
+    ],
+    "f_prem": [
+     "DOUBLE",
+     2641753,
+     4537275.596532404,
+     6143085.241895426,
+     -48.27586206902927,
+     60.507678301010046,
+     0
+    ],
+    "f_prem_b2": [
+     "DOUBLE",
+     2551725,
+     4821823.8772219755,
+     6261648.764668052,
+     -37.260388821562685,
+     85.51888890102663,
+     0
+    ],
+    "f_prem_own": [
+     "DOUBLE",
+     2641753,
+     -322506.86814674345,
+     5191622.719281418,
+     -48.27586206902927,
+     55.96527219734764,
+     0
+    ],
+    "fx_spend": [
+     "DOUBLE",
+     2641753,
+     1211609952.3099973,
+     1211609952.3099973,
+     1.38,
+     5601.469999999998,
+     0
+    ],
+    "household_code": [
+     "INTEGER",
+     2783093,
+     "25650495667657030018298585"
+    ],
+    "kcal0": [
+     "DOUBLE",
+     2783093,
+     666898440377.6971,
+     666898440377.6971,
+     776.543560221,
+     3399773.980841365,
+     0
+    ],
+    "kcal1": [
+     "DOUBLE",
+     2608837,
+     596596625691.8591,
+     596596625691.8591,
+     10.001648418,
+     3399773.9808413666,
+     0
+    ],
+    "kcal_cheap0": [
+     "DOUBLE",
+     2763515,
+     184507136060.89355,
+     184507136060.89355,
+     0.35436875,
+     1817299.72552527,
+     0
+    ],
+    "kcal_cheap1": [
+     "DOUBLE",
+     2580684,
+     165102185567.71976,
+     165102185567.71976,
+     0.35436875,
+     1817299.7255252702,
+     0
+    ],
+    "kcal_prem0": [
+     "DOUBLE",
+     2782179,
+     178996109549.3044,
+     178996109549.3044,
+     16.77827551,
+     1542252.5929289642,
+     0
+    ],
+    "kcal_prem1": [
+     "DOUBLE",
+     2604576,
+     160793221298.68964,
+     160793221298.68964,
+     3.29779898,
+     1065550.873078716,
+     0
+    ],
+    "kcal_tier0": [
+     "DOUBLE",
+     2783091,
+     653623829359.9437,
+     653623829359.9437,
+     776.543560221,
+     3341507.7427413994,
+     0
+    ],
+    "kcal_tier1": [
+     "DOUBLE",
+     2608704,
+     586159337779.3009,
+     586159337779.3009,
+     10.001648418,
+     3341507.7427414013,
+     0
+    ],
+    "n_e_items": [
+     "BIGINT",
+     2641592,
+     "25542508237232846237143086"
+    ],
+    "n_mod_both": [
+     "BIGINT",
+     2605864,
+     "25688830434468969017183438"
+    ],
+    "own_fiber": [
+     "DOUBLE",
+     2783093,
+     4244307842.177452,
+     4244307842.177452,
+     0.0,
+     35733.19668658099,
+     0
+    ],
+    "own_grams": [
+     "DOUBLE",
+     2783092,
+     222593078851.5519,
+     222593078851.5519,
+     41.106775,
+     3112266.547055001,
+     0
+    ],
+    "own_kcal_g": [
+     "DOUBLE",
+     2783092,
+     574760307753.1077,
+     574760307753.1077,
+     210.546896341,
+     3312911.3166907937,
+     0
+    ],
+    "own_protein": [
+     "DOUBLE",
+     2783093,
+     17930486074.159626,
+     17930486074.159626,
+     0.0,
+     88777.55914308199,
+     0
+    ],
+    "own_satfat": [
+     "DOUBLE",
+     2783093,
+     9513602193.26476,
+     9513602193.26476,
+     0.0,
+     89078.00635357402,
+     0
+    ],
+    "own_sodium": [
+     "DOUBLE",
+     2783093,
+     1026857379051.9569,
+     1026857379051.9569,
+     50.176106195,
+     36036318.78033843,
+     0
+    ],
+    "own_sugar": [
+     "DOUBLE",
+     2783093,
+     27762303659.401356,
+     27762303659.401356,
+     0.0,
+     413321.67604119005,
+     0
+    ],
+    "sav25": [
+     "DOUBLE",
+     2783093,
+     440949362.40026224,
+     440949362.40026224,
+     0.0,
+     2142.328501565155,
+     0
+    ],
+    "sav50": [
+     "DOUBLE",
+     2783093,
+     280383747.31346995,
+     280383747.31346995,
+     0.0,
+     1949.6825573874403,
+     0
+    ],
+    "spend0": [
+     "DOUBLE",
+     2783093,
+     1313904909.099992,
+     1313904909.099992,
+     5.609999999999999,
+     5655.230000000001,
+     0
+    ],
+    "spend1": [
+     "DOUBLE",
+     2608837,
+     1188776579.3899953,
+     1188776579.3899953,
+     0.01,
+     5655.229999999998,
+     0
+    ],
+    "state": [
+     "INTEGER",
+     2783093,
+     "23872236307108351494028287"
+    ],
+    "yq": [
+     "DOUBLE",
+     2783093,
+     56033630312.0,
+     56033630312.0,
+     20051.0,
+     20214.0,
+     0
+    ]
+   },
+   "rows": 2783093
+  },
+  "ladder_tier": {
+   "columns": {
+    "l_all": [
+     "DOUBLE",
+     1400175,
+     1440122.509169965,
+     1440122.509169965,
+     0.3333333333333333,
+     3.0,
+     0
+    ],
+    "l_cheap": [
+     "DOUBLE",
+     1264891,
+     1314964.1233234878,
+     1314964.1233234878,
+     0.33333333333333326,
+     3.0,
+     0
+    ],
+    "l_cheap_b2": [
+     "DOUBLE",
+     1068752,
+     1108536.755174278,
+     1108536.755174278,
+     0.3333333333333333,
+     3.0,
+     0
+    ],
+    "l_cheap_own": [
+     "DOUBLE",
+     1267190,
+     1368537.5306430822,
+     1368537.5306430822,
+     0.3333333333333333,
+     3.0,
+     0
+    ],
+    "l_mid": [
+     "DOUBLE",
+     1069752,
+     1101246.4898953796,
+     1101246.4898953796,
+     0.3333333333333333,
+     3.0,
+     0
+    ],
+    "l_mid_b2": [
+     "DOUBLE",
+     953301,
+     981798.4475459864,
+     981798.4475459864,
+     0.3333333333333333,
+     3.0,
+     0
+    ],
+    "l_prem": [
+     "DOUBLE",
+     1249635,
+     1281172.3852159563,
+     1281172.3852159563,
+     0.3333333333333333,
+     3.0,
+     0
+    ],
+    "l_prem_b2": [
+     "DOUBLE",
+     1100079,
+     1128351.8694403237,
+     1128351.8694403237,
+     0.3333333333333333,
+     3.0,
+     0
+    ],
+    "l_prem_own": [
+     "DOUBLE",
+     1254231,
+     1248614.1384100043,
+     1248614.1384100043,
+     0.3333333333333333,
+     2.9999999999967075,
+     0
+    ],
+    "module": [
+     "INTEGER",
+     1400175,
+     "12769154667312062132672439"
+    ],
+    "n_items": [
+     "BIGINT",
+     1400175,
+     "10959545219037321519465662"
+    ],
+    "spend0": [
+     "DOUBLE",
+     1400175,
+     1269387158.689988,
+     1269387158.689988,
+     0.2,
+     111241.52999999988,
+     0
+    ],
+    "spend0_b2": [
+     "DOUBLE",
+     1248137,
+     1062940662.4599887,
+     1062940662.4599887,
+     0.2,
+     107692.5199999999,
+     0
+    ],
+    "state": [
+     "SMALLINT",
+     1400175,
+     "12634412963864331622538760"
+    ],
+    "t": [
+     "BIGINT",
+     1400175,
+     "11636574046648359132894434"
+    ]
+   },
+   "rows": 1400175
+  },
+  "ladder_upc_kcal": {
+   "columns": {
+    "amt_unit": [
+     "DOUBLE",
+     1154841,
+     663580092.8745745,
+     663580092.8745745,
+     0.340194,
+     1658880.0,
+     0
+    ],
+    "basis": [
+     "VARCHAR",
+     1154841,
+     "14812359216429178422505825"
+    ],
+    "fiber_unit": [
+     "DOUBLE",
+     1154841,
+     10314926.163329747,
+     10314926.163329747,
+     0.0,
+     18899.666666666664,
+     0
+    ],
+    "g_unit": [
+     "DOUBLE",
+     1154841,
+     513419210.22973394,
+     513419210.22973394,
+     0.0,
+     1658880.0,
+     0
+    ],
+    "is_pl": [
+     "BOOLEAN",
+     1154841,
+     "1527677674984886681660896"
+    ],
+    "item": [
+     "VARCHAR",
+     1154841,
+     "10649951261433808209312648"
+    ],
+    "kcal_unit": [
+     "DOUBLE",
+     1154841,
+     1523367084.508747,
+     1523367084.508747,
+     0.2883,
+     6250000.0,
+     0
+    ],
+    "module": [
+     "INTEGER",
+     1154841,
+     "11282506837245044506553625"
+    ],
+    "protein_unit": [
+     "DOUBLE",
+     1154841,
+     37847961.13542701,
+     37847961.13542701,
+     0.0,
+     23327.588571428572,
+     0
+    ],
+    "satfat_unit": [
+     "DOUBLE",
+     1154841,
+     20611642.883220404,
+     20611642.883220404,
+     0.0,
+     16329.312000000002,
+     0
+    ],
+    "sodium_unit": [
+     "DOUBLE",
+     1154841,
+     2226024282.193259,
+     2226024282.193259,
+     0.0,
+     20000000.0,
+     0
+    ],
+    "sugar_unit": [
+     "DOUBLE",
+     1154841,
+     83361463.22179201,
+     83361463.22179201,
+     0.0,
+     1244160.0,
+     0
+    ],
+    "upc": [
+     "VARCHAR",
+     1154841,
+     "10651865545038674728770157"
+    ],
+    "upc_ver_uc": [
+     "SMALLINT",
+     1154841,
+     "5305501641638918783124181"
+    ]
+   },
+   "rows": 1154841
+  },
+  "local_panel": {
+   "columns": {
+    "area_type": [
+     "VARCHAR",
+     2783093,
+     "20035331111481447645782900"
+    ],
+    "cpi_area": [
+     "VARCHAR",
+     2783093,
+     "34125039454479778907658324"
+    ],
+    "d_cpi": [
+     "DOUBLE",
+     2783093,
+     4987103.142139288,
+     6393712.8450253215,
+     -5.600756724464107,
+     10.670154567844548,
+     0
+    ],
+    "d_ed": [
+     "DOUBLE",
+     2782901,
+     1314975.186793546,
+     88080762.4790599,
+     -613.0091005141115,
+     682.8992831359953,
+     0
+    ],
+    "d_emp_c": [
+     "DOUBLE",
+     2756148,
+     2647046.7475873437,
+     6609846.210878856,
+     -72.13374281742998,
+     47.42186474132852,
+     0
+    ],
+    "d_hpi": [
+     "DOUBLE",
+     2783093,
+     7393022.739824325,
+     15219815.245271359,
+     -30.115975743581913,
+     30.53598511860578,
+     0
+    ],
+    "d_hs": [
+     "DOUBLE",
+     2782366,
+     6917.348735156931,
+     834046.459847067,
+     -3.8079958598787407,
+     3.466356464964645,
+     0
+    ],
+    "d_lkcal": [
+     "DOUBLE",
+     2783043,
+     -12655718.806546137,
+     98579101.25030047,
+     -838.0386922255695,
+     513.1412094704629,
+     0
+    ],
+    "d_lkpu": [
+     "DOUBLE",
+     2783093,
+     -2865425.693932202,
+     41926881.922044486,
+     -170.64885488328096,
+     160.83403850871596,
+     0
+    ],
+    "d_lspend": [
+     "DOUBLE",
+     2783093,
+     -9939396.436577184,
+     91246659.68143287,
+     -979.996545535175,
+     422.0467526894109,
+     0
+    ],
+    "d_pinc": [
+     "DOUBLE",
+     2783093,
+     11810521.491933312,
+     13180866.717688333,
+     -11.395106639910324,
+     22.65682165112093,
+     0
+    ],
+    "d_ur": [
+     "DOUBLE",
+     2783093,
+     -840534.0666665351,
+     3062622.666666746,
+     -17.433333333333334,
+     6.1333333333333355,
+     0
+    ],
+    "d_ur_c": [
+     "DOUBLE",
+     2756148,
+     -827038.2999999946,
+     3138619.70000021,
+     -20.999999999999996,
+     16.03333333333333,
+     0
+    ],
+    "dl_cpi": [
+     "DOUBLE",
+     2783093,
+     5542570.366183946,
+     6912703.784207134,
+     -5.600756724464107,
+     10.354971845615246,
+     0
+    ],
+    "dl_emp_c": [
+     "DOUBLE",
+     2755742,
+     830437.0267157587,
+     6787035.433904797,
+     -72.13374281742998,
+     59.04292404498488,
+     0
+    ],
+    "dl_hpi": [
+     "DOUBLE",
+     2783093,
+     6249605.460957545,
+     14195538.73413228,
+     -30.115975743581913,
+     31.621193192645514,
+     0
+    ],
+    "dl_pinc": [
+     "DOUBLE",
+     2783093,
+     11580989.572935836,
+     12892279.391669527,
+     -11.395106639910324,
+     17.12038081697891,
+     0
+    ],
+    "dl_ur": [
+     "DOUBLE",
+     2783093,
+     441494.5333333263,
+     3170649.666666655,
+     -5.7666666666666675,
+     20.633333333333333,
+     0
+    ],
+    "dl_ur_c": [
+     "DOUBLE",
+     2755742,
+     421464.6333333468,
+     3247433.966666694,
+     -13.366666666666664,
+     25.933333333333334,
+     0
+    ],
+    "fips": [
+     "INTEGER",
+     2783093,
+     "26304756619364280593671099"
+    ],
+    "household_code": [
+     "INTEGER",
+     2783093,
+     "25650495667657030018298585"
+    ],
+    "income_cat": [
+     "VARCHAR",
+     2783093,
+     "24402198931020856115332479"
+    ],
+    "infl_exposure": [
+     "DOUBLE",
+     2783093,
+     6269619.148678035,
+     9370235.179654226,
+     -46.918525869145924,
+     97.12985081353935,
+     0
+    ],
+    "n_base_items": [
+     "DOUBLE",
+     2783093,
+     375422375.0,
+     375422375.0,
+     10.0,
+     1270.0,
+     0
+    ],
+    "panel_year": [
+     "INTEGER",
+     2783093,
+     "20324712259249916299541141"
+    ],
+    "projection_factor": [
+     "DOUBLE",
+     2783093,
+     5301192848.0,
+     5301192848.0,
+     118.0,
+     31860.0,
+     0
+    ],
+    "region_code": [
+     "INTEGER",
+     2783093,
+     "22667263588399440979632488"
+    ],
+    "state": [
+     "INTEGER",
+     2783093,
+     "23872236307108351494028287"
+    ],
+    "year": [
+     "BIGINT",
+     2783093,
+     "20324712259249916299541141"
+    ],
+    "yq": [
+     "DOUBLE",
+     2783093,
+     56033630312.0,
+     56033630312.0,
+     20051.0,
+     20214.0,
+     0
+    ]
+   },
+   "rows": 2783093
+  },
+  "sample_flags": {
+   "columns": {
+    "bal_2007_2012": [
+     "BOOLEAN",
+     1036019,
+     "1653209395064451348332560"
+    ],
+    "bal_2016_2023": [
+     "BOOLEAN",
+     0,
+     "14284473318837249484778651"
+    ],
+    "bal_2018_2023": [
+     "BOOLEAN",
+     0,
+     "14284473318837249484778651"
+    ],
+    "bal_2019_2022": [
+     "BOOLEAN",
+     0,
+     "14284473318837249484778651"
+    ],
+    "f_core": [
+     "BOOLEAN",
+     1036019,
+     "4829354879114617638182256"
+    ],
+    "f_food_reporter": [
+     "BOOLEAN",
+     1036019,
+     "4878138957951867183541936"
+    ],
+    "f_health_survey": [
+     "BOOLEAN",
+     1036019,
+     "1857352364813866297865248"
+    ],
+    "f_magnet_hh": [
+     "BOOLEAN",
+     1036019,
+     "2798729392504153003481456"
+    ],
+    "f_nutri_cov50": [
+     "BOOLEAN",
+     58226,
+     "13707394554539624923320137"
+    ],
+    "f_spend_outlier": [
+     "BOOLEAN",
+     1036019,
+     "49954141849980482230976"
+    ],
+    "f_static": [
+     "BOOLEAN",
+     1036019,
+     "4887933517687469703480688"
+    ],
+    "f_store_linkable": [
+     "BOOLEAN",
+     1035959,
+     "3242887877360271485021228"
+    ],
+    "household_code": [
+     "INTEGER",
+     1036019,
+     "9549609118744504227977514"
+    ],
+    "panel_year": [
+     "SMALLINT",
+     1036019,
+     "7571433681220887588818891"
+    ]
+   },
+   "rows": 1036019
+  },
+  "shock_div": {
+   "columns": {
+    "C": [
+     "DOUBLE",
+     355256,
+     -28495800.668560628,
+     79217450.38924745,
+     -72608.71197253023,
+     140786.78878119227,
+     0
+    ],
+    "D": [
+     "DOUBLE",
+     355256,
+     -2190157029.519998,
+     2190167802.259998,
+     -308385.77999999997,
+     1748.4500000000003,
+     0
+    ],
+    "division": [
+     "INTEGER",
+     355256,
+     "3028369210023459118681164"
+    ],
+    "module": [
+     "INTEGER",
+     355256,
+     "3232063536344019137305262"
+    ],
+    "yq": [
+     "BIGINT",
+     355256,
+     "3073461316586744238394000"
+    ]
+   },
+   "rows": 355256
+  },
+  "shock_nat": {
+   "columns": {
+    "A": [
+     "DOUBLE",
+     40033,
+     27571782.841624312,
+     68556167.8592132,
+     -380639.10696248704,
+     255244.6480426659,
+     0
+    ],
+    "W": [
+     "DOUBLE",
+     40033,
+     2153922357.989998,
+     2153922357.989998,
+     0.78,
+     1485753.3800000004,
+     0
+    ],
+    "module": [
+     "INTEGER",
+     40037,
+     "364364687658179698674050"
+    ],
+    "n_items": [
+     "BIGINT",
+     40037,
+     "357807828992857438699847"
+    ],
+    "yq": [
+     "BIGINT",
+     40037,
+     "346430008169561366982935"
+    ]
+   },
+   "rows": 40037
+  },
+  "shock_st": {
+   "columns": {
+    "C": [
+     "DOUBLE",
+     1841432,
+     -29075940.612168077,
+     93227571.3190146,
+     -22335.826097791265,
+     41600.310470238146,
+     0
+    ],
+    "D": [
+     "DOUBLE",
+     1841432,
+     -2192638993.7399817,
+     2192684484.579982,
+     -124302.40000000007,
+     2043.0300000000002,
+     0
+    ],
+    "module": [
+     "INTEGER",
+     1841432,
+     "16759377822898860313117006"
+    ],
+    "state": [
+     "INTEGER",
+     1840121,
+     "16804389101300388957873215"
+    ],
+    "yq": [
+     "BIGINT",
+     1841432,
+     "15931132993944961987391572"
+    ]
+   },
+   "rows": 1841432
+  },
+  "state_controls": {
+   "columns": {
+    "ci": [
+     "DOUBLE",
+     3400,
+     378445.4633333335,
+     378445.4633333335,
+     69.59333333333333,
+     163.68333333333334,
+     0
+    ],
+    "d_lci": [
+     "DOUBLE",
+     3400,
+     7554.599477967615,
+     13242.271091034827,
+     -72.45717711316892,
+     65.454893863747,
+     0
+    ],
+    "d_ur": [
+     "DOUBLE",
+     3468,
+     -75.16666666666659,
+     3910.633333333311,
+     -17.433333333333334,
+     20.633333333333333,
+     0
+    ],
+    "state": [
+     "DOUBLE",
+     3468,
+     100436.0,
+     100436.0,
+     1.0,
+     56.0,
+     0
+    ],
+    "ur": [
+     "DOUBLE",
+     3468,
+     19902.233333333337,
+     19902.233333333337,
+     2.0,
+     24.7,
+     0
+    ],
+    "yq": [
+     "INTEGER",
+     3468,
+     "30007238189061208775055"
+    ]
+   },
+   "rows": 3468
+  },
+  "state_q": {
+   "columns": {
+    "d_hpi": [
+     "DOUBLE",
+     3528,
+     11852.800909339241,
+     18785.644547782103,
+     -30.115975743581913,
+     31.621193192645514,
+     0
+    ],
+    "d_pinc": [
+     "DOUBLE",
+     3528,
+     16003.898380942135,
+     17441.339614994686,
+     -11.395106639910324,
+     22.65682165112093,
+     0
+    ],
+    "d_ur": [
+     "DOUBLE",
+     3528,
+     -156.2,
+     3839.199999999977,
+     -17.433333333333334,
+     20.633333333333333,
+     0
+    ],
+    "dl_hpi": [
+     "DOUBLE",
+     3332,
+     9375.761524755631,
+     16308.605163198485,
+     -30.115975743581913,
+     31.621193192645514,
+     0
+    ],
+    "dl_pinc": [
+     "DOUBLE",
+     3332,
+     14133.20221917736,
+     15562.783113304593,
+     -11.395106639910324,
+     17.12038081697891,
+     0
+    ],
+    "dl_ur": [
+     "DOUBLE",
+     3332,
+     337.56666666666626,
+     3171.233333333316,
+     -5.7666666666666675,
+     20.633333333333333,
+     0
+    ],
+    "hpi": [
+     "DOUBLE",
+     3724,
+     1364862.8299999984,
+     1364862.8299999984,
+     164.72,
+     1028.42,
+     0
+    ],
+    "pinc": [
+     "DOUBLE",
+     3724,
+     1077657821.400002,
+     1077657821.400002,
+     16485.5,
+     3106684.1,
+     0
+    ],
+    "state": [
+     "INTEGER",
+     3724,
+     "34162371864127397339232"
+    ],
+    "ur": [
+     "DOUBLE",
+     3724,
+     21234.966666666656,
+     21234.966666666656,
+     2.0,
+     24.7,
+     0
+    ],
+    "yq": [
+     "INTEGER",
+     3724,
+     "32914614424136864626669"
+    ]
+   },
+   "rows": 3724
+  },
+  "upc_nutrients": {
+   "columns": {
+    "basis": [
+     "VARCHAR",
+     1504831,
+     "126809324082100670070790131"
+    ],
+    "carb_100": [
+     "DOUBLE",
+     1486684,
+     52109001.20169683,
+     52109001.20169683,
+     0.0,
+     100.0,
+     0
+    ],
+    "f_kcal_implausible": [
+     "BOOLEAN",
+     9307955,
+     "489784602732354913237824"
+    ],
+    "f_macro_mismatch": [
+     "BOOLEAN",
+     1595362,
+     "106587694826214850355460969"
+    ],
+    "f_nutrient_cleaned": [
+     "BOOLEAN",
+     1494017,
+     "107831109178026972261428178"
+    ],
+    "f_srv_mismatch": [
+     "BOOLEAN",
+     1422558,
+     "109156632219836913622038477"
+    ],
+    "fat_100": [
+     "DOUBLE",
+     1493030,
+     18204073.76082304,
+     18204073.76082304,
+     0.0,
+     100.0,
+     0
+    ],
+    "fiber_100": [
+     "DOUBLE",
+     1229729,
+     3092599.9472120344,
+     3092599.9472120344,
+     0.0,
+     100.0,
+     0
+    ],
+    "is_pl_masked_b2": [
+     "BOOLEAN",
+     9305045,
+     "8083697231026815682765982"
+    ],
+    "kcal_100": [
+     "DOUBLE",
+     1498870,
+     2748491820.170054,
+     2748491820.170054,
+     0.0,
+     2000000000.0,
+     0
+    ],
+    "kcal_pkg_srv": [
+     "DOUBLE",
+     1459779,
+     1841780780.7715003,
+     1841780780.7715003,
+     0.0,
+     2484300.0,
+     0
+    ],
+    "kcal_srv": [
+     "DOUBLE",
+     1595362,
+     217960070.66899997,
+     217960070.66899997,
+     0.0,
+     7116.0,
+     0
+    ],
+    "label_year": [
+     "SMALLINT",
+     9307955,
+     "98603751197720785722414465"
+    ],
+    "nutrition_status": [
+     "VARCHAR",
+     9307955,
+     "114950328675883178792515730"
+    ],
+    "pack_size_srv": [
+     "DOUBLE",
+     1403532,
+     806274882.6887536,
+     806274882.6887536,
+     0.0,
+     3549645.0,
+     0
+    ],
+    "product_module_code": [
+     "INTEGER",
+     8948145,
+     "89553092519309742470946547"
+    ],
+    "product_size": [
+     "VARCHAR",
+     8981058,
+     "113728577324581638342258388"
+    ],
+    "protein_100": [
+     "DOUBLE",
+     1489959,
+     10736534.59702505,
+     10736534.59702505,
+     0.0,
+     100.0,
+     0
+    ],
+    "satfat_100": [
+     "DOUBLE",
+     1282747,
+     6183573.161467196,
+     6183573.161467196,
+     0.0,
+     100.0,
+     0
+    ],
+    "servings": [
+     "DOUBLE",
+     1474633,
+     25852475.320000008,
+     25852475.320000008,
+     0.0,
+     23600.0,
+     0
+    ],
+    "size_basis": [
+     "VARCHAR",
+     8959575,
+     "62036176167621299450737596"
+    ],
+    "size_unit_b2": [
+     "VARCHAR",
+     8981058,
+     "74129330776261928949705796"
+    ],
+    "sodium_mg_100": [
+     "DOUBLE",
+     1492468,
+     952057917.6039329,
+     952057917.6039329,
+     0.0,
+     40000.0,
+     0
+    ],
+    "srv_size": [
+     "DOUBLE",
+     1506284,
+     120294565.8748211,
+     120294565.8748211,
+     0.0,
+     3000.0,
+     0
+    ],
+    "sugar_100": [
+     "DOUBLE",
+     1116666,
+     19922534.51391436,
+     19922534.51391436,
+     0.0,
+     100.0,
+     0
+    ],
+    "unit_size": [
+     "DOUBLE",
+     1351883,
+     693825461.1831582,
+     693825461.1831582,
+     0.1,
+     58673.854999999996,
+     0
+    ],
+    "upc": [
+     "VARCHAR",
+     9307955,
+     "85860900187023728487247837"
+    ]
+   },
+   "rows": 9307955
+  },
+  "xwalk_module_foodgroup": {
+   "columns": {
+    "department_code": [
+     "INTEGER",
+     1344,
+     "10646737992366780139085"
+    ],
+    "fg_rule": [
+     "VARCHAR",
+     1460,
+     "17671885019891124592141"
+    ],
+    "food_group": [
+     "VARCHAR",
+     773,
+     "14645869933743176816673"
+    ],
+    "is_human_food": [
+     "BOOLEAN",
+     1460,
+     "3647010922746025006096"
+    ],
+    "is_magnet_product": [
+     "BOOLEAN",
+     1344,
+     "1722058356502144412916"
+    ],
+    "product_group_code": [
+     "INTEGER",
+     1344,
+     "14584458853681968336419"
+    ],
+    "product_group_descr": [
+     "VARCHAR",
+     1344,
+     "15268037328163674299189"
+    ],
+    "product_module_code": [
+     "INTEGER",
+     1460,
+     "13445799283032697171226"
+    ],
+    "product_module_descr": [
+     "VARCHAR",
+     1378,
+     "13867149489876347150310"
+    ]
+   },
+   "rows": 1460
+  }
+ }
+}

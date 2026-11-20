@@ -1,0 +1,21 @@
+ladder,rung,label,quantile,mean,median,wmean,n
+pooled,ret,Retailer where the calories were bought,25,30.8635573321264,30.3387389836022,30.5231884534345,2912575
+pooled,ret,Retailer where the calories were bought,50,19.3915966891251,18.2943106390345,19.0588794273561,2912575
+pooled,zip3,Everything bought in the household's zip3,25,33.7458917975682,33.2885314562578,33.2639980742564,2912575
+pooled,zip3,Everything bought in the household's zip3,50,21.161733244158,19.9706888123882,20.7084501424512,2912575
+pooled,cty,Everything bought in the household's county,25,33.110071968029,32.5617347595546,32.7076737333741,2912575
+pooled,cty,Everything bought in the household's county,50,20.7356193922807,19.4849974763135,20.3489295168859,2912575
+pooled,st,Everything bought in the household's state,25,35.2058264149384,34.8042380650725,34.9045391138516,2912575
+pooled,st,Everything bought in the household's state,50,22.190653733063,20.9627713587216,21.8862992457837,2912575
+best retailer,ret,Retailer where the calories were bought,25,30.8635573321264,30.3387389836022,30.5231884534345,2912575
+best retailer,ret,Retailer where the calories were bought,50,19.3915966891251,18.2943106390345,19.0588794273561,2912575
+best retailer,setx,Best of the household's own retailers,25,37.6675380656624,37.5174530276759,37.1219529663348,2912575
+best retailer,setx,Best of the household's own retailers,50,27.0700057011767,26.4221061000825,26.4702175521406,2912575
+best retailer,bz3,Best retailer used in the household's zip3,25,40.847216155466,40.7315334962454,40.4750168797628,2912575
+best retailer,bz3,Best retailer used in the household's zip3,50,31.430473439042,30.852382691374,30.9855336542427,2912575
+best retailer,bcty,Best retailer used in the household's county,25,40.7650174601976,40.6577382480547,40.3958564184462,2912575
+best retailer,bcty,Best retailer used in the household's county,50,31.2512522759756,30.679473918453,30.8143218404486,2912575
+best retailer,bst,Best retailer in the household's state,25,40.8308810637263,40.6865520340575,40.5535148408088,2912575
+best retailer,bst,Best retailer in the household's state,50,31.5209459857926,30.9045220500685,31.1964097138001,2912575
+reference,fig3_state,"State, Figure 4 panellist-price shelf",25,33.8241770486932,33.3196018524086,33.6008373918275,2912575
+reference,fig3_state,"State, Figure 4 panellist-price shelf",50,21.564628340249,20.2642035163435,21.3174825935661,2912575

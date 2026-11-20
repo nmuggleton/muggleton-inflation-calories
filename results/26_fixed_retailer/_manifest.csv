@@ -1,0 +1,6 @@
+object,kind,file,class,named
+decomp,table,decomp.csv,data.table,FALSE
+iv,table,iv.csv,data.table,FALSE
+rf,table,rf.csv,data.table,FALSE
+cells,table,cells.csv,data.table,FALSE
+flow,table,flow.csv,data.table,FALSE

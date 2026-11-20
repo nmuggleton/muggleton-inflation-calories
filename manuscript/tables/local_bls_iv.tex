@@ -1,0 +1,28 @@
+\sisetup{group-digits=integer, group-separator={,}, group-minimum-digits=4}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{
+    l
+    S[table-format=-1.4, table-space-text-post=\sym{***}, table-align-text-after=false]
+    S[table-format=1.4, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+    S[table-format=-1.4, table-space-text-post=\sym{***}, table-align-text-after=false]
+    S[table-format=1.4, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+    S[table-format=-1.4, table-space-text-post=\sym{***}, table-align-text-after=false]
+    S[table-format=1.4, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+}
+\toprule
+ & \multicolumn{2}{c}{BLS, all 21 areas} & \multicolumn{2}{c}{BLS, 14 metro areas} & \multicolumn{2}{c}{Both instruments} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+ & {\(b\)} & {\(\mathit{SE}\)} & {\(b\)} & {\(\mathit{SE}\)} & {\(b\)} & {\(\mathit{SE}\)} \\
+\midrule
+Calories per dollar & -0.908\sym{***} & {(}0.180{)} & -0.654\sym{**} & {(}0.275{)} & -0.812\sym{***} & {(}0.022{)} \\
+Real spend & 1.185\sym{***} & {(}0.277{)} & 1.248\sym{**} & {(}0.433{)} & 0.758\sym{***} & {(}0.043{)} \\
+Calories bought & 0.423 & {(}0.350{)} & 0.677\sym{*} & {(}0.382{)} & -0.013 & {(}0.054{)} \\
+Energy density & -0.031 & {(}0.162{)} & 0.176 & {(}0.349{)} & -0.083\sym{**} & {(}0.035{)} \\
+Health score & -0.0060\sym{**} & {(}0.0028{)} & -0.0113\sym{*} & {(}0.0052{)} & 0.0004 & {(}0.0005{)} \\
+\midrule
+Quarter FE & \multicolumn{2}{c}{$\checkmark$} & \multicolumn{2}{c}{$\checkmark$} & \multicolumn{2}{c}{$\checkmark$} \\
+Clustered by & \multicolumn{2}{c}{CPI area (21)} & \multicolumn{2}{c}{CPI area (14)} & \multicolumn{2}{c}{State (49)} \\
+First-stage \(F\) & \multicolumn{2}{r}{\num{8976}} & \multicolumn{2}{r}{\num{2375}} & \multicolumn{2}{r}{\num{109461}} \\
+\(N\) (household-quarters) & \multicolumn{2}{r}{\num{3323087}} & \multicolumn{2}{r}{\num{874248}} & \multicolumn{2}{r}{\num{3323087}} \\
+\bottomrule
+\end{tabular}

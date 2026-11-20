@@ -1,0 +1,21 @@
+\sisetup{group-digits=integer, group-separator={,}, group-minimum-digits=4}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{
+    l
+    S[table-format=-1.3, table-space-text-post=\sym{***}, table-align-text-after=false]
+    S[table-format=1.3, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+    S[table-format=1.3, table-space-text-post=\sym{***}, table-align-text-after=false]
+    S[table-format=1.3, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+    S[table-format=-1.3]
+    S[table-format=1.3, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+}
+\toprule
+ & \multicolumn{2}{c}{kcal per \$} & \multicolumn{2}{c}{Spend} & \multicolumn{2}{c}{kcal} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+Slack tercile & {\(b\)} & {\(\mathit{SE}\)} & {\(b\)} & {\(\mathit{SE}\)} & {\(b\)} & {\(\mathit{SE}\)} \\
+\midrule
+T1 & -0.793\sym{***} & {(}0.034{)} & 0.703\sym{***} & {(}0.085{)} & -0.082 & {(}0.088{)} \\
+T2 & -0.813\sym{***} & {(}0.034{)} & 0.752\sym{***} & {(}0.070{)} & -0.008 & {(}0.091{)} \\
+T3 & -0.787\sym{***} & {(}0.042{)} & 0.810\sym{***} & {(}0.054{)} & 0.080 & {(}0.068{)} \\
+\bottomrule
+\end{tabular}

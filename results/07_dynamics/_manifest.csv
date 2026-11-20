@@ -1,0 +1,5 @@
+object,kind,file,class,named
+pre,table,pre.csv,data.table,FALSE
+cond,table,cond.csv,data.table,FALSE
+per,table,per.csv,data.table,FALSE
+eq,table,eq.csv,data.table,FALSE

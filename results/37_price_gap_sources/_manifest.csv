@@ -1,0 +1,11 @@
+object,kind,file,class,named
+total,table,total.csv,data.table,FALSE
+own,table,own.csv,data.table,FALSE
+contrib,table,contrib.csv,data.table,FALSE
+parts,table,parts.csv,data.table,FALSE
+route,table,route.csv,data.table,FALSE
+store_2011,table,store_2011.csv,data.table,FALSE
+rms,table,rms.csv,data.table,FALSE
+moved,table,moved.csv,data.table,FALSE
+switching,table,switching.csv,data.table,FALSE
+flow,table,flow.csv,data.table,FALSE

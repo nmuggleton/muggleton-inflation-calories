@@ -1,0 +1,45 @@
+\sisetup{group-digits=integer, group-separator={,}, group-minimum-digits=4}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{
+    l
+    S[table-format=-1.3, table-space-text-post=\sym{***}, table-align-text-after=false]
+    S[table-format=1.3, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+    S[table-format=-1.3, table-space-text-post=\sym{***}, table-align-text-after=false]
+    S[table-format=1.3, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+    S[table-format=-1.3]
+    S[table-format=1.3, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+}
+\multicolumn{7}{c}{\textit{A. Spending and calories}} \\
+\toprule
+ & \multicolumn{2}{c}{kcal per \$} & \multicolumn{2}{c}{Spend} & \multicolumn{2}{c}{Calories} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+ & {\(b\)} & {\(\mathit{SE}\)} & {\(b\)} & {\(\mathit{SE}\)} & {\(b\)} & {\(\mathit{SE}\)} \\
+\midrule
+Pre-trend placebo, Quarter FE & 0.063\sym{**} & {(}0.027{)} & -0.132\sym{**} & {(}0.055{)} & -0.039 & {(}0.058{)} \\
+Pre-trend placebo, State FE & 0.035 & {(}0.028{)} & -0.118\sym{**} & {(}0.050{)} & -0.039 & {(}0.053{)} \\
+Pre-trend placebo, State FE + division x quarter FE & 0.018 & {(}0.028{)} & -0.136\sym{**} & {(}0.060{)} & -0.066 & {(}0.074{)} \\
+Lag sample, headline spec & -0.808\sym{***} & {(}0.023{)} & 0.759\sym{***} & {(}0.048{)} & -0.015 & {(}0.058{)} \\
+Lag sample, + own lagged change + zb(\(t-4\)) & -0.785\sym{***} & {(}0.022{)} & 0.719\sym{***} & {(}0.052{)} & -0.028 & {(}0.063{)} \\
+\bottomrule
+\end{tabular}
+\par\bigskip
+\begin{tabular}{
+    l
+    S[table-format=-1.3, table-space-text-post=\sym{***}, table-align-text-after=false]
+    S[table-format=1.3, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+    S[table-format=-1.5]
+    S[table-format=1.5, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+}
+\multicolumn{5}{c}{\textit{B. Diet quality}} \\
+\toprule
+ & \multicolumn{2}{c}{Energy density} & \multicolumn{2}{c}{Health score} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+ & {\(b\)} & {\(\mathit{SE}\)} & {\(b\)} & {\(\mathit{SE}\)} \\
+\midrule
+Pre-trend placebo, Quarter FE & -0.036 & {(}0.043{)} & -0.00060 & {(}0.00043{)} \\
+Pre-trend placebo, State FE & -0.039 & {(}0.046{)} & -0.00058 & {(}0.00041{)} \\
+Pre-trend placebo, State FE + division x quarter FE & -0.045 & {(}0.052{)} & 0.00038 & {(}0.00046{)} \\
+Lag sample, headline spec & -0.100\sym{**} & {(}0.039{)} & 0.00058 & {(}0.00048{)} \\
+Lag sample, + own lagged change + zb(\(t-4\)) & -0.112\sym{***} & {(}0.041{)} & 0.00033 & {(}0.00050{)} \\
+\bottomrule
+\end{tabular}

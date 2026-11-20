@@ -1,0 +1,11 @@
+object,column,class,levels
+est,spec,character,
+est,outcome,character,
+est,b,numeric,
+est,se,numeric,
+est,n,integer,
+est,f,numeric,
+bal,var,character,
+bal,b,numeric,
+bal,se,numeric,
+bal,p,numeric,

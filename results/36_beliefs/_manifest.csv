@@ -1,0 +1,9 @@
+object,kind,file,class,named
+years,table,years.csv,data.table,FALSE
+waves,table,waves.csv,data.table,FALSE
+tracking,table,tracking.csv,data.table,FALSE
+tracking_iv,table,tracking_iv.csv,data.table,FALSE
+behave,table,behave.csv,data.table,FALSE
+types,table,types.csv,data.table,FALSE
+uncertainty,table,uncertainty.csv,data.table,FALSE
+who,table,who.csv,data.table,FALSE

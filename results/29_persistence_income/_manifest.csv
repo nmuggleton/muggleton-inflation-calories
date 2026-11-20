@@ -1,0 +1,4 @@
+object,kind,file,class,named
+by_group,table,by_group.csv,data.table,FALSE
+two_group,table,two_group.csv,data.table,FALSE
+flow,table,flow.csv,data.table,FALSE

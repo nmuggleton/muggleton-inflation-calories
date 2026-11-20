@@ -1,0 +1,11 @@
+object,kind,file,class,named
+sds,list,sds.csv,list,TRUE
+gs,table,gs.csv,data.table,FALSE
+bn,table,bn.csv,data.table,FALSE
+bins,table,bins.csv,data.table,FALSE
+fit,table,fit.csv,data.table,FALSE
+cells,table,cells.csv,data.table,FALSE
+tw,table,tw.csv,data.table,FALSE
+nutrients,table,nutrients.csv,data.table,FALSE
+nut_levels,table,nut_levels.csv,data.table,FALSE
+nut_by_income,table,nut_by_income.csv,data.table,FALSE

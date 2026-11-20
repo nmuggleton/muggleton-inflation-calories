@@ -1,0 +1,27 @@
+\sisetup{group-digits=integer, group-separator={,}, group-minimum-digits=4}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{
+    l
+    S[table-format=-1.3, table-space-text-post=\sym{***}, table-align-text-after=false]
+    S[table-format=1.3, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+    S[table-format=-1.3, table-space-text-post=\sym{***}, table-align-text-after=false]
+    S[table-format=1.3, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+}
+\toprule
+ & \multicolumn{2}{c}{All} & \multicolumn{2}{c}{Densely priced} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+ & {\(b\)} & {\(\mathit{SE}\)} & {\(b\)} & {\(\mathit{SE}\)} \\
+\midrule
+(1) Own prices, products bought in both years & 0.900\sym{***} & {(}0.016{)} & 1.071\sym{***} & {(}0.022{)} \\
+(2) Own prices, products with a state price & 0.971\sym{***} & {(}0.016{)} & 1.126\sym{***} & {(}0.023{)} \\
+(3) State prices of the same products & 1.034\sym{***} & {(}0.014{)} & 1.092\sym{***} & {(}0.020{)} \\
+(4) Own less state prices (2 minus 3) & -0.063\sym{***} & {(}0.009{)} & 0.034\sym{**} & {(}0.014{)} \\
+(5) Retailer & 0.022\sym{***} & {(}0.005{)} & 0.066\sym{***} & {(}0.010{)} \\
+(6) Month of purchase & -0.005\sym{**} & {(}0.002{)} & -0.005 & {(}0.003{)} \\
+(7) Deal flag & 0.001 & {(}0.002{)} & 0.005\sym{*} & {(}0.002{)} \\
+(8) Coupons & -0.003 & {(}0.003{)} & -0.003 & {(}0.005{)} \\
+(9) Within retailer, month and deal flag & -0.078\sym{***} & {(}0.007{)} & -0.028\sym{***} & {(}0.010{)} \\
+\midrule
+\(N\) (household-quarters) & \multicolumn{2}{r}{\num{3032960}} & \multicolumn{2}{r}{\num{1356111}} \\
+\bottomrule
+\end{tabular}

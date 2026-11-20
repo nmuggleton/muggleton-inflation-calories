@@ -1,0 +1,7 @@
+step,hh_quarters,households
+f1 gate sample with instrument,3323087,151975
+shelf metrics (base basket),3323087,151975
+valid-ladder share of labeled spend >= .5,3323077,151975
+"tier price indices defined, |index| < 50",3322991,151975
+decomposition (>= 5 modules both quarters),3263273,151129
+tier calorie shares both quarters,,151971

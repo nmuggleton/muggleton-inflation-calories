@@ -1,0 +1,4 @@
+object,kind,file,class,named
+est,table,est.csv,data.table,FALSE
+by_split,table,by_split.csv,data.table,FALSE
+flow,table,flow.csv,data.table,FALSE

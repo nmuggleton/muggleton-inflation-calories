@@ -1,0 +1,4 @@
+object,kind,file,class,named
+est,table,est.csv,data.table,FALSE
+moments,table,moments.csv,data.table,FALSE
+bargain,table,bargain.csv,data.table,FALSE

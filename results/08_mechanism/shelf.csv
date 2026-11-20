@@ -1,0 +1,7 @@
+measure,mean,median,wmean
+Valid-ladder share of labeled base spend (%),99.5048922594903,100,99.5009301883949
+Savings buying module calories at state p25 (%),33.7032273294474,33.1441639555681,33.456216658053
+Savings buying module calories at state p50 (%),21.5008637564422,20.1392316913101,21.2376075171574
+"Net saving, all calories at cheap-tier mean $/kcal (%)",39.8149337876866,40.3197900851353,39.5763965141031
+Exposure inflation T2 (pp),3.16390823715767,2.35223290323094,3.20577040884202
+T2 among households with T2 > 0 (pp),4.80570787981227,3.54209976028161,4.86394378785437

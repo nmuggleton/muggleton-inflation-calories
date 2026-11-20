@@ -1,0 +1,25 @@
+\sisetup{group-digits=integer, group-separator={,}, group-minimum-digits=4}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{
+    l
+    S[table-format=1.3, table-space-text-post=\sym{***}, table-align-text-after=false]
+    S[table-format=1.3, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+    S[table-format=-1.3]
+    S[table-format=1.3, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+    S[table-format=-1.3, table-space-text-post=\sym{***}, table-align-text-after=false]
+    S[table-format=1.3, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+    S[table-format=9]
+}
+\toprule
+ & \multicolumn{2}{c}{Real spend} & \multicolumn{2}{c}{Calories bought} & \multicolumn{2}{c}{Calories per dollar} & \multicolumn{1}{c}{ } \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+Specification & {\(b\)} & {\(\mathit{SE}\)} & {\(b\)} & {\(\mathit{SE}\)} & {\(b\)} & {\(\mathit{SE}\)} & {\(N\)} \\
+\midrule
+Main estimate, full sample & 0.755\sym{***} & {(}0.042{)} & -0.017 & {(}0.053{)} & -0.811\sym{***} & {(}0.021{)} & 3323087 \\
+Main estimate, sample with local data & 0.764\sym{***} & {(}0.042{)} & -0.010 & {(}0.054{)} & -0.812\sym{***} & {(}0.022{)} & 3290004 \\
++ state unemployment, personal income, and house prices & 0.764\sym{***} & {(}0.040{)} & -0.002 & {(}0.051{)} & -0.801\sym{***} & {(}0.022{)} & 3290004 \\
++ county unemployment and employment & 0.764\sym{***} & {(}0.040{)} & -0.003 & {(}0.051{)} & -0.802\sym{***} & {(}0.022{)} & 3290004 \\
++ last year's changes in all of these & 0.760\sym{***} & {(}0.040{)} & -0.006 & {(}0.051{)} & -0.800\sym{***} & {(}0.022{)} & 3290004 \\
++ census division \texttimes{} quarter fixed effects & 0.813\sym{***} & {(}0.044{)} & 0.047 & {(}0.044{)} & -0.798\sym{***} & {(}0.027{)} & 3290004 \\
+\bottomrule
+\end{tabular}

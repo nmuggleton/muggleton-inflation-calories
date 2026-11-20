@@ -1,0 +1,5 @@
+# Exact versions the paper's data were built with (src/tools/check_data.py
+# hashes depend on the DuckDB version). The DuckDB CLI must match duckdb.
+duckdb==1.5.6
+polars==1.44.2
+fastexcel==0.21.0

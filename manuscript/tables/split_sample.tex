@@ -1,0 +1,24 @@
+\sisetup{group-digits=integer, group-separator={,}, group-minimum-digits=4}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{
+    l
+    S[table-format=-1.3, table-space-text-post=\sym{***}, table-align-text-after=false]
+    S[table-format=1.3, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+    S[table-format=1.3, table-space-text-post=\sym{***}, table-align-text-after=false]
+    S[table-format=1.3, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+    S[table-format=-1.3]
+    S[table-format=1.3, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+    S[table-format=1.3, table-space-text-post=\sym{***}, table-align-text-after=false]
+    S[table-format=1.3, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+    S[table-format=1.3]
+}
+\toprule
+ & \multicolumn{2}{c}{kcal per \$} & \multicolumn{2}{c}{Spend} & \multicolumn{2}{c}{Calories} & \multicolumn{2}{c}{Own prices} & \multicolumn{1}{c}{ } \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}\cmidrule(lr){8-9}
+ & {\(b\)} & {\(\mathit{SE}\)} & {\(b\)} & {\(\mathit{SE}\)} & {\(b\)} & {\(\mathit{SE}\)} & {\(b\)} & {\(\mathit{SE}\)} & {First stage} \\
+\midrule
+Main specification & -0.813\sym{***} & {(}0.021{)} & 0.752\sym{***} & {(}0.043{)} & -0.023 & {(}0.053{)} & 0.851\sym{***} & {(}0.016{)} & 0.979 \\
+Half-sample prices, same-half instrument & -0.745\sym{***} & {(}0.023{)} & 0.689\sym{***} & {(}0.040{)} & -0.024 & {(}0.048{)} & 0.777\sym{***} & {(}0.016{)} & 0.945 \\
+Half-sample prices, other-half instrument & -0.784\sym{***} & {(}0.024{)} & 0.731\sym{***} & {(}0.045{)} & -0.013 & {(}0.054{)} & 0.839\sym{***} & {(}0.017{)} & 0.830 \\
+\bottomrule
+\end{tabular}

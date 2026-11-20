@@ -1,0 +1,4 @@
+object,kind,file,class,named
+by_year,table,by_year.csv,data.table,FALSE
+cum,table,cum.csv,data.table,FALSE
+b,table,b.csv,data.table,FALSE

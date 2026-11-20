@@ -1,0 +1,5 @@
+object,kind,file,class,named
+est,table,est.csv,data.table,FALSE
+two_way,table,two_way.csv,data.table,FALSE
+calories_dense,table,calories_dense.csv,data.table,FALSE
+flow,table,flow.csv,data.table,FALSE

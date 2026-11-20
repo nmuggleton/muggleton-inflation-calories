@@ -1,0 +1,33 @@
+sample,spec,outcome,b,se,n
+gate,OLS on exposure,d_lspend,0.315934768285468,0.015659525844168,3323087
+gate,OLS on exposure,d_lkcal,-0.104413082066008,0.0155440950402341,3323006
+gate,OLS on exposure,d_lkpu,-0.406064632301132,0.0144656922060832,3323087
+gate,OLS on exposure,d_ed,-0.0596758684208451,0.00938850762349155,3322822
+gate,2SLS on exposure,d_lspend,0.754716528899093,0.0422981794472812,3323087
+gate,2SLS on exposure,d_lkcal,-0.0169679305212307,0.0530370896479196,3323006
+gate,2SLS on exposure,d_lkpu,-0.811157768238914,0.0212282151094886,3323087
+gate,2SLS on exposure,d_ed,-0.0830700292629902,0.0347994247723236,3322822
+own-price sample,OLS on exposure,d_lspend,0.314506406434927,0.0162416216181,3059147
+own-price sample,OLS on exposure,d_lkcal,-0.117034585419988,0.0138383123500899,3059147
+own-price sample,OLS on exposure,d_lkpu,-0.420133085645054,0.0147373493982571,3059147
+own-price sample,OLS on exposure,d_ed,-0.0529015598938702,0.00890145981371062,3059146
+own-price sample,2SLS on exposure,d_lspend,0.732707155995782,0.0380776794797182,3059147
+own-price sample,2SLS on exposure,d_lkcal,-0.0436453966205353,0.0476393091931556,3059147
+own-price sample,2SLS on exposure,d_lkpu,-0.818301212253798,0.0211686424242695,3059147
+own-price sample,2SLS on exposure,d_ed,-0.0697940844064408,0.0344195436761077,3059146
+own-price sample,OLS on own-price inflation,d_lspend,0.242815840579406,0.00558980188651705,3059147
+own-price sample,OLS on own-price inflation,d_lkcal,-0.113367905668251,0.00467870292005195,3059147
+own-price sample,OLS on own-price inflation,d_lkpu,-0.341300916478483,0.00289882570318772,3059147
+own-price sample,OLS on own-price inflation,d_ed,-0.0120522271796909,0.00251817131654297,3059146
+own-price sample,"Own-price inflation, instrumented",d_lspend,0.834791198447027,0.0490636060761955,3059147
+own-price sample,"Own-price inflation, instrumented",d_lkcal,-0.0497262687465249,0.0541589872121851,3059147
+own-price sample,"Own-price inflation, instrumented",d_lkpu,-0.932310601961531,0.0303723464498637,3059147
+own-price sample,"Own-price inflation, instrumented",d_ed,-0.0795181323700701,0.0391237829790469,3059146
+own-price sample,"OLS on own-price inflation, trimmed",d_lspend,0.253131203164141,0.0062497084309471,2997891
+own-price sample,"OLS on own-price inflation, trimmed",d_lkcal,-0.131885174790897,0.00490323443557331,2997891
+own-price sample,"OLS on own-price inflation, trimmed",d_lkpu,-0.370973866490428,0.00327385319472793,2997891
+own-price sample,"OLS on own-price inflation, trimmed",d_ed,-0.0163251282997013,0.00312488922032689,2997890
+own-price sample,"OLS on own-price inflation, given margin changes",d_lspend,0.288516283627431,0.00454241528570249,3059147
+own-price sample,"OLS on own-price inflation, given margin changes",d_lkcal,-0.0533934334815349,0.00460933643650366,3059147
+own-price sample,"OLS on own-price inflation, given margin changes",d_lkpu,-0.328237806390234,0.00256945873076242,3059147
+own-price sample,"OLS on own-price inflation, given margin changes",d_ed,0.00595392551284818,0.00250366035442204,3059146

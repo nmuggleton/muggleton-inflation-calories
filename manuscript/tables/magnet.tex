@@ -1,0 +1,23 @@
+\sisetup{group-digits=integer, group-separator={,}, group-minimum-digits=4}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{
+    l
+    S[table-format=-1.3, table-space-text-post=\sym{***}, table-align-text-after=false]
+    S[table-format=1.3, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+    S[table-format=-1.3, table-space-text-post=\sym{***}, table-align-text-after=false]
+    S[table-format=1.3, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+    S[table-format=9]
+}
+\toprule
+ & \multicolumn{2}{c}{Unweighted} & \multicolumn{2}{c}{Magnet weights} & \multicolumn{1}{c}{ } \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+Outcome & {\(b\)} & {\(\mathit{SE}\)} & {\(b\)} & {\(\mathit{SE}\)} & {\(N\)} \\
+\midrule
+All food spend incl. random weight, per AE-day & 0.701\sym{***} & {(}0.058{)} & 0.811\sym{***} & {(}0.082{)} & 1669359 \\
+Random-weight share of food spend \(\times\)100 & -0.012 & {(}0.022{)} & -0.014 & {(}0.027{)} & 1669359 \\
+Fruit and vegetable share incl. random weight \(\times\)100 & 0.002 & {(}0.011{)} & -0.002 & {(}0.018{)} & 1669359 \\
+Non-Magnet spend per AE-day & 0.737\sym{***} & {(}0.058{)} & 0.867\sym{***} & {(}0.083{)} & 1669359 \\
+kcal per \$ (labeled) & -0.808\sym{***} & {(}0.036{)} & -0.797\sym{***} & {(}0.052{)} & 1669359 \\
+Labeled kcal per AE-day & -0.022 & {(}0.069{)} & 0.116 & {(}0.098{)} & 1669318 \\
+\bottomrule
+\end{tabular}

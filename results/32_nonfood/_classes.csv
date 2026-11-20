@@ -1,0 +1,10 @@
+object,column,class,levels
+est,sample,character,
+est,outcome,character,
+est,b,numeric,
+est,se,numeric,
+est,p,numeric,
+est,n,integer,
+flow,gate,integer,
+flow,with_nonfood,integer,
+flow,base_share,numeric,

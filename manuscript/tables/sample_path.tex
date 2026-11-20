@@ -1,0 +1,27 @@
+\sisetup{group-digits=integer, group-separator={,}, group-minimum-digits=4}
+\begin{tabular}{
+    l
+    S[table-format=9.1]
+    S[table-format=2.1]
+}
+\toprule
+ & {Number} & {Kept (\%)} \\
+\midrule
+\multicolumn{3}{l}{\textit{From the panel to the estimation sample (household-quarters)}} \\
+\quad All household-quarters, 2004--2024 & 4918010 & {---} \\
+\quad Same quarter a year earlier in the panel, valid exposure, known state & 3708197 & 75.4 \\
+\quad Quarter \(t\) not in 2020 & 3510417 & 94.7 \\
+\quad Complete reporting in \(t\) and \(t-4\) & 3467711 & 98.8 \\
+\quad Neither quarter partial & 3365947 & 97.1 \\
+\quad Labeled share at least .5 and positive calories per dollar in both quarters & 3323087 & 98.7 \\
+\addlinespace
+\multicolumn{3}{l}{\textit{The estimation sample}} \\
+\quad Households & 151975 & {} \\
+\quad States (48 contiguous and DC) & 49 & {} \\
+\quad State-quarters & 3724 & {} \\
+\quad Households per state-quarter, median & 603 & {} \\
+\quad Households per state-quarter, 10th percentile & 111 & {} \\
+\quad Effective number of state clusters, by household-quarters & 25.3 & {} \\
+\quad Effective number of state clusters, by identifying variation & 32.7 & {} \\
+\bottomrule
+\end{tabular}

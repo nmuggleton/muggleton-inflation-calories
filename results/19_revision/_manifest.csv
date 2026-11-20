@@ -1,0 +1,9 @@
+object,kind,file,class,named
+rc,table,rc.csv,data.table,FALSE
+rm_,table,rm_.csv,data.table,FALSE
+hd,table,hd.csv,data.table,FALSE
+mean_ed,vector,mean_ed.csv,numeric,FALSE
+t_meta,table,t_meta.csv,data.table,FALSE
+rh,table,rh.csv,data.table,FALSE
+hm,table,hm.csv,data.table,FALSE
+habit_diff,table,habit_diff.csv,data.table,FALSE

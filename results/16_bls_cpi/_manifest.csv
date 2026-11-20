@@ -1,0 +1,6 @@
+object,kind,file,class,named
+est,table,est.csv,data.table,FALSE
+val,table,val.csv,data.table,FALSE
+inf,table,inf.csv,data.table,FALSE
+local_bls_iv_tex,text,local_bls_iv_tex.tex,etable_tex,FALSE
+first_stage,table,first_stage.csv,data.table,FALSE

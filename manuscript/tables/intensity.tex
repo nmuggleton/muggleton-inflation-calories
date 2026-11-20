@@ -1,0 +1,31 @@
+\sisetup{group-digits=integer, group-separator={,}, group-minimum-digits=4}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{
+    l
+    S[table-format=9]
+    S[table-format=-1.3]
+    S[table-format=1.3, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+    S[table-format=-1.3, table-space-text-post=\sym{***}, table-align-text-after=false]
+    S[table-format=1.3, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+    S[table-format=1.3, table-space-text-post=\sym{***}, table-align-text-after=false]
+    S[table-format=1.3, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+    S[table-format=-1.3, table-space-text-post=\sym{***}, table-align-text-after=false]
+    S[table-format=1.3, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+    S[table-format=-1.4]
+    S[table-format=1.4, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+}
+\toprule
+ & \multicolumn{1}{c}{ } & \multicolumn{2}{c}{Calories bought} & \multicolumn{2}{c}{Calories per dollar} & \multicolumn{2}{c}{Real food spend} & \multicolumn{2}{c}{Energy density} & \multicolumn{2}{c}{Health score} \\
+\cmidrule(lr){3-4}\cmidrule(lr){5-6}\cmidrule(lr){7-8}\cmidrule(lr){9-10}\cmidrule(lr){11-12}
+Group & {\(N\)} & {\(b\)} & {\(\mathit{SE}\)} & {\(b\)} & {\(\mathit{SE}\)} & {\(b\)} & {\(\mathit{SE}\)} & {\(b\)} & {\(\mathit{SE}\)} & {\(b\)} & {\(\mathit{SE}\)} \\
+\midrule
+\multicolumn{12}{l}{\textit{National food-at-home inflation of the quarter}} \\
+\quad Low & 1223691 & 0.041 & {(}0.114{)} & -0.942\sym{***} & {(}0.046{)} & 0.928\sym{***} & {(}0.084{)} & -0.030 & {(}0.082{)} & 0.0007 & {(}0.0008{)} \\
+\quad Middle & 992655 & -0.123 & {(}0.083{)} & -0.857\sym{***} & {(}0.046{)} & 0.735\sym{***} & {(}0.077{)} & -0.110\sym{*} & {(}0.061{)} & -0.0005 & {(}0.0009{)} \\
+\quad High & 1106741 & -0.009 & {(}0.093{)} & -0.654\sym{***} & {(}0.033{)} & 0.597\sym{***} & {(}0.083{)} & -0.119\sym{**} & {(}0.059{)} & 0.0008 & {(}0.0007{)} \\
+\addlinespace
+\multicolumn{12}{l}{\textit{Food-price episodes (2007Q4-08Q4, 2011, 2021Q2--23Q3)}} \\
+\quad Outside episodes & 2466920 & -0.059 & {(}0.087{)} & -0.897\sym{***} & {(}0.034{)} & 0.808\sym{***} & {(}0.062{)} & -0.102\sym{**} & {(}0.043{)} & 0.0007 & {(}0.0006{)} \\
+\quad Food-price episode & 856167 & 0.085 & {(}0.142{)} & -0.603\sym{***} & {(}0.043{)} & 0.625\sym{***} & {(}0.116{)} & -0.038 & {(}0.074{)} & -0.0001 & {(}0.0009{)} \\
+\bottomrule
+\end{tabular}

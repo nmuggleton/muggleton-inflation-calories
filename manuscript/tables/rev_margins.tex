@@ -1,0 +1,23 @@
+\sisetup{group-digits=integer, group-separator={,}, group-minimum-digits=4}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{
+    l
+    S[table-format=-1.3, table-space-text-post=\sym{***}, table-align-text-after=false]
+    S[table-format=1.3, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+    S[table-format=<1.3, print-zero-integer=false]
+    S[table-format=9]
+}
+\toprule
+Outcome & {2SLS} & {\(\mathit{SE}\)} & {\(p\)} & {\(N\)} \\
+\midrule
+Deal (promotion) share of spend, pp & 0.044\sym{**} & {(}0.021{)} & .042 & 3323087 \\
+Private-label share of spend, pp & 0.008 & {(}0.017{)} & .647 & 3323087 \\
+Grocery-store share, pp & 0.102\sym{***} & {(}0.025{)} & <.001 & 3323087 \\
+Discount-store share, pp & -0.059\sym{**} & {(}0.024{)} & .018 & 3323087 \\
+Club-store share, pp & -0.030\sym{**} & {(}0.012{)} & .017 & 3323087 \\
+Dollar-store share, pp & 0.008 & {(}0.006{)} & .135 & 3323087 \\
+Food shopping trips per quarter & -0.014 & {(}0.014{)} & .332 & 3323087 \\
+Non-food spending, percent & 0.233\sym{***} & {(}0.058{)} & <.001 & 3317894 \\
+Non-food share of recorded spending, pp & -0.096\sym{***} & {(}0.016{)} & <.001 & 3323087 \\
+\bottomrule
+\end{tabular}

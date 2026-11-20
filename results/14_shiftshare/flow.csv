@@ -1,0 +1,7 @@
+step,hh_quarters,households
+est_gate,3323087,151975
+B4 (t-4 shares) defined,3323087,151975
+B8 (t-8 shares),2751130,124225
+state controls (excl. DC: no coincident index),3320187,151821
+"dynamic sample: z lead and lag, 2006-2018",2285404,
+"dynamic sample: B lead and lag, 2006-2018",2285404,

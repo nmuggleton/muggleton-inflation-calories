@@ -1,0 +1,6 @@
+object,kind,file,class,named
+est,table,est.csv,data.table,FALSE
+dropped,table,dropped.csv,data.table,FALSE
+coupon_use,table,coupon_use.csv,data.table,FALSE
+flow,table,flow.csv,data.table,FALSE
+hand_codes,table,hand_codes.csv,data.table,FALSE

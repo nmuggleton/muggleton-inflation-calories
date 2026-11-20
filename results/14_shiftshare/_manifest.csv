@@ -1,0 +1,5 @@
+object,kind,file,class,named
+res,table,res.csv,data.table,FALSE
+dyn,table,dyn.csv,data.table,FALSE
+flow,table,flow.csv,data.table,FALSE
+first_stage,table,first_stage.csv,data.table,FALSE

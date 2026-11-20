@@ -1,0 +1,11 @@
+name,value
+d_ur,State unemployment rate (pp)
+d_pinc,State personal income (log x100)
+d_hpi,"State house prices, FHFA (log x100)"
+d_ur_c,County unemployment rate (pp)
+d_emp_c,County employment (log x100)
+dl_ur,"State unemployment, lagged change"
+dl_pinc,"State income, lagged change"
+dl_hpi,"State house prices, lagged change"
+dl_ur_c,"County unemployment, lagged change"
+dl_emp_c,"County employment, lagged change"

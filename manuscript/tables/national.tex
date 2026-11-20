@@ -1,0 +1,22 @@
+\sisetup{group-digits=integer, group-separator={,}, group-minimum-digits=4}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{
+    l
+    S[table-format=-1.4, table-space-text-post=\sym{***}, table-align-text-after=false]
+    S[table-format=1.4, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+    S[table-format=-1.4, table-space-text-post=\sym{***}, table-align-text-after=false]
+    S[table-format=1.4, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+}
+\toprule
+ & \multicolumn{2}{c}{All households} & \multicolumn{2}{c}{At or below poverty line} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+Outcome & {\(b\)} & {\(\mathit{SE}\)} & {\(b\)} & {\(\mathit{SE}\)} \\
+\midrule
+Nominal spend & 0.580\sym{***} & {(}0.063{)} & 0.453\sym{***} & {(}0.091{)} \\
+Real spend & -0.227\sym{***} & {(}0.082{)} & -0.308\sym{***} & {(}0.107{)} \\
+Calories bought & -0.196\sym{**} & {(}0.077{)} & -0.254\sym{**} & {(}0.115{)} \\
+Calories per dollar & 0.000 & {(}0.026{)} & 0.024 & {(}0.045{)} \\
+Energy density & 0.138\sym{***} & {(}0.037{)} & 0.189\sym{***} & {(}0.048{)} \\
+Health score & -0.0001 & {(}0.0004{)} & 0.0002 & {(}0.0003{)} \\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,23 @@
+\sisetup{group-digits=integer, group-separator={,}, group-minimum-digits=4}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{
+    l
+    S[table-format=1.3, table-space-text-post=\sym{***}, table-align-text-after=false]
+    S[table-format=1.3, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+    S[table-format=-1.3]
+    S[table-format=1.3, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+    S[table-format=-1.3, table-space-text-post=\sym{***}, table-align-text-after=false]
+    S[table-format=1.3, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+    S[table-format=9]
+}
+\toprule
+ & \multicolumn{2}{c}{Real spend} & \multicolumn{2}{c}{Calories bought} & \multicolumn{2}{c}{Calories per dollar} & \multicolumn{1}{c}{ } \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+Specification & {\(b\)} & {\(\mathit{SE}\)} & {\(b\)} & {\(\mathit{SE}\)} & {\(b\)} & {\(\mathit{SE}\)} & {\(N\)} \\
+\midrule
+Main estimate & 0.755\sym{***} & {(}0.042{)} & -0.017 & {(}0.053{)} & -0.811\sym{***} & {(}0.021{)} & 3323087 \\
++ change in the state minimum wage, this year and last & 0.753\sym{***} & {(}0.042{)} & -0.020 & {(}0.052{)} & -0.812\sym{***} & {(}0.021{)} & 3323087 \\
+Excluding state-quarters where the minimum wage changed in the past year & 0.725\sym{***} & {(}0.053{)} & -0.058 & {(}0.067{)} & -0.829\sym{***} & {(}0.038{)} & 1871688 \\
+Excluding state-quarters where it changed in the past two years & 0.673\sym{***} & {(}0.067{)} & -0.115 & {(}0.070{)} & -0.818\sym{***} & {(}0.038{)} & 1497948 \\
+\bottomrule
+\end{tabular}

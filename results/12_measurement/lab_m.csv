@@ -1,0 +1,7 @@
+name,value
+d_lspend_all,"All food spend incl. random weight, per AE-day"
+d_sh_mag,Random-weight share of food spend
+d_sh_fv_all,Fruit and vegetable share incl. random weight
+d_lspend,Non-Magnet spend per AE-day
+d_lkpu,kcal per $ (labeled)
+d_lkcal,Labeled kcal per AE-day

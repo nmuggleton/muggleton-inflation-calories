@@ -1,0 +1,8 @@
+object,kind,file,class,named
+res,table,res.csv,data.table,FALSE
+pre,table,pre.csv,data.table,FALSE
+bal,table,bal.csv,data.table,FALSE
+oid,table,oid.csv,data.table,FALSE
+dif,table,dif.csv,data.table,FALSE
+tu,table,tu.csv,data.table,FALSE
+spec_names,vector,spec_names.csv,character,FALSE

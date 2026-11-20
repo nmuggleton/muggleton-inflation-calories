@@ -1,0 +1,5 @@
+object,kind,file,class,named
+s,table,s.csv,data.table,FALSE
+universe,table,universe.csv,data.table,FALSE
+flow,table,flow.csv,data.table,FALSE
+cells,table,cells.csv,data.table,FALSE

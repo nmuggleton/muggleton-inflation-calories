@@ -1,0 +1,50 @@
+\sisetup{group-digits=integer, group-separator={,}, group-minimum-digits=4}
+\begin{tabular}{
+    l
+    S[table-format=-1.3]
+    S[table-format=1.3, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+    S[table-format=1.3]
+    S[table-format=1.3, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+    S[table-format=-1.3]
+    S[table-format=1.3, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+    S[table-format=1.3, print-zero-integer=false]
+    S[table-format=-1.3]
+    S[table-format=1.3]
+    S[table-format=9]
+}
+\multicolumn{11}{c}{\textit{A. Main outcomes}} \\
+\toprule
+ & \multicolumn{2}{c}{kcal per \$} & \multicolumn{2}{c}{Spend} & \multicolumn{2}{c}{Calories} & \multicolumn{3}{c}{Calories: bootstrap} & \multicolumn{1}{c}{ } \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}\cmidrule(lr){8-10}
+States & {\(b\)} & {\(\mathit{SE}\)} & {\(b\)} & {\(\mathit{SE}\)} & {\(b\)} & {\(\mathit{SE}\)} & {\(p\)} & {Lower} & {Upper} & {\(N\)} \\
+\midrule
+All 49 states & -0.811 & {(}0.021{)} & 0.755 & {(}0.042{)} & -0.017 & {(}0.053{)} & .763 & -0.125 & 0.095 & 3323006 \\
+4 largest (CA, TX, FL, NY) & -1.030 & {(}0.080{)} & 0.704 & {(}0.082{)} & -0.311 & {(}0.139{)} & .059 & -1.450 & 0.670 & 956625 \\
+Next 11 & -0.839 & {(}0.039{)} & 0.719 & {(}0.046{)} & -0.099 & {(}0.050{)} & .072 & -0.210 & 0.010 & 1220384 \\
+34 smallest & -0.763 & {(}0.030{)} & 0.825 & {(}0.074{)} & 0.136 & {(}0.078{)} & .120 & -0.030 & 0.305 & 1145997 \\
+15 largest & -0.879 & {(}0.029{)} & 0.747 & {(}0.043{)} & -0.121 & {(}0.058{)} & .069 & -0.245 & 0.010 & 2177009 \\
+\bottomrule
+\end{tabular}
+\par\bigskip
+\begin{tabular}{
+    l
+    S[table-format=-1.3]
+    S[table-format=1.3, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+    S[table-format=-1.3]
+    S[table-format=1.3, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+    S[table-format=-1.3]
+    S[table-format=1.3, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+}
+\multicolumn{7}{c}{\textit{B. Other calorie measures}} \\
+\toprule
+ & \multicolumn{2}{c}{Incl. imputed} & \multicolumn{2}{c}{Per household} & \multicolumn{2}{c}{Scaled by coverage} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+States & {\(b\)} & {\(\mathit{SE}\)} & {\(b\)} & {\(\mathit{SE}\)} & {\(b\)} & {\(\mathit{SE}\)} \\
+\midrule
+All 49 states & -0.030 & {(}0.045{)} & -0.027 & {(}0.045{)} & -0.071 & {(}0.047{)} \\
+4 largest (CA, TX, FL, NY) & -0.285 & {(}0.111{)} & -0.290 & {(}0.113{)} & -0.339 & {(}0.135{)} \\
+Next 11 & -0.076 & {(}0.052{)} & -0.100 & {(}0.061{)} & -0.130 & {(}0.045{)} \\
+34 smallest & 0.082 & {(}0.073{)} & 0.087 & {(}0.072{)} & 0.043 & {(}0.077{)} \\
+15 largest & -0.097 & {(}0.047{)} & -0.103 & {(}0.056{)} & -0.142 & {(}0.048{)} \\
+\bottomrule
+\end{tabular}

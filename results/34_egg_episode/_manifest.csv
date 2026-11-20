@@ -1,0 +1,6 @@
+object,kind,file,class,named
+est,table,est.csv,data.table,FALSE
+iv,table,iv.csv,data.table,FALSE
+low,table,low.csv,data.table,FALSE
+quarter_means,table,quarter_means.csv,data.table,FALSE
+periods,table,periods.csv,data.table,FALSE

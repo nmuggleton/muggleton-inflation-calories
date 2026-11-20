@@ -1,0 +1,11 @@
+object,kind,file,class,named
+flow,table,flow.csv,data.table,FALSE
+by_year,table,by_year.csv,data.table,FALSE
+reach,table,reach.csv,data.table,FALSE
+kept,table,kept.csv,data.table,FALSE
+by_inc,table,by_inc.csv,data.table,FALSE
+reach_ci,table,reach_ci.csv,data.table,FALSE
+inc_ci,table,inc_ci.csv,data.table,FALSE
+inc_def,table,inc_def.csv,data.table,FALSE
+set_by_n,table,set_by_n.csv,data.table,FALSE
+own,table,own.csv,data.table,FALSE

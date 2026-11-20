@@ -1,0 +1,8 @@
+object,kind,file,class,named
+headline,table,headline.csv,data.table,FALSE
+table1,table,table1.csv,data.table,FALSE
+robustness,table,robustness.csv,data.table,FALSE
+reliability,table,reliability.csv,data.table,FALSE
+first_stage,table,first_stage.csv,data.table,FALSE
+pairs_boot,table,pairs_boot.csv,data.table,FALSE
+item_levels,vector,item_levels.csv,character,FALSE

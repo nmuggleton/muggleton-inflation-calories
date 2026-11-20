@@ -1,0 +1,5 @@
+object,kind,file,class,named
+gradient,table,gradient.csv,data.table,FALSE
+within,table,within.csv,data.table,FALSE
+share,table,share.csv,data.table,FALSE
+predicted,table,predicted.csv,data.table,FALSE

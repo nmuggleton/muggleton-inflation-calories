@@ -1,0 +1,10 @@
+object,kind,file,class,named
+by_kind,table,by_kind.csv,data.table,FALSE
+by_chan,table,by_chan.csv,data.table,FALSE
+dens,table,dens.csv,data.table,FALSE
+lad,table,lad.csv,data.table,FALSE
+sav,table,sav.csv,data.table,FALSE
+match,table,match.csv,data.table,FALSE
+repl,table,repl.csv,data.table,FALSE
+dec_lad,table,dec_lad.csv,data.table,FALSE
+dec_sav,table,dec_sav.csv,data.table,FALSE

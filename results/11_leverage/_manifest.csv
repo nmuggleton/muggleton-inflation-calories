@@ -1,0 +1,6 @@
+object,kind,file,class,named
+all_r,table,all_r.csv,data.table,FALSE
+loo_sum,table,loo_sum.csv,data.table,FALSE
+loso,table,loso.csv,data.table,FALSE
+loyo,table,loyo.csv,data.table,FALSE
+year_z,table,year_z.csv,data.table,FALSE

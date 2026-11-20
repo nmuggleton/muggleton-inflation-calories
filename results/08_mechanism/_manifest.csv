@@ -1,0 +1,12 @@
+object,kind,file,class,named
+flow,table,flow.csv,data.table,FALSE
+shelf,table,shelf.csv,data.table,FALSE
+ivt,table,ivt.csv,data.table,FALSE
+ladder_iv_tex,text,ladder_iv_tex.tex,etable_tex,FALSE
+ladder_dec_tex,text,ladder_dec_tex.tex,etable_tex,FALSE
+het,table,het.csv,data.table,FALSE
+slack_t3_t1,table,slack_t3_t1.csv,data.table,FALSE
+dens,table,dens.csv,data.table,FALSE
+hist,table,hist.csv,data.table,FALSE
+mean_shock,vector,mean_shock.csv,numeric,FALSE
+tr,table,tr.csv,data.table,FALSE

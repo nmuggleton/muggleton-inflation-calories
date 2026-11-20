@@ -1,0 +1,6 @@
+object,kind,file,class,named
+res,table,res.csv,data.table,FALSE
+wt,table,wt.csv,data.table,FALSE
+qe,table,qe.csv,data.table,FALSE
+asy,table,asy.csv,data.table,FALSE
+tests,table,tests.csv,data.table,FALSE

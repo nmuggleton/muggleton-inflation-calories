@@ -1,0 +1,11 @@
+object,kind,file,class,named
+res,table,res.csv,data.table,FALSE
+wt,table,wt.csv,data.table,FALSE
+ga,table,ga.csv,data.table,FALSE
+gr,table,gr.csv,data.table,FALSE
+pb,table,pb.csv,data.table,FALSE
+gb,table,gb.csv,data.table,FALSE
+rt,table,rt.csv,data.table,FALSE
+grt,table,grt.csv,data.table,FALSE
+tc,table,tc.csv,data.table,FALSE
+fpl_levels,vector,fpl_levels.csv,character,FALSE

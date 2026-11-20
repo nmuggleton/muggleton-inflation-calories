@@ -1,0 +1,133 @@
+\begingroup
+\sisetup{group-digits=integer, group-separator={,}, group-minimum-digits=4}
+\setlength{\tabcolsep}{4pt}
+\begin{longtable}{
+    l
+    S[table-format=-1.3, table-space-text-post=\sym{***}, table-align-text-after=false]
+    S[table-format=1.3, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+    S[table-format=-1.3, table-space-text-post=\sym{***}, table-align-text-after=false]
+    S[table-format=1.3, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+    S[table-format=1.3, table-space-text-post=\sym{***}, table-align-text-after=false]
+    S[table-format=1.3, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+    S[table-format=9]
+}
+\caption{Sample, Threshold, Weight, and Control Variants}\label{tab:a_sample} \\
+\multicolumn{8}{c}{\textit{A. Spending and calories}} \\
+\toprule
+ & \multicolumn{2}{c}{kcal per \$} & \multicolumn{2}{c}{kcal} & \multicolumn{2}{c}{Spend} & \multicolumn{1}{c}{ } \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+Specification & {\(b\)} & {\(\mathit{SE}\)} & {\(b\)} & {\(\mathit{SE}\)} & {\(b\)} & {\(\mathit{SE}\)} & {\(N\)} \\
+\midrule
+\endfirsthead
+\multicolumn{8}{l}{\textit{A. Spending and calories (continued)}} \\
+\toprule
+ & \multicolumn{2}{c}{kcal per \$} & \multicolumn{2}{c}{kcal} & \multicolumn{2}{c}{Spend} & \multicolumn{1}{c}{ } \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+Specification & {\(b\)} & {\(\mathit{SE}\)} & {\(b\)} & {\(\mathit{SE}\)} & {\(b\)} & {\(\mathit{SE}\)} & {\(N\)} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+\multicolumn{8}{l}{\textit{Sample and thresholds}} \\
+\quad Headline & -0.811\sym{***} & {(}0.021{)} & -0.017 & {(}0.053{)} & 0.755\sym{***} & {(}0.042{)} & 3323087 \\
+\quad Include t in 2020 & -0.815\sym{***} & {(}0.024{)} & -0.068 & {(}0.066{)} & 0.729\sym{***} & {(}0.047{)} & 3511595 \\
+\quad Exclude t in 2021 (base in 2020) & -0.810\sym{***} & {(}0.024{)} & -0.043 & {(}0.051{)} & 0.746\sym{***} & {(}0.040{)} & 3135399 \\
+\quad Coverage floor .3 & -0.810\sym{***} & {(}0.021{)} & -0.012 & {(}0.053{)} & 0.758\sym{***} & {(}0.042{)} & 3360824 \\
+\quad Coverage floor .4 & -0.810\sym{***} & {(}0.022{)} & -0.017 & {(}0.053{)} & 0.754\sym{***} & {(}0.043{)} & 3352374 \\
+\quad Coverage floor .6 & -0.813\sym{***} & {(}0.021{)} & -0.018 & {(}0.051{)} & 0.757\sym{***} & {(}0.040{)} & 3208293 \\
+\quad Coverage floor .7 & -0.814\sym{***} & {(}0.019{)} & -0.050 & {(}0.046{)} & 0.736\sym{***} & {(}0.039{)} & 2744985 \\
+\quad Coverage floor .8 & -0.813\sym{***} & {(}0.026{)} & -0.022 & {(}0.047{)} & 0.769\sym{***} & {(}0.048{)} & 1394962 \\
+\quad Base basket 25+ items & -0.812\sym{***} & {(}0.022{)} & 0.002 & {(}0.050{)} & 0.774\sym{***} & {(}0.039{)} & 3278731 \\
+\quad Base basket 50+ items & -0.816\sym{***} & {(}0.021{)} & 0.030 & {(}0.051{)} & 0.803\sym{***} & {(}0.041{)} & 3043473 \\
+\quad Base basket 100+ items & -0.829\sym{***} & {(}0.022{)} & 0.051 & {(}0.063{)} & 0.835\sym{***} & {(}0.056{)} & 2122018 \\
+\quad Core in t only & -0.810\sym{***} & {(}0.021{)} & -0.016 & {(}0.051{)} & 0.755\sym{***} & {(}0.041{)} & 3335903 \\
+\quad No core requirement & -0.811\sym{***} & {(}0.021{)} & -0.018 & {(}0.054{)} & 0.755\sym{***} & {(}0.044{)} & 3361483 \\
+\quad Allow partial quarters & -0.812\sym{***} & {(}0.021{)} & -0.021 & {(}0.057{)} & 0.749\sym{***} & {(}0.045{)} & 3420280 \\
+\quad Same household size \(t\) and \(t-4\) & -0.810\sym{***} & {(}0.022{)} & -0.034 & {(}0.047{)} & 0.739\sym{***} & {(}0.040{)} & 2927903 \\
+\quad Exclude spend outliers & -0.811\sym{***} & {(}0.021{)} & -0.017 & {(}0.053{)} & 0.755\sym{***} & {(}0.042{)} & 3323087 \\
+\quad Base quarter not in first panel year & -0.804\sym{***} & {(}0.023{)} & -0.012 & {(}0.057{)} & 0.756\sym{***} & {(}0.045{)} & 2804214 \\
+\quad Households with 8+ panel years & -0.819\sym{***} & {(}0.022{)} & -0.030 & {(}0.059{)} & 0.748\sym{***} & {(}0.051{)} & 2444827 \\
+\quad Balanced 2007-2012 panel, t in 2008-2012 & -0.877\sym{***} & {(}0.050{)} & 0.046 & {(}0.110{)} & 0.903\sym{***} & {(}0.100{)} & 496564 \\
+\quad 2005-2010 & -0.813\sym{***} & {(}0.048{)} & 0.037 & {(}0.100{)} & 0.826\sym{***} & {(}0.087{)} & 899626 \\
+\quad 2011-2015 & -0.893\sym{***} & {(}0.052{)} & -0.134 & {(}0.091{)} & 0.730\sym{***} & {(}0.079{)} & 926739 \\
+\quad 2016-2024 & -0.767\sym{***} & {(}0.041{)} & -0.002 & {(}0.075{)} & 0.708\sym{***} & {(}0.067{)} & 1496722 \\
+\addlinespace
+\multicolumn{8}{l}{\textit{Weights}} \\
+\quad Projection weights & -0.784\sym{***} & {(}0.036{)} & 0.075 & {(}0.074{)} & 0.823\sym{***} & {(}0.057{)} & 3323087 \\
+\quad Base-basket expenditure weights & -0.809\sym{***} & {(}0.021{)} & 0.046 & {(}0.065{)} & 0.804\sym{***} & {(}0.057{)} & 3323087 \\
+\quad Equal weight per state-quarter & -0.727\sym{***} & {(}0.048{)} & 0.097 & {(}0.076{)} & 0.748\sym{***} & {(}0.060{)} & 3323087 \\
+\quad Inverse probability of sample x projection & -0.785\sym{***} & {(}0.035{)} & 0.081 & {(}0.073{)} & 0.833\sym{***} & {(}0.059{)} & 3323087 \\
+\addlinespace
+\multicolumn{8}{l}{\textit{Controls}} \\
+\quad Demographic FE & -0.813\sym{***} & {(}0.022{)} & -0.010 & {(}0.055{)} & 0.765\sym{***} & {(}0.042{)} & 3323087 \\
+\quad Base-quarter outcome levels & -0.596\sym{***} & {(}0.072{)} & 0.234\sym{**} & {(}0.114{)} & 0.769\sym{***} & {(}0.066{)} & 3323087 \\
+\quad Base coverage and log basket size & -0.816\sym{***} & {(}0.024{)} & 0.139 & {(}0.097{)} & 0.885\sym{***} & {(}0.079{)} & 3323087 \\
+\quad State FE (state trends) & -0.840\sym{***} & {(}0.025{)} & -0.052 & {(}0.061{)} & 0.750\sym{***} & {(}0.047{)} & 3323087 \\
+\quad State FE + census division x quarter FE & -0.818\sym{***} & {(}0.030{)} & 0.023 & {(}0.045{)} & 0.806\sym{***} & {(}0.044{)} & 3323087 \\
+\end{longtable}
+\endgroup
+\begingroup
+\sisetup{group-digits=integer, group-separator={,}, group-minimum-digits=4}
+\setlength{\tabcolsep}{4pt}
+\addtocounter{table}{-1}
+\begin{longtable}{
+    l
+    S[table-format=-1.3, table-space-text-post=\sym{***}, table-align-text-after=false]
+    S[table-format=1.3, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+    S[table-format=-1.3, table-space-text-post=\sym{***}, table-align-text-after=false]
+    S[table-format=1.3, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+}
+\multicolumn{5}{c}{\textit{B. Diet quality}} \\
+\toprule
+ & \multicolumn{2}{c}{Energy density} & \multicolumn{2}{c}{Health score \(\times\)100} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+Specification & {\(b\)} & {\(\mathit{SE}\)} & {\(b\)} & {\(\mathit{SE}\)} \\
+\midrule
+\endfirsthead
+\multicolumn{5}{l}{\textit{B. Diet quality (continued)}} \\
+\toprule
+ & \multicolumn{2}{c}{Energy density} & \multicolumn{2}{c}{Health score \(\times\)100} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+Specification & {\(b\)} & {\(\mathit{SE}\)} & {\(b\)} & {\(\mathit{SE}\)} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+\multicolumn{5}{l}{\textit{Sample and thresholds}} \\
+\quad Headline & -0.083\sym{**} & {(}0.035{)} & 0.045 & {(}0.045{)} \\
+\quad Include t in 2020 & -0.106\sym{***} & {(}0.029{)} & 0.080\sym{*} & {(}0.043{)} \\
+\quad Exclude t in 2021 (base in 2020) & -0.085\sym{**} & {(}0.033{)} & 0.076 & {(}0.046{)} \\
+\quad Coverage floor .3 & -0.074\sym{**} & {(}0.035{)} & 0.041 & {(}0.044{)} \\
+\quad Coverage floor .4 & -0.080\sym{**} & {(}0.035{)} & 0.041 & {(}0.044{)} \\
+\quad Coverage floor .6 & -0.076\sym{**} & {(}0.035{)} & 0.048 & {(}0.045{)} \\
+\quad Coverage floor .7 & -0.088\sym{**} & {(}0.035{)} & 0.076\sym{*} & {(}0.043{)} \\
+\quad Coverage floor .8 & -0.121\sym{**} & {(}0.052{)} & 0.050 & {(}0.057{)} \\
+\quad Base basket 25+ items & -0.072\sym{**} & {(}0.035{)} & 0.052 & {(}0.046{)} \\
+\quad Base basket 50+ items & -0.061\sym{*} & {(}0.033{)} & 0.048 & {(}0.045{)} \\
+\quad Base basket 100+ items & -0.053 & {(}0.034{)} & 0.058 & {(}0.044{)} \\
+\quad Core in t only & -0.079\sym{**} & {(}0.034{)} & 0.047 & {(}0.045{)} \\
+\quad No core requirement & -0.086\sym{**} & {(}0.036{)} & 0.046 & {(}0.045{)} \\
+\quad Allow partial quarters & -0.079\sym{**} & {(}0.034{)} & 0.039 & {(}0.045{)} \\
+\quad Same household size \(t\) and \(t-4\) & -0.117\sym{***} & {(}0.033{)} & 0.039 & {(}0.048{)} \\
+\quad Exclude spend outliers & -0.083\sym{**} & {(}0.035{)} & 0.045 & {(}0.045{)} \\
+\quad Base quarter not in first panel year & -0.099\sym{**} & {(}0.041{)} & 0.047 & {(}0.047{)} \\
+\quad Households with 8+ panel years & -0.097\sym{**} & {(}0.043{)} & 0.030 & {(}0.048{)} \\
+\quad Balanced 2007-2012 panel, t in 2008-2012 & -0.169\sym{*} & {(}0.089{)} & 0.036 & {(}0.088{)} \\
+\quad 2005-2010 & -0.139\sym{*} & {(}0.069{)} & 0.072 & {(}0.092{)} \\
+\quad 2011-2015 & -0.094 & {(}0.079{)} & -0.078 & {(}0.096{)} \\
+\quad 2016-2024 & -0.030 & {(}0.073{)} & 0.085 & {(}0.069{)} \\
+\addlinespace
+\multicolumn{5}{l}{\textit{Weights}} \\
+\quad Projection weights & -0.114\sym{*} & {(}0.058{)} & 0.058 & {(}0.046{)} \\
+\quad Base-basket expenditure weights & -0.053 & {(}0.038{)} & 0.063 & {(}0.044{)} \\
+\quad Equal weight per state-quarter & -0.100\sym{*} & {(}0.054{)} & 0.113 & {(}0.071{)} \\
+\quad Inverse probability of sample x projection & -0.118\sym{**} & {(}0.058{)} & 0.058 & {(}0.046{)} \\
+\addlinespace
+\multicolumn{5}{l}{\textit{Controls}} \\
+\quad Demographic FE & -0.080\sym{**} & {(}0.035{)} & 0.050 & {(}0.045{)} \\
+\quad Base-quarter outcome levels & 0.160 & {(}0.096{)} & -0.052 & {(}0.056{)} \\
+\quad Base coverage and log basket size & -0.093\sym{***} & {(}0.035{)} & 0.039 & {(}0.045{)} \\
+\quad State FE (state trends) & -0.077\sym{**} & {(}0.035{)} & 0.048 & {(}0.046{)} \\
+\quad State FE + census division x quarter FE & -0.074\sym{*} & {(}0.041{)} & 0.010 & {(}0.044{)} \\
+\end{longtable}
+\endgroup

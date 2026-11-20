@@ -1,0 +1,12 @@
+object,kind,file,class,named
+size,table,size.csv,data.table,FALSE
+by_size,table,by_size.csv,data.table,FALSE
+gradient,table,gradient.csv,data.table,FALSE
+equality,table,equality.csv,data.table,FALSE
+no_ca,table,no_ca.csv,data.table,FALSE
+leave_out,table,leave_out.csv,data.table,FALSE
+thin,table,thin.csv,data.table,FALSE
+boot,table,boot.csv,data.table,FALSE
+pooled,table,pooled.csv,data.table,FALSE
+perm,table,perm.csv,data.table,FALSE
+alt_cal,table,alt_cal.csv,data.table,FALSE

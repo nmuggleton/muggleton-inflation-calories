@@ -1,0 +1,5 @@
+object,kind,file,class,named
+est,table,est.csv,data.table,FALSE
+bal,table,bal.csv,data.table,FALSE
+lab,vector,lab.csv,character,TRUE
+spec_names,vector,spec_names.csv,character,FALSE

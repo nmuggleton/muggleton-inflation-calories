@@ -1,0 +1,49 @@
+\sisetup{group-digits=integer, group-separator={,}, group-minimum-digits=4}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{
+    l
+    S[table-format=-1.4, table-space-text-post=\sym{***}, table-align-text-after=false]
+    S[table-format=1.4, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+    S[table-format=-1.4, table-space-text-post=\sym{***}, table-align-text-after=false]
+    S[table-format=1.4, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+    S[table-format=-1.4, table-space-text-post=\sym{***}, table-align-text-after=false]
+    S[table-format=1.4, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+}
+\multicolumn{7}{c}{\textit{A. 2SLS, exposure inflation instrumented}} \\
+\toprule
+ & \multicolumn{2}{c}{Main instrument} & \multicolumn{2}{c}{Unit values} & \multicolumn{2}{c}{Fixed retailer weights} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+ & {\(b\)} & {\(\mathit{SE}\)} & {\(b\)} & {\(\mathit{SE}\)} & {\(b\)} & {\(\mathit{SE}\)} \\
+\midrule
+Calories per dollar & -0.811\sym{***} & {(}0.021{)} & -0.820\sym{***} & {(}0.022{)} & -0.819\sym{***} & {(}0.022{)} \\
+Real spend & 0.757\sym{***} & {(}0.042{)} & 0.768\sym{***} & {(}0.043{)} & 0.786\sym{***} & {(}0.052{)} \\
+Calories bought & -0.016 & {(}0.052{)} & -0.011 & {(}0.056{)} & 0.004 & {(}0.064{)} \\
+Energy density & -0.081\sym{**} & {(}0.035{)} & -0.080\sym{**} & {(}0.036{)} & -0.077\sym{*} & {(}0.039{)} \\
+Health score & 0.0004 & {(}0.0005{)} & 0.0004 & {(}0.0005{)} & 0.0005 & {(}0.0005{)} \\
+\midrule
+First-stage coefficient & \multicolumn{2}{r}{0.976} & \multicolumn{2}{r}{1.006} & \multicolumn{2}{r}{0.943} \\
+First-stage Wald (clustered) & \multicolumn{2}{r}{\num{60361}} & \multicolumn{2}{r}{\num{103678}} & \multicolumn{2}{r}{\num{9471}} \\
+\(N\) (household-quarters) & \multicolumn{2}{r}{\num{3321279}} & \multicolumn{2}{r}{\num{3321279}} & \multicolumn{2}{r}{\num{3321279}} \\
+\bottomrule
+\end{tabular}
+\par\bigskip
+\begin{tabular}{
+    l
+    S[table-format=-1.4, table-space-text-post=\sym{***}, table-align-text-after=false]
+    S[table-format=1.4, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+    S[table-format=-1.4, table-space-text-post=\sym{***}, table-align-text-after=false]
+    S[table-format=1.4, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+}
+\multicolumn{5}{c}{\textit{B. Reduced form on both parts of the instrument}} \\
+\toprule
+ & \multicolumn{2}{c}{Fixed retailer weights} & \multicolumn{2}{c}{Retailer mix} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+ & {\(b\)} & {\(\mathit{SE}\)} & {\(b\)} & {\(\mathit{SE}\)} \\
+\midrule
+Calories per dollar & -0.824\sym{***} & {(}0.022{)} & -0.858\sym{***} & {(}0.107{)} \\
+Real spend & 0.775\sym{***} & {(}0.044{)} & 0.555\sym{***} & {(}0.174{)} \\
+Calories bought & -0.009 & {(}0.056{)} & -0.221 & {(}0.181{)} \\
+Energy density & -0.081\sym{**} & {(}0.037{)} & -0.131 & {(}0.131{)} \\
+Health score & 0.0004 & {(}0.0005{)} & -0.0009 & {(}0.0013{)} \\
+\bottomrule
+\end{tabular}

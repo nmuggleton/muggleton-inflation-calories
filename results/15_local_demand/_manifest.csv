@@ -1,0 +1,8 @@
+object,kind,file,class,named
+bal,table,bal.csv,data.table,FALSE
+lab,vector,lab.csv,character,TRUE
+joint_hh,table,joint_hh.csv,data.table,FALSE
+joint_sq,table,joint_sq.csv,data.table,FALSE
+est,table,est.csv,data.table,FALSE
+spec_names,vector,spec_names.csv,character,FALSE
+sq2,table,sq2.csv,data.table,FALSE

@@ -1,0 +1,8 @@
+object,kind,file,class,named
+oa,table,oa.csv,data.table,FALSE
+ia,table,ia.csv,data.table,FALSE
+dl,table,dl.csv,data.table,FALSE
+ib,table,ib.csv,data.table,FALSE
+mc,table,mc.csv,data.table,FALSE
+ym,vector,ym.csv,character,FALSE
+lab_m,vector,lab_m.csv,character,TRUE

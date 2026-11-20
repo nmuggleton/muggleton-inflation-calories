@@ -1,0 +1,21 @@
+\sisetup{group-digits=integer, group-separator={,}, group-minimum-digits=4}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{
+    l
+    S[table-format=-1.3, table-space-text-post=\sym{***}, table-align-text-after=false]
+    S[table-format=1.3, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+    S[table-format=-1.3, table-space-text-post=\sym{***}, table-align-text-after=false]
+    S[table-format=1.3, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+}
+\toprule
+ & \multicolumn{2}{c}{Ordinary quarters} & \multicolumn{2}{c}{Egg price shocks} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+ & {\(b\)} & {\(\mathit{SE}\)} & {\(b\)} & {\(\mathit{SE}\)} \\
+\midrule
+(1) Price paid per egg & 1.033\sym{***} & {(}0.025{)} & 0.996\sym{***} & {(}0.052{)} \\
+(2) Eggs bought & -0.081\sym{***} & {(}0.020{)} & -0.120\sym{***} & {(}0.031{)} \\
+(3) Still buys eggs & -0.013 & {(}0.015{)} & 0.019 & {(}0.030{)} \\
+\midrule
+(4) Elasticity of eggs bought (2 / 1, 2SLS) & -0.079\sym{***} & {(}0.020{)} & -0.120\sym{***} & {(}0.026{)} \\
+\bottomrule
+\end{tabular}

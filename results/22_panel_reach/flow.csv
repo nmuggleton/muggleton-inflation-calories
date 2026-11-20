@@ -1,0 +1,5 @@
+step,hh_quarters,households
+f1 gate sample,3323087,151975
+target year has a panel base year,3323087,151975
+base basket with valid ladders at all eight rungs,3263871,151011
+common base >= .5 of labeled base spend,2912575,145494

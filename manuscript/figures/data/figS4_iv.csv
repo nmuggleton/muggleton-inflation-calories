@@ -1,0 +1,21 @@
+outcome,out_lab,model,b,se,lo,hi,ci_method,benchmark
+d_lkpu,Calories per $ (%),Main instrument (state leave-out),-0.81115776823892,0.0212282151094884,-0.852765069853517,-0.769550466624323,"Wald, clustered SE",-1
+d_lkpu,Calories per $ (%),"BLS CPI, all areas",-0.908217174923939,0.179662175468087,-1.30660945323069,-0.537545207602193,pairs cluster bootstrap,-1
+d_lkpu,Calories per $ (%),"BLS CPI, 14 metros",-0.654421850598622,0.274904109131082,-1.16737952465032,0.00442907271157731,pairs cluster bootstrap,-1
+d_lkpu,Calories per $ (%),Both instruments,-0.811956578468825,0.0216409015409199,-0.854372745489028,-0.769540411448622,"Wald, clustered SE",-1
+d_lspend,Real spend (%),Main instrument (state leave-out),0.754716528899088,0.0422981794472828,0.671812097182414,0.837620960615762,"Wald, clustered SE",1
+d_lspend,Real spend (%),"BLS CPI, all areas",1.18497782317483,0.276728769509052,0.598828506879028,1.77544308358224,pairs cluster bootstrap,1
+d_lspend,Real spend (%),"BLS CPI, 14 metros",1.24843923560894,0.4334541537576,0.190626296097917,2.02930870791616,pairs cluster bootstrap,1
+d_lspend,Real spend (%),Both instruments,0.758257629500303,0.0429811959202368,0.674014485496639,0.842500773503967,"Wald, clustered SE",1
+d_lkcal,Calories (%),Main instrument (state leave-out),-0.0169679305212304,0.0530370896479207,-0.120920626231155,0.0869847651886942,"Wald, clustered SE",
+d_lkcal,Calories (%),"BLS CPI, all areas",0.423473030417877,0.34980029255033,-0.303209698383312,1.13517026642482,pairs cluster bootstrap,
+d_lkcal,Calories (%),"BLS CPI, 14 metros",0.676664885518916,0.381768198225002,-0.0928318039285547,1.47931496722833,pairs cluster bootstrap,
+d_lkcal,Calories (%),Both instruments,-0.0133479243675556,0.0543504277114126,-0.119874762681924,0.0931789139468131,"Wald, clustered SE",
+d_ed,Energy density,Main instrument (state leave-out),-0.0830700292629924,0.0347994247723244,-0.151276901816748,-0.0148631567092366,"Wald, clustered SE",
+d_ed,Energy density,"BLS CPI, all areas",-0.0311383688943778,0.161985000728226,-0.354164910312988,0.335213793700396,pairs cluster bootstrap,
+d_ed,Energy density,"BLS CPI, 14 metros",0.175732696760908,0.349101441091195,-0.52854115678922,1.02791088010248,pairs cluster bootstrap,
+d_ed,Energy density,Both instruments,-0.0826428251171325,0.0345036484819545,-0.150269976141763,-0.0150156740925017,"Wald, clustered SE",
+d_hs,Health score,Main instrument (state leave-out),0.000450412140197773,0.000448882401459433,-0.000429397366662716,0.00133022164705826,"Wald, clustered SE",
+d_hs,Health score,"BLS CPI, all areas",-0.00601235635945012,0.00281269912820223,-0.0121943985621428,-0.00100887425264278,pairs cluster bootstrap,
+d_hs,Health score,"BLS CPI, 14 metros",-0.0112775039649617,0.00524548467064253,-0.0242948092024201,-0.00128028835922829,pairs cluster bootstrap,
+d_hs,Health score,Both instruments,0.000397312986494669,0.000451810282074744,-0.000488235166371829,0.00128286113936117,"Wald, clustered SE",

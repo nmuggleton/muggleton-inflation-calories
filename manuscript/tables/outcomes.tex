@@ -1,0 +1,38 @@
+\sisetup{group-digits=integer, group-separator={,}, group-minimum-digits=4}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{
+    l
+    S[table-format=-1.3, table-space-text-post=\sym{***}, table-align-text-after=false]
+    S[table-format=1.3, table-space-text-pre={(}, table-align-text-before=false, table-space-text-post={)}, table-align-text-after=false]
+    S[table-format=9]
+}
+\toprule
+Outcome (change \(t\) vs \(t-4\), \(\times\)100 log) & {2SLS per pp} & {\(\mathit{SE}\)} & {\(N\)} \\
+\midrule
+\multicolumn{4}{l}{\textit{Calories per dollar}} \\
+\quad kcal per \$, winsorized p1/p99 by year (headline) & -0.811\sym{***} & {(}0.021{)} & 3323087 \\
+\quad kcal per \$, not winsorized & -0.825\sym{***} & {(}0.021{)} & 3323006 \\
+\quad kcal per \$ (winsorized), arc \% change & -0.803\sym{***} & {(}0.021{)} & 3323087 \\
+\quad kcal per \$ incl. module-imputed kcal & -0.795\sym{***} & {(}0.020{)} & 3323018 \\
+\addlinespace
+\multicolumn{4}{l}{\textit{Quantity}} \\
+\quad Labeled kcal per AE-day (headline) & -0.017 & {(}0.053{)} & 3323006 \\
+\quad Labeled kcal per household-quarter & -0.027 & {(}0.045{)} & 3323006 \\
+\quad kcal incl. module-imputed, per AE-day & -0.030 & {(}0.045{)} & 3323018 \\
+\quad kcal scaled by 1/coverage, per AE-day & -0.071 & {(}0.047{)} & 3323006 \\
+\quad Labeled grams + ml per AE-day & 0.008 & {(}0.046{)} & 3323087 \\
+\quad Labeled grams (foods) per AE-day & 0.022 & {(}0.058{)} & 3322822 \\
+\addlinespace
+\multicolumn{4}{l}{\textit{Spend}} \\
+\quad Real non-Magnet spend per AE-day (headline) & 0.755\sym{***} & {(}0.042{)} & 3323087 \\
+\quad Nominal non-Magnet spend per AE-day & 0.755\sym{***} & {(}0.042{)} & 3323087 \\
+\quad Labeled spend per AE-day & 0.808\sym{***} & {(}0.047{)} & 3323087 \\
+\quad Unlabeled non-Magnet spend per AE-day & 0.465\sym{***} & {(}0.068{)} & 3311095 \\
+\quad Non-Magnet spend per household-quarter & 0.745\sym{***} & {(}0.037{)} & 3323087 \\
+\addlinespace
+\multicolumn{4}{l}{\textit{Nutrition and coverage}} \\
+\quad Energy density, foods (kcal/100 g) & -0.083\sym{**} & {(}0.035{)} & 3322822 \\
+\quad Health score \(\times\)100 & 0.045 & {(}0.045{)} & 3321326 \\
+\quad Labeled share of spend (coverage) \(\times\)100 & 0.043\sym{***} & {(}0.011{)} & 3323087 \\
+\bottomrule
+\end{tabular}

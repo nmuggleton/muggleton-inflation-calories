@@ -1,0 +1,9 @@
+object,kind,file,class,named
+band_slopes,table,band_slopes.csv,data.table,FALSE
+beyond,table,beyond.csv,data.table,FALSE
+symmetry,table,symmetry.csv,data.table,FALSE
+by_quarter,table,by_quarter.csv,data.table,FALSE
+pair_shares,table,pair_shares.csv,data.table,FALSE
+exposure,table,exposure.csv,data.table,FALSE
+labels,table,labels.csv,data.table,FALSE
+flow,table,flow.csv,data.table,FALSE

@@ -1,0 +1,5 @@
+object,kind,file,class,named
+est,table,est.csv,data.table,FALSE
+coverage,table,coverage.csv,data.table,FALSE
+flow,table,flow.csv,data.table,FALSE
+own_rule,table,own_rule.csv,data.table,FALSE

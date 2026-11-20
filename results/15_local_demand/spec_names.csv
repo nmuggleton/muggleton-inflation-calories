@@ -1,0 +1,7 @@
+name,value
+,f1 headline (full gate sample)
+,"Baseline, control sample"
+,"+ state U, income, house prices"
+,+ county U and employment
+,+ lagged changes of all
+,+ division x quarter FE
